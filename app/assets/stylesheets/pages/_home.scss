@@ -12,11 +12,25 @@
 }
 
 .home-video-wrapper {
-height: 100%;
-display: flex;
+  height: 100%;
+  display: flex;
 }
 
 h1.home {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.home-description {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: white;
+}
+
+.home-buttons {
+  padding: 16px;
+}
+
+.home-description {
+  padding: 16px;
+  margin-top:208px;
 }
