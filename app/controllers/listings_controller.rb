@@ -13,6 +13,7 @@ class ListingsController < ApplicationController
   end
 
   def new
+    # page where the form is displayed
     @listing = Listing.new
   end
 
