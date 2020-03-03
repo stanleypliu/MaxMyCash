@@ -1,10 +1,10 @@
 .btn-ghost {
-  color: white;
-  border: 1px solid white;
+  color: $gray;
+  border: 1px solid $gray;
   padding: 16px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 1.0;
   margin-right: 16px;
   transition: opacity 0.3s ease;
   text-align: center;
