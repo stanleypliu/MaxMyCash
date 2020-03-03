@@ -1,4 +1,5 @@
 
+
 <div>
   <div class="listing-card-title"><p><%= @listing.location %></p><div class="listing-card-title-money"><p><p><%= @listing.type %><%= @listing.currency_amount %></p></div></div>
   <p><%= @listing.user.first_name  %> <%= @listing.user.last_name %></p>
@@ -7,3 +8,7 @@
 
 
 <%#= link_to 'Make a booking', #the messaging service with location %>
+
+
+<%= link_to "edit", edit_listing_path(@listing)  %>
+
