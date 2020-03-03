@@ -2,7 +2,9 @@ class ListingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @listings = Listing.all
+    # @listings = Listing.all
+    @listings = Listing.where(transaction_completed: false)
+    # raise
     #not complete because this needs a map as well
   end
 
