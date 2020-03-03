@@ -1,10 +1,9 @@
 
 
 <div>
-    <div class="listing-card-title"><p><%= @listing.location %></p><div class="listing-card-title-money"><p><p><%= @listing.currency %><%= @listing.currency_amount %></p></div></div>
-    <p><%= @listing.user.first_name  %> <%= @listing.user.last_name %></p>
-    <p><%= @listing.message %></p>
-
+  <div class="listing-card-title"><p> Where ? => <%= @listing.location %></p><div class="listing-card-title-money"><p><p> What ? => <%= @listing.currency %> <%= @listing.currency_amount %></p></div></div>
+  <p><%= @listing.user.first_name  %> <%= @listing.user.last_name %></p>
+  <p>Important message : <%= @listing.message %></p>
 </div>
 
 
