@@ -1,2 +1,9 @@
-<h1>Listings#show</h1>
-<p>Find me in app/views/listings/show.html.erb</p>
+
+<div>
+  <div class="listing-card-title"><p><%= @listing.location %></p><div class="listing-card-title-money"><p><p><%= @listing.type %><%= @listing.currency_amount %></p></div></div>
+  <p><%= @listing.user.first_name  %> <%= @listing.user.last_name %></p>
+  <p><%= @listing.message %></p>
+</div>
+
+
+<%#= link_to 'Make a booking', #the messaging service with location %>
