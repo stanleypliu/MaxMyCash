@@ -1,2 +1,5 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1>Congratulations! You've made a booking! 🎊</h1>
+
+<p>You're booked in with <%= @booking.listing.user.first_name %> <%= @booking.listing.user.first_name %></p>
+
+<%= link_to 'View my bookings', dashboard_path  %>

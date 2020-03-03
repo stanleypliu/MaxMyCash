@@ -1,9 +1,10 @@
 
 
 <div>
-  <div class="listing-card-title"><p><%= @listing.location %></p><div class="listing-card-title-money"><p><p><%= @listing.currency %><%= @listing.currency_amount %></p></div></div>
-  <p><%= @listing.user.first_name  %> <%= @listing.user.last_name %></p>
-  <p><%= @listing.message %></p>
+    <div class="listing-card-title"><p><%= @listing.location %></p><div class="listing-card-title-money"><p><p><%= @listing.currency %><%= @listing.currency_amount %></p></div></div>
+    <p><%= @listing.user.first_name  %> <%= @listing.user.last_name %></p>
+    <p><%= @listing.message %></p>
+
 </div>
 
 
@@ -11,4 +12,4 @@
 
 
 <%= link_to "edit", edit_listing_path(@listing)  %>
-
+<%= link_to "book me", listing_bookings_path(@listing), method: :post %>
