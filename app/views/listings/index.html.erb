@@ -1,3 +1,20 @@
-<h1>Listings#index</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
-<%= @listings.count %>
+
+<h1>Active Exchanges</h1>
+
+<div class="container">
+  <div class="lhs-index">
+    <% @listings.each do |listing|%>
+      <%= link_to listing_path(listing) do  %>
+        <div>
+          <div class='listing-card-title'><p><%= listing.location %></p><div class='listing-card-title-money'><p><p><%= listing.type%><%= listing.currency_amount %></p></div></div>
+          <p><%= listing.user.first_name  %> <%= listing.user.last_name %></p>
+          <p><%= listing.message %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="rhs-index">
+    <!-- maps goes in here -->
+  </div>
+</div>
