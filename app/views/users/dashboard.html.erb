@@ -1,18 +1,49 @@
-<h2>My listing</h2>
-<% @listings.each do |listing| %>
-  <%= listing.currency_amount %>
-  <%= listing.message %>
-<% end %>
-
-<h2>My requests</h2>
-<% @bookings.each do |booking| %>
-  <%= booking.user.email %>
-  <%= booking.listing.currency_amount %>
-  <%= booking.listing.message %>
-<% end %>
-
-<h2>My bookings</h2>
-<% @my_bookings.each do |booking| %>
-  <%= booking.listing.currency_amount %>
-  <%= booking.listing.message %>
-<% end %>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My listings</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My requests</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">My bookings</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+	<h2>My listing</h2>
+	<% @listings.each do |listing| %>
+	  <span> What ? => <%= listing.currency %>
+	  <%= listing.currency_amount %>
+	  <br>
+	  Message : <%= listing.message %></span>
+	  <br>
+	  <%= link_to 'edit', edit_listing_path(listing) %>
+	  <br>
+	  <%= link_to 'delete this listing NOW (and forever)', delete_path(listing), method: :delete %>
+	  <br>
+	  <br>
+	<% end %>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+	<h2>My requests</h2>
+	<% @bookings.each do |booking| %>
+	  <p> From <%= booking.user.email %> </p>
+	  <br>
+	  <%= booking.listing.currency %>
+	  <%= booking.listing.currency_amount %>
+	  <%= booking.listing.message %>
+	  <br>
+	<% end %>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+	<h2>My bookings</h2>
+		<% @my_bookings.each do |booking| %>
+		  <%= booking.listing.currency %>
+		  <%= booking.listing.currency_amount %> 
+		  <br>
+		  <%= booking.listing.message %>
+		  <br>
+		<% end %>
+  </div>
+</div>
