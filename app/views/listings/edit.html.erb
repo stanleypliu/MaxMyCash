@@ -1,2 +1,13 @@
-<h1>Listings#edit</h1>
-<p>Find me in app/views/listings/edit.html.erb</p>
+<div class="container">
+	<h1>edit</h1>
+	<p>Find me in app/views/listings/edit.html.erb</p>
+
+	<%= simple_form_for(@listing) do |f| %>
+	  <%= f.input :currency_amount, placeholder: @listing.currency_amount %>
+	  <%= f.input :currency, placeholder: @listing.currency %>
+	  <%= f.input :transaction_completed, placeholder: @listing.transaction_completed %>
+	  <%= f.input :location, placeholder: @listing.location %>
+	  <%= f.input :message, placeholder: @listing.message %>
+	  <%= f.submit %>
+	<% end %>
+</div>
