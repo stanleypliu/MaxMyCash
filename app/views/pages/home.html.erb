@@ -1,3 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= video_tag "Money.mp4" %>
+<div id="home-container">
+  <div class="home-video-wrapper">
+    <%= video_tag "Money.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video"%>
+      <h2 class="home-description">change your cash for cash</h2>
+  </div>
+  <div class="home-buttons">
+    <a class="btn-ghost" href="#">exchange my cash</a>
+    <a class="btn-ghost" href="#">active listings</a>
+  </div>
+</div>
