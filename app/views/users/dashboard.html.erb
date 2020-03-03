@@ -1,2 +1,18 @@
-<h1>Users#dashboard</h1>
-<p>Find me in app/views/users/dashboard.html.erb</p>
+<h2>My listing</h2>
+<% @listings.each do |listing| %>
+  <%= listing.currency_amount %>
+  <%= listing.message %>
+<% end %>
+
+<h2>My requests</h2>
+<% @bookings.each do |booking| %>
+  <%= booking.user.email %>
+  <%= booking.listing.currency_amount %>
+  <%= booking.listing.message %>
+<% end %>
+
+<h2>My bookings</h2>
+<% @my_bookings.each do |booking| %>
+  <%= booking.listing.currency_amount %>
+  <%= booking.listing.message %>
+<% end %>
