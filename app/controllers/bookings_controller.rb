@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user: params[:user_id])
+    # @bookings = Booking.where(user: current_user)
   end
 
   def show
