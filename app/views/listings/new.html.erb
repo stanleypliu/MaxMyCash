@@ -2,6 +2,10 @@
 
 <%= simple_form_for(@listing) do |f| %>
   <%= f.input :currency_amount %>
+  <%= f.input :currency %>
+  <%= f.input :location %>
+  <%= f.input :message %>
+  <%= f.submit %>
 <% end %>
 
 <!-- ff + tab => form -->
