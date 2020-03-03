@@ -13,6 +13,7 @@ class ListingsController < ApplicationController
   end
 
   def new
+    # page where the form is displayed
     @listing = Listing.new
   end
 
@@ -49,6 +50,6 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listing).permit(:currency_amount, :type, :transaction_completed, :location, :message)
+    params.require(:listing).permit(:currency_amount, :currency, :location, :message)
   end
 end
