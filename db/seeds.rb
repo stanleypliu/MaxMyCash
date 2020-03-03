@@ -12,9 +12,8 @@ User.destroy_all
 a = User.create!(email: 'hello@gmail.com', password: '123123')
 b = User.create!(email: 'goodbye@gmail.com', password: '123123')
 
-
-lista = Listing.create!(user: a, location: '138 kingsland', currency: 'african dollars', message: 'I sleep until 2 !!', currency_amount: '2000', transaction_completed: 'false')
-listb = Listing.create!(user: b, location: 'bplace', currency: 'greenland dollars', message: 'Im hungry !!', currency_amount: '666', transaction_completed: 'true')
+lista = Listing.create!(user: a,location: '138 kingsland', currency: 'african dollars', currency_amount: 200, message: 'alleluya', transaction_completed: 'false')
+listb = Listing.create!(user: b, location: 'bplace', currency: 'strawberries', currency_amount: 666, message: 'bye bye', transaction_completed: 'true')
 
 bookinga = Booking.create!(user: a, listing: listb)
 bookingb = Booking.create!(user: b, listing: lista)
