@@ -13,6 +13,6 @@ class ChatroomsController < ApplicationController
     else
       @chatroom = @booking.chatroom
     end
-    redirect_to booking_chatrooms_path(@booking, @chatroom)
+    redirect_to chatroom_path(@chatroom)
   end
 end
