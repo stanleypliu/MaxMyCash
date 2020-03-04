@@ -28,7 +28,7 @@
               <%= link_to 'edit', edit_listing_path(listing) %>
               <br>
               <%= link_to 'delete', delete_path(listing), method: :delete %>
-              <br>       
+              <br>
               <br>
               <% end %>
            </div>
@@ -59,6 +59,7 @@
             <%= link_to 'Accept', listing_booking_path([booking.listing], [booking]), method: :patch %>
             <br>
           <% end %>
+        <% end %>
         </div>
 
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -95,8 +96,3 @@
       </div>
     </div>
 </div>
-
-
-
-
-
