@@ -10,8 +10,8 @@
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
-	<h2>My listing</h2>
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+	<h2>My listings</h2>
 	<% @listings.each do |listing| %>
 	  <span> What ? => <%= listing.currency %>
 	  <%= listing.currency_amount %>
@@ -40,7 +40,7 @@
 	<h2>My bookings</h2>
 		<% @my_bookings.each do |booking| %>
 		  <%= booking.listing.currency %>
-		  <%= booking.listing.currency_amount %> 
+		  <%= booking.listing.currency_amount %>
 		  <br>
 		  <%= booking.listing.message %>
 		  <br>
