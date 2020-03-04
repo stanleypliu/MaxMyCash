@@ -29,11 +29,11 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-  def accept_booking
-    # if another user requests one of your bookings, to set transaction completed to true
-    if
-    # booking.transaction_completed = true
-  end
+  # def accept_booking
+  #   # if another user requests one of your bookings, to set transaction completed to true
+  #   if
+  #   # booking.transaction_completed = true
+  # end
 
   private
 

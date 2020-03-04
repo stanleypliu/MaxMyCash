@@ -11,4 +11,7 @@
 
 
 <%= link_to "edit", edit_listing_path(@listing)  %>
-<%= link_to "book me", listing_bookings_path(@listing), method: :post %>
+
+<% if @listing.user != current_user %>
+  <%= link_to "book me", listing_bookings_path(@listing), method: :post %>
+<% end %>
