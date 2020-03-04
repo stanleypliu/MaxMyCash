@@ -2,7 +2,7 @@
 
 <%= simple_form_for(@listing) do |f| %>
   <%= f.input :currency_amount %>
-  <%= f.input :currency %>
+  <%= f.input :currency, collection: @currencies %>
   <%= f.input :location %>
   <%= f.input :message %>
   <%= f.submit %>
