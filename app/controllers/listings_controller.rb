@@ -19,7 +19,7 @@ class ListingsController < ApplicationController
     # page where the form is displayed
     @listing = Listing.new
     # @currencies = ['Pounds', 'Dollars', 'Euros', 'Yen', 'Florins', 'Pesos', 'Kronor']
-    @exchange_rate = Listing.exchange_rates
+    # @exchange_rate = Listing.exchange_rates
   end
 
   def create
