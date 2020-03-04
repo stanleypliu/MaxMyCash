@@ -12,27 +12,24 @@
 }
 
 .logo {
-  color: white;
+  color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .nav-link {
-  color: white !important;
+  color: black !important;
 }
 
 .nav-item:after {
-    content: '';
-    display: block;
-    height: 1.5px;
-    width: 0;
-    background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-
+  content: '';
+  display: block;
+  height: 1.5px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
 }
 .nav-item:hover:after {
-    width: 100%;
-    background: white;
-    transition: width .5s ease, background-color .5s ease;
-
-
+  width: 100%;
+  background: black;
+  transition: width .5s ease, background-color .5s ease;
 }

@@ -9,29 +9,44 @@
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">My bookings</a>
   </li>
 </ul>
+
 <div class="container">
-	<div class="tab-content" id="myTabContent">
-	  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
-		<h2>My listing</h2>
-		<% @listings.each do |listing| %>
-		  <span> What ? => <%= listing.currency %>
-		  <%= listing.currency_amount %>
-		  <br>
-		  Message : <%= listing.message %></span>
-		  <br>
-		  <%= link_to 'edit', edit_listing_path(listing) %>
-		  <br>
-		  <%= link_to 'delete this listing NOW (and forever)', delete_path(listing), method: :delete %>
-		  <br>
-		  <br>
-		<% end %>
-	  </div>
-	  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-		<h2>My requests</h2>
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+	<h1>Hi , <%= @current_user.email %> ! </h1>
+  <h2>My listing</h2>
+	<% @listings.each do |listing| %>
+	  <span> What ? => <%= listing.currency %>
+	  <%= listing.currency_amount %>
+	  <br>
+	  Message : <%= listing.message %></span>
+	  <br>
+	  <%= link_to 'edit', edit_listing_path(listing) %>
+	  <br>
+	  <%= link_to 'delete this listing NOW (and forever)', delete_path(listing), method: :delete %>
+	  <br>
+	  <br>
+	<% end %>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+	<h2>My requests</h2>
+	<% @bookings.each do |booking| %>
+	  <p> From <%= booking.user.email %> </p>
+	  <br>
+	  <%= booking.listing.currency %>
+	  <%= booking.listing.currency_amount %>
+	  <%= booking.listing.message %> <!-- added for chat -->
+    <%= link_to "Message", chatroom_path(booking.chatroom) %> <!-- added for chat function -->
+	  <br>
+	<% end %>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+	<h2>My bookings</h2>
 		<% @my_bookings.each do |booking| %>
 		  <span> From <%= booking.user.email %> </span>
 		  <%= booking.listing.currency %>
-		  <%=  booking.listing.currency_amount %>
+      <p> <%=  booking.listing.currency_amount %></p>
 		  <br>
 		  <%= booking.listing.message %>
 		  <br>	
@@ -44,6 +59,8 @@
 		  <% end %>
 		  <br>
 		  <br>
+      <%= link_to "Message", chatroom_path(booking.chatroom) %> <!-- found post inside the routes -->
+
 		<% end %>
 	  </div>
 	  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -63,3 +80,4 @@
 	  </div>
 	</div>
 </div>
+

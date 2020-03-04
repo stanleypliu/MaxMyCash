@@ -1,15 +1,13 @@
 // Specific CSS for your home-page
 .home_video {
- width: 100vw;
- height: 100vh;
- position: absolute;
- display: flex;
- justify-content: center;
- object-fit: cover;
- top: 0;
- z-index: -2;
-box-shadow: 0 0 15px rgba(0,0,0,0.8);
-  filter: grayscale(100%) blur(3px);
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   object-fit: cover;
+   top: 0;
+   z-index: -2;
 }
 
 .home-video-wrapper {
@@ -19,13 +17,13 @@ box-shadow: 0 0 15px rgba(0,0,0,0.8);
 }
 
 h1.home {
-  color: white;
+  color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .home-description {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  color: $gray;
+  color: black;
 }
 
 .home-buttons {

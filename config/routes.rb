@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   resources :listings, except: [:destroy] do
     resources :bookings, only: [:create, :update]
   end
-  resources :bookings, only: [:index, :show]
+  resources :bookings, only: [:index, :show, :destroy] do
+    resources :chatrooms, only: [:show, :create] # nested chatrooms inside bookings so a booking has a chat
+  end
+  resources :chatrooms, only: [:show] do
+    resources :messages , only: :create
+  end
   resources :reviews
   delete "bookings/:id", to: "bookings#destroy", as: :delete_booking
   delete "listings/:id", to: "listings#destroy", as: :delete
