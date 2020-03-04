@@ -1,0 +1,22 @@
+<div class="chatroom">
+<!--   <%= @booking.listing.currency_amount %>
+  <%= @booking.listing.currency %> -->
+  <p>Chat between <%= @booking.listing.user.email %> and <%= @booking.user.email %></p>
+
+  <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+    <% @chatroom.messages.each do |message| %>
+      <div class="message-container">
+        <i class="author">
+          <span><%= message.user.email %></span>
+          <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+        </i>
+        <p><%= message.content %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= simple_form_for [ @chatroom, @message ] do |f| %>
+    <%= f.input :content, label: false, placeholder: "Type your message here 😉" %>
+  <% end %>
+  </div>
+</div>
