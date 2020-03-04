@@ -3,6 +3,7 @@
 <%= simple_form_for(@listing) do |f| %>
   <%= f.input :currency_amount %>
   <%= f.input :currency, collection: @currencies %>
+  <p> You'll get <strong><%=  %></strong> amount back </p>
   <%= f.input :location %>
   <%= f.input :message %>
   <%= f.submit %>

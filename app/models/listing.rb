@@ -16,6 +16,7 @@ class Listing < ApplicationRecord
       currency = "#{currency[1]["symbol"]} - #{currency[1]["name"]}"
     end
   end
+
 end
 
 
