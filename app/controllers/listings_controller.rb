@@ -15,13 +15,16 @@ class ListingsController < ApplicationController
   end
 
   def new
+    @currencies = Listing.get_currencies
     # page where the form is displayed
     @listing = Listing.new
+    # @currencies = ['Pounds', 'Dollars', 'Euros', 'Yen', 'Florins', 'Pesos', 'Kronor']
   end
 
   def create
     @listing = Listing.new(listing_params)
     @listing.user = current_user
+    @listing.transaction_completed = false
     if @listing.save
       redirect_to dashboard_path
     else
