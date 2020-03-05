@@ -3,7 +3,12 @@ class ListingsController < ApplicationController
 
   def index
     # @listings = Listing.all
-    @listings = Listing.where(transaction_completed: false)
+    #@listings = Listing.where(transaction_completed: false)  
+    if params[:query].present?
+      @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
+    else
+      @listings = Listing.all
+    end
     # raise
     #not complete because this needs a map as well
   end
