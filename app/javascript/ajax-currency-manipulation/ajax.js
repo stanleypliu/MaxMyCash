@@ -8,7 +8,7 @@ dropdownInput.addEventListener('input', (event) => {
   const dropdownInputSplit = currency.split(' ')[0];
   fetch(ratesURL).then(response => response.json()).then((data) => {
     document.querySelector('.exchanged-currency').innerHTML = "";
-    const exchanged_amount = Math.floor((data.rates[dropdownInputSplit] * currencyAmount) / data.rates.GBP)
-    exchangedCurrency.insertAdjacentHTML('afterbegin', `You'll get £${exchanged_amount} back`);
+    const exchanged_amount = (currencyAmount / data.rates[dropdownInputSplit]).toFixed(2);
+    exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><h3>You'll get <b>${exchanged_amount} Euros</b> back<h3>!</div></br>`);
   })
 })
