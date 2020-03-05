@@ -37,12 +37,14 @@
         <h2>My bookings</h2>
         <% @bookings.each do |booking| %>
           <p> With <%= booking.listing.user.email %> </p>
-          <br>
-          <%= booking.listing.currency %>
-          <%= booking.listing.currency_amount %>
-          <%= link_to "Message", booking_chatrooms_path(booking), method: :post %>
-          <%= link_to 'Cancel', delete_booking_path(booking), method: :delete %>
-
+          <p><%= booking.listing.currency %>
+          <%= booking.listing.currency_amount %></p>
+          <% if booking.booking_status == true %>
+          	<h3>Booking confirmed</h3>
+          <% end %>
+          <p><%= link_to "Message", booking_chatrooms_path(booking), method: :post %>        	
+          <%= link_to 'Cancel', delete_booking_path(booking), method: :delete %></p>
+          
           <br>
         <% end %>
       </div>
