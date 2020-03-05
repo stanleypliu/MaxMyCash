@@ -6,9 +6,9 @@ class Listing < ApplicationRecord
   belongs_to :user
 
   validates :currency_amount, presence: true
+  validates :currency_amount, numericality: { only_integer: true }
   validates :currency, presence: true
   validates :location, presence: true
-  validates :message, length: { minimum: 20 }
 
   def self.get_currencies
     # url = 'https://openexchangerates.org/api/currencies.json'

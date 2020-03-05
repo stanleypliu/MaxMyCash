@@ -10,4 +10,13 @@ class User < ApplicationRecord
   has_many :received_reviews, class_name: 'Review', foreign_key: 'reviewee_id'
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  def running_total
+    @sum = 0
+    self.requested_bookings.each do |booking|
+      @sum += booking.listing.currency_amount
+    end
+    @sum
+  end
+
 end
