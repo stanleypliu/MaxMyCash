@@ -11,16 +11,19 @@
   width: 40px;
 }
 
+
 .logo {
-  color: black;
+  // color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  decoration: none !important;;
 }
 
-.nav-link {
+.navbar-link {
   color: black !important;
+  text-decoration: none !important;
 }
 
-.nav-item:after {
+.navbar-item:after {
   content: '';
   display: block;
   height: 1.5px;
@@ -28,7 +31,7 @@
   background: transparent;
   transition: width .5s ease, background-color .5s ease;
 }
-.nav-item:hover:after {
+.navbar-item:hover:after {
   width: 100%;
   background: black;
   transition: width .5s ease, background-color .5s ease;
