@@ -15,69 +15,39 @@
       </li>
     </ul>
 
-  <div class="container">
-    <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <h1>Hi, <%= @current_user.email %>! </h1>
-            <h2>My listings</h2>
-            <% @listings.each do |listing| %>
-              <p><%= listing.currency.capitalize %></p>
-              <p>Amount: <%= listing.currency_amount %></p>
-              <p>Message: <%= listing.message.capitalize %></p>
-              <br>
-              <%= link_to 'edit', edit_listing_path(listing) %>
-              <br>
-              <%= link_to 'delete', delete_path(listing), method: :delete %>
-              <br>
-              <br>
-              <% end %>
-           </div>
-      </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <h2>My bookings</h2>
-        <% @bookings.each do |booking| %>
-          <p> With <%= booking.listing.user.email %> </p>
-          <p><%= booking.listing.currency %>
-          <%= booking.listing.currency_amount %></p>
-          <% if booking.booking_status == true %>
-          	<h3>Booking confirmed</h3>
-          <% else %>
-          	<h3>Booking not confirmed yet</h3>
-          <% end %>
-          <p><%= link_to "Message", booking_chatrooms_path(booking), method: :post %>        	
-          <%= link_to 'Cancel', delete_booking_path(booking), method: :delete %></p>
-          
-          <br>
-        <% end %>
-      </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        <h2>My requests</h2>
-        <% @my_bookings.each do |booking| %>
-          <span> From <%= booking.user.email %> </span>
-          <%= booking.listing.currency %>
-          <p> <%=  booking.listing.currency_amount %></p>
-          <br>
-          <%= booking.listing.message %>
-          <br>
-          <% if booking.booking_status == false %>
-            <%= link_to 'Accept', listing_booking_path([booking.listing], [booking]), method: :patch %>
+    <div class="container">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h1>Hi, <%= @current_user.email %>! </h1>
+          <h2>My listings</h2>
+          <% @listings.each do |listing| %>
+            <p><%= listing.currency.capitalize %></p>
+            <p>Amount: <%= listing.currency_amount %></p>
+            <p>Message: <%= listing.message.capitalize %></p>
+            <br>
+            <%= link_to 'edit', edit_listing_path(listing) %>
+            <br>
+            <%= link_to 'delete', delete_path(listing), method: :delete %>
+            <br>
             <br>
           <% end %>
-        <% end %>
         </div>
-
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           <h2>My bookings</h2>
           <% @bookings.each do |booking| %>
-            <p> From <%= booking.user.email %> </p>
-            <br>
-            <%= booking.listing.currency %>
-            <%= booking.listing.currency_amount %>
-            <%= link_to "Message", booking_chatrooms_path(booking), method: :post %>
+            <p> With <%= booking.listing.user.email %> </p>
+            <p><%= booking.listing.currency %>
+            <%= booking.listing.currency_amount %></p>
+            <% if booking.booking_status == true %>
+            	<h3>Booking confirmed</h3>
+            <% else %>
+            	<h3>Booking not confirmed yet</h3>
+            <% end %>
+            <p><%= link_to "Message", booking_chatrooms_path(booking), method: :post %>
+            <%= link_to 'Cancel', delete_booking_path(booking), method: :delete %></p>
             <br>
           <% end %>
         </div>
-
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <h2>My requests</h2>
           <% @my_bookings.each do |booking| %>
@@ -90,13 +60,10 @@
             <% if booking.booking_status == false %>
               <%= link_to 'Accept', listing_booking_path([booking.listing], [booking]), method: :patch %>
               <br>
-              <%= link_to 'Refuse', delete_booking_path(booking), method: :delete %>
-            <% else %>
-              <h3>Booking accepted</h3>
             <% end %>
-            <%= link_to "Message", booking_chatrooms_path(booking), method: :post %>
           <% end %>
         </div>
       </div>
     </div>
+  </div>
 </div>
