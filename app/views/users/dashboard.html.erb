@@ -59,7 +59,9 @@
             <br>
             <% if booking.booking_status == false %>
               <%= link_to 'Accept', listing_booking_path([booking.listing], [booking]), method: :patch %>
-              <br>
+              <%= link_to 'Refuse', delete_booking_path(booking), method: :delete %>
+            <% else %>
+              <%= link_to 'Cancel', delete_booking_path(booking), method: :delete  %>
             <% end %>
           <% end %>
         </div>
