@@ -1,10 +1,19 @@
-<div id="home-container">
+<div class="home-container">
+
+  <div class="homepage-whitespace">
+    <h2 class="home-description">Change your <br> cash for cash</h2>
+    <p>a super useful website for travelers like you</p>
+    <p>coming to an app store near you</p>
+    <div class="home-buttons">
+      <%= link_to "Exchange My Cash", new_listing_path, class: "btn btn-primary" %>
+      <%= link_to "Browse Active Listings", listings_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+
   <div class="home-video-wrapper">
     <%= video_tag "Money.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video"%>
-      <h2 class="home-description">change your cash for cash</h2>
   </div>
-  <div class="home-buttons">
-    <%= link_to "Exchange My Cash", new_listing_path, class: "btn btn-primary" %>
-    <%= link_to "Browse Active Listings", listings_path, class: "btn btn-secondary" %>
-  </div>
+
+
+
 </div>

@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .home_video {
-  width: 100vw;
+  width: 70vw;
   height: 100vh;
   position: absolute;
   display: flex;
@@ -10,19 +10,25 @@
   z-index: -2;
 }
 
+.home-container {
+  display: flex;
+  justify-content: space-bewteen;
+}
+
 .home-video-wrapper {
   height: 100%;
   display: flex;
 }
 
 h1.home {
-  color: black;
+  color: #594A66;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .home-description {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  color: black;
+  color: #594A66;
+  font-size: 32px;
 }
 
 .home-buttons {
@@ -32,4 +38,8 @@ h1.home {
 .home-description {
   padding: 16px;
   margin-top:208px;
+}
+
+p {
+  color: #594A66;
 }
