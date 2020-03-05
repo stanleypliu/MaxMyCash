@@ -8,6 +8,12 @@
       params[:query],
       class: "form-control",
       placeholder: "Find a currency" %>
+  
+      <%= text_field_tag :where,
+      params[:where],
+      class: "form-control",
+      placeholder: "Where ?"%>
+
       <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
     <% @listings.each do |listing|%>

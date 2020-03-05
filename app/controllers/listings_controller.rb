@@ -6,6 +6,9 @@ class ListingsController < ApplicationController
     #@listings = Listing.where(transaction_completed: false)  
     if params[:query].present?
       @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
+      if params[:where].present?
+        @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
+      end
     else
       @listings = Listing.all
     end

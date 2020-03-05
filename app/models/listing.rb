@@ -16,6 +16,11 @@ class Listing < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+  pg_search_scope :search_by_location,
+  against: [ :location ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 
   def self.get_currencies
     # url = 'https://openexchangerates.org/api/currencies.json'
