@@ -41,6 +41,8 @@
           <%= booking.listing.currency_amount %></p>
           <% if booking.booking_status == true %>
           	<h3>Booking confirmed</h3>
+          <% else %>
+          	<h3>Booking not confirmed yet</h3>
           <% end %>
           <p><%= link_to "Message", booking_chatrooms_path(booking), method: :post %>        	
           <%= link_to 'Cancel', delete_booking_path(booking), method: :delete %></p>
