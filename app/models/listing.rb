@@ -25,7 +25,7 @@ class Listing < ApplicationRecord
     currencies = JSON.parse(currencies_serialized)
 
     parsed_currencies = currencies.to_a.map do |currency|
-      currency = "#{currency[1]["symbol"]} - #{currency[1]["name"]}"
+      currency = "#{currency[1]["code"]} - #{currency[1]["name"]}"
   end
 
 end
