@@ -2,19 +2,24 @@
 	color: black !important;
 }
 
-.red {
-  background-color: red;
-  padding: 40px;
-  margin: 10px;
+.user-greeting {
+  text-align: center;
 }
 
 .user-info {
   width: 300px;
+  align-items: center;
+  padding: 40px;
+  margin: 10px;
+  background-color: white;
 }
 
 .user-content-container {
   height: 80vh;
   width: 100%;
+  padding: 40px;
+  margin: 10px;
+  background-color: white;
 }
 
 .tab-card-styling {
@@ -31,10 +36,30 @@
   overflow: scroll;
 }
 
-.user-greeting {
-  text-align: center;
-}
-
 .running-total {
   text-align: center;
 }
+.avatar-dash {
+  height: 200px;
+  width: 200px;
+  margin: 8px;
+}
+
+.dashboard-tab-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
