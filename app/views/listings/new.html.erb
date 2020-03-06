@@ -1,8 +1,9 @@
 <h1>Exchange your cash</h1>
 
 <%= simple_form_for(@listing) do |f| %>
-  <%= f.input :currency_amount %>
-  <%= f.input :currency, collection: @currencies %>
+  <%= f.input :currency_amount, input_html: {class: 'currency-amount'} %>
+  <%= f.input :currency, collection: @currencies, input_html: {class: 'dropdown-currency'} %>
+  <div class="exchanged-currency"></div>
   <%= f.input :location %>
   <%= f.input :message %>
   <%= f.submit %>

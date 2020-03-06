@@ -3,10 +3,24 @@
 
 <div class="container">
   <div class="lhs-index">
+    <%= form_tag listings_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a currency" %>
+  
+      <%= text_field_tag :where,
+      params[:where],
+      class: "form-control",
+      placeholder: "Where ?"%>
+
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
     <% @listings.each do |listing|%>
       <%= link_to listing_path(listing) do  %>
         <div>
-          <div class='listing-card-title'><p><%= listing.location %></p><div class='listing-card-title-money'><p><p><%= listing.currency%><%= listing.currency_amount %></p></div></div>
+          <div class='listing-card-title'><p>  
+            <%= listing.location %></p><div class='listing-card-title-money'><p><p><%= listing.currency%><%= listing.currency_amount %></p></div></div>
           <p><%= listing.user.first_name  %> <%= listing.user.last_name %></p>
           <p><%= listing.message %></p>
         </div>

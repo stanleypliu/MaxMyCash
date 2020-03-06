@@ -6,9 +6,21 @@ class Listing < ApplicationRecord
   belongs_to :user
 
   validates :currency_amount, presence: true
+  validates :currency_amount, numericality: { only_integer: true }
   validates :currency, presence: true
   validates :location, presence: true
-  validates :message, length: { minimum: 20 }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_currency,
+    against: [ :currency ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
+  pg_search_scope :search_by_location,
+  against: [ :location ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 
   def self.get_currencies
     # url = 'https://openexchangerates.org/api/currencies.json'
@@ -18,11 +30,11 @@ class Listing < ApplicationRecord
     currencies = JSON.parse(currencies_serialized)
 
     parsed_currencies = currencies.to_a.map do |currency|
-      currency = "#{currency[1]["symbol"]} - #{currency[1]["name"]}"
-    end
+      currency = "#{currency[1]["code"]} - #{currency[1]["name"]}"
   end
-end
 
+end
+end
 
 
 

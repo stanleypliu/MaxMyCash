@@ -1,14 +1,65 @@
-.tab-link {
+.nav-link {
 	color: black !important;
 }
-.w30 {
-  width: 25%;
+
+.user-greeting {
+  text-align: center;
 }
-.w70 {
-  width: 75%;
+
+.user-info {
+  width: 300px;
+  align-items: center;
+  padding: 40px;
+  margin: 10px;
+  background-color: white;
 }
-.dash-cont {
+
+.user-content-container {
+  height: 80vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  padding: 40px;
+  margin: 10px;
+  background-color: white;
 }
+
+.tab-card-styling {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  width: 100%;
+
+}
+.tab-pane {
+  height: 68vh;
+  overflow: scroll;
+}
+
+.running-total {
+  text-align: center;
+}
+.avatar-dash {
+  height: 200px;
+  width: 200px;
+  margin: 8px;
+}
+
+.dashboard-tab-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

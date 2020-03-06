@@ -1,9 +1,17 @@
 class ListingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :new]
 
   def index
     # @listings = Listing.all
-    @listings = Listing.where(transaction_completed: false)
+    #@listings = Listing.where(transaction_completed: false)  
+    if params[:query].present?
+      @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
+      if params[:where].present?
+        @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
+      end
+    else
+      @listings = Listing.all
+    end
     # raise
     #not complete because this needs a map as well
   end
@@ -18,7 +26,7 @@ class ListingsController < ApplicationController
     @currencies = Listing.get_currencies
     # page where the form is displayed
     @listing = Listing.new
-    # @currencies = ['Pounds', 'Dollars', 'Euros', 'Yen', 'Florins', 'Pesos', 'Kronor']
+    # @exchange_rate = Listing.exchange_value
   end
 
   def create
