@@ -1,0 +1,45 @@
+.sign-in-container {
+  text-align: center;
+}
+
+.logo-title-dark {
+  font-weight: bold;
+  color: $gray;
+  span {
+    color: $purple
+  }
+}
+
+.sign-in-card {
+  margin: 48px auto;
+  background-color: #FFFFFF;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  width: 450px;
+}
+
+.sign-into-your-account {
+  margin-top: 20px;
+}
+
+.simple_form.new_user {
+  margin-top: 24px;
+}
+
+.form-check {
+  margin-top:16px;
+  margin-bottom:16px;
+}
+
+.form-group.password.optional.user_password {
+  margin-top: 16px;
+}
+
+a {
+  text-decoration: none !important;
+}
