@@ -1,5 +1,5 @@
 .currency-span {
-  background-color: #F0E68C;
+  background-color: #FFFFBF;
   // border: 1px solid black;
   border-radius: 20px;
   padding: 25px 30px;
@@ -7,7 +7,9 @@
 }
 
 .currency-span p {
-  margin-bottom: none;
+  margin-bottom: 0;
+}
+
 
 }
 .exchanged-currency {
@@ -18,4 +20,30 @@
 .container {
   display: flex;
   justify-content: center;
+}
+
+.container h3 {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.form-group {
+  padding: 10px;
+}
+
+.card-box-shadow {
+  width: 40%;
+}
+
+.blue-gradient-button {
+  padding: 10px;
+}
+
+form abbr[title] {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+abbr {
+  display: none;
 }
