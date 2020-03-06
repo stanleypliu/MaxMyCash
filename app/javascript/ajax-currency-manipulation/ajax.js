@@ -10,7 +10,7 @@ dropdownInput.addEventListener('input', (event) => {
   fetch(ratesURL).then(response => response.json()).then((data) => {
     document.querySelector('.exchanged-currency').innerHTML = "";
     const exchanged_amount = (currencyAmount.value / data.rates[dropdownInputSplit]).toFixed(2);
-    isNaN(exchanged_amount) ? 0 : exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><h3>You'll get <b>${exchanged_amount} Euros</b> back<h3>!</div></br>`);
+    isNaN(exchanged_amount) ? 0 : exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><p>You'll get <b>${exchanged_amount} Euros</b> back<p>!</div></br>`);
   });
 });
 
@@ -24,6 +24,6 @@ currencyAmount.addEventListener('input', (event) => {
   fetch(ratesURL).then(response => response.json()).then((data) => {
     document.querySelector('.exchanged-currency').innerHTML = "";
     const exchanged_amount = (event.target.value / data.rates[dropdownInputSplit]).toFixed(2);
-    isNaN(exchanged_amount) ? 0 : exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><h3>You'll get <b>${exchanged_amount} Euros</b> back<h3>!</div></br>`);
+    isNaN(exchanged_amount) ? 0 : exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><p>You'll get <b>${exchanged_amount} Euros</b> back<p>!</div></br>`);
   });
 });
