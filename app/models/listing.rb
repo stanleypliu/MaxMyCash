@@ -10,6 +10,9 @@ class Listing < ApplicationRecord
   validates :currency, presence: true
   validates :location, presence: true
 
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
   include PgSearch::Model
   pg_search_scope :search_by_currency,
     against: [ :currency ],
@@ -31,10 +34,10 @@ class Listing < ApplicationRecord
 
     parsed_currencies = currencies.to_a.map do |currency|
       currency = "#{currency[1]["code"]} - #{currency[1]["name"]}"
+    end
   end
+end
 
-end
-end
 
 
 
