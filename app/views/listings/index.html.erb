@@ -1,5 +1,5 @@
 
-<h1>Active Exchanges</h1>
+<h1 class ="AE">Active Exchanges</h1>
 
 <div class="container">
   <div class="lhs-index">
@@ -8,7 +8,7 @@
       params[:query],
       class: "form-control",
       placeholder: "Find a currency" %>
-  
+
       <%= text_field_tag :where,
       params[:where],
       class: "form-control",
@@ -19,7 +19,7 @@
     <% @listings.each do |listing|%>
       <%= link_to listing_path(listing) do  %>
         <div>
-          <div class='listing-card-title'><p>  
+          <div class='listing-card-title'><p>
             <%= listing.location %></p><div class='listing-card-title-money'><p><p><%= listing.currency%><%= listing.currency_amount %></p></div></div>
           <p><%= listing.user.first_name  %> <%= listing.user.last_name %></p>
           <p><%= listing.message %></p>
