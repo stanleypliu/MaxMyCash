@@ -13,7 +13,7 @@ if (dropdownInput) {
 	  fetch(ratesURL).then(response => response.json()).then((data) => {
 	    document.querySelector('.exchanged-currency').innerHTML = "";
 	    const exchanged_amount = (currencyAmount / data.rates[dropdownInputSplit]).toFixed(2);
-	    exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><h3>You'll get <b>${exchanged_amount} Euros</b> back<h3>!</div></br>`);
+	    exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><h3>You'll get <b>${exchanged_amount} Euros</b> back<h3></div></br>`);
 	  });
 	});
 };
