@@ -4,37 +4,39 @@
   <%= text_field_tag :query,
   params[:query],
   class: "form-control1 special-input",
-  placeholder: "Find a currency" %>
+  placeholder: "Which currency?" %>
 
   <%= text_field_tag :where,
   params[:where],
   class: "form-control1 special-input",
-  placeholder: "Where ?" %>
+  placeholder: "Where?" %>
 
   <%= submit_tag "Search", class: "btn btn-primary", id: "a1" %>
 <% end %>
 
-<div class="container">
+<div class="list-cont">
   <div class="lhs-index">
     <% @listings.each do |listing|%>
       <%= link_to listing_path(listing) do  %>
         <div class="listing-card">
           <div class='listing-card-title'>
-            <h5><strong><%= listing.location %></strong></h5>
-            <h5><strong><%= listing.currency%> <%= listing.currency_amount %></strong></h5>
+            <h5><strong>Location: <%= listing.location.capitalize %></strong></h5>
+            <h5><strong><%= listing.currency %> <%= listing.currency_amount %></strong></h5>
           </div>
-          <p><%= listing.user.first_name  %> <%= listing.user.last_name %></p>
-          <p><%= listing.message %></p>
+          <p>Contact: <%= listing.user.email %></p>
+          <p>Message: <%= listing.message %></p>
         </div>
       <% end %>
     <% end %>
   </div>
+
+
   <div class="rhs-index">
     <div id="map"
-     style="width: 100%;
-     height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div>
+       style="width: 100%;
+       height: 600px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
   </div>
 </div>
