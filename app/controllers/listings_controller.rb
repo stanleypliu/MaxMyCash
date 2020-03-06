@@ -12,8 +12,13 @@ class ListingsController < ApplicationController
     else
       @listings = Listing.all
     end
-    # raise
-    #not complete because this needs a map as well
+    @listings = Listing.geocoded # returns flats with coordinates
+    @markers = @listings.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude
+      } 
+    end
   end
 
   def show
