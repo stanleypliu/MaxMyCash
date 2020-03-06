@@ -1,13 +1,21 @@
 .currency-span {
-  background-color: rgb(150,150,150);
+  background-color: #F0E68C;
   // border: 1px solid black;
   border-radius: 20px;
   padding: 25px 30px;
+  margin-bottom: 12px;
 }
-.currency-span h3 {
-  margin-bottom: 0px;
+
+.currency-span p {
+  margin-bottom: none;
+
 }
 .exchanged-currency {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
   display: flex;
   justify-content: center;
 }

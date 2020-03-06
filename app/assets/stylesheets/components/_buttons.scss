@@ -15,3 +15,16 @@
   text-decoration: none;
   color: black;
 }
+
+.blue-gradient-button {
+  background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.blue-gradient-button:hover {
+  opacity: 3;
+  text-decoration: none;
+  color: white;
+}
