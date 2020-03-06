@@ -2,8 +2,7 @@ class ListingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :new]
 
   def index
-    # @listings = Listing.all
-    #@listings = Listing.where(transaction_completed: false)  
+    
     if params[:query].present?
       @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
       if params[:where].present?
@@ -12,7 +11,8 @@ class ListingsController < ApplicationController
     else
       @listings = Listing.all
     end
-    @listings = Listing.geocoded # returns flats with coordinates
+
+  #  @listings = Listing.geocoded # returns flats with coordinates
     @markers = @listings.map do |listing|
       {
         lat: listing.latitude,
