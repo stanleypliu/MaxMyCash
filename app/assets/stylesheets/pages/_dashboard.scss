@@ -34,6 +34,7 @@
 .tab-pane {
   height: 68vh;
   overflow: scroll;
+  padding: 8px;
 }
 
 .running-total {
@@ -51,7 +52,9 @@
 }
 
 
-
+.nav {
+  margin-left: 5px;
+}
 
 
 
