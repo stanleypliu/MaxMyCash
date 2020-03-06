@@ -24,7 +24,7 @@
   padding-left: 8px;
   margin-left: 8px;
   margin-bottom: 32px;
-  text-align: left;
+  align-items: left !important;
 }
 .navbar-link {
   color: $text-color-gray !important;
@@ -44,12 +44,14 @@
 h1.home {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  align-items: left !important;
 }
 
 .home-description {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   color: white;
   padding: 16px;
+  text-align: left;
 }
 
 .home-buttons {
