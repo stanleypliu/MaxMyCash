@@ -19,16 +19,24 @@
     <% @listings.each do |listing|%>
       <%= link_to listing_path(listing) do  %>
         <div>
-          <div class='listing-card-title'><p>  
-            <%= listing.location %></p><div class='listing-card-title-money'><p><p><%= listing.currency%><%= listing.currency_amount %></p></div></div>
+          <div class='listing-card-title'>
+            <p><%= listing.location %></p>
+            <div class='listing-card-title-money'>
+                <p><%= listing.currency%><%= listing.currency_amount %></p>
+            </div>
+          </div>
           <p><%= listing.user.first_name  %> <%= listing.user.last_name %></p>
           <p><%= listing.message %></p>
         </div>
       <% end %>
     <% end %>
   </div>
-
   <div class="rhs-index">
-    <!-- maps goes in here -->
+    <div id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
   </div>
 </div>
