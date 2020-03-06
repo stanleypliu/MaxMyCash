@@ -3,15 +3,18 @@
 
     <div class="user-info">
       <h4 class="user-greeting">Hello, <%= @current_user.email %>!</h4>
-      <%= image_tag 'logo.png', alt: "temp", class: 'avatar-dash' %>
-      <p class="running-total"> Units exchanged:
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, alt: "temp", class: 'avatar-dash', gravity: :face, crop: :thumb %>
+      <% else %>
+        <%= image_tag 'logo.png', alt: "temp", class: 'avatar-dash' %>
+      <% end %>
+      <p class="running-total"> You've exchanged €
         <% if current_user.running_total == 0  %>
           <strong><%= "Nothing yet, make your first exchange!" %></strong>
         <% else %>
-          <strong><%= current_user.running_total %></strong></p>
+          <strong><%= current_user.running_total %></strong> so far!</p>
         <% end %>
     </div>
-
     <div class="user-content-container">
       <div class="nav" id="nav-tab" role="tablist">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -22,7 +25,7 @@
             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">My requests</a>
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">My requests <span class="bg-primary">(<%= @my_bookings.where(booking_status: false).count %>)</span></a>
           </li>
         </ul>
       </div>

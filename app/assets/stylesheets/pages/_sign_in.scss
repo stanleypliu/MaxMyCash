@@ -10,8 +10,16 @@
   }
 }
 
+.logo-title-white {
+  font-weight: bold;
+  color: white;
+  span {
+    color: $purple
+  }
+}
+
 .sign-in-card {
-  margin: 48px auto;
+  margin: 24px auto;
   background-color: #FFFFFF;
   padding-right: 48px;
   padding-left: 48px;
