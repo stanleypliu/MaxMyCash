@@ -87,9 +87,11 @@
                 </div>
                 <div class="dashboard-tab-card-buttons">
                   <% if booking.booking_status == false %>
+                    <%= link_to "message", booking_chatrooms_path(booking), method: :post, class: "btn btn-outline-dark" %>
                     <%= link_to 'accept', listing_booking_path([booking.listing], [booking]), method: :patch, class: "btn btn-outline-primary" %>
                     <%= link_to 'refuse', delete_booking_path(booking), method: :delete, class: "btn btn-outline-danger" %>
                   <% else %>
+                    <%= link_to "message", booking_chatrooms_path(booking), method: :post, class: "btn btn-outline-dark" %>
                     <%= link_to 'Cancel', delete_booking_path(booking), method: :delete, class: "btn btn-outline-danger"%>
                   <% end %>
                 </div>
