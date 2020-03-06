@@ -1,10 +1,16 @@
-<div id="home-container">
-  <div class="home-video-wrapper">
-    <%= video_tag "Money.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video"%>
-      <h2 class="home-description">change your cash for cash</h2>
-  </div>
-  <div class="home-buttons">
-    <%= link_to "Exchange My Cash", new_listing_path, class: "btn btn-primary" %>
-    <%= link_to "Browse Active Listings", listings_path, class: "btn btn-secondary" %>
+<div class="dark-bg">
+  <div class="container">
+    <div class="d-flex home-container">
+      <div class="left w-50">
+        <h1 class="home-description">Exchange left over cash <br> for digital money <br>anywhere you are.</h1>
+        <p class="revonew-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nobis deleniti eaque vero ut ipsa nostrum reprehenderit ipsam ex molestias incidunt maxime quasi, nesciunt labore facere, minima. Iste, numquam, iusto.</p>
+        <%= link_to "Cash exchanges near you", listings_path, class: "blue-gradient-button-home" %>
+      </div>
+
+      <div class="right w-50">
+        <%= image_tag "hugo-payment-error.png", alt: "money", class: "home-img" %>
+      </div>
+    </div>
+
   </div>
 </div>

@@ -1,35 +1,61 @@
-// Specific CSS for your home-page
-.home_video {
-  width: 100vw;
+// // Specific CSS for your home-page
+// .home_video {
+//   width: 100vw;
+//   height: 100vh;
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+//   object-fit: cover;
+//   top: 0;
+//   z-index: -2;
+// }
+
+// .home-video-wrapper {
+//   height: 100%;
+//   display: flex;
+// }
+
+// .home-container {
+//   background-color: linear-gradient(#232526, #414345);
+// }
+
+.revonew-description {
+  color: $text-color-gray;
+  padding-left: 8px;
+  margin-left: 8px;
+  margin-bottom: 32px;
+}
+.navbar-link {
+  color: $text-color-gray !important;
+}
+.dark-bg {
+  background: $gradient-dark;
+}
+.home-container {
   height: 100vh;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  object-fit: cover;
-  top: 0;
-  z-index: -2;
+  // needs to be a flexbox to work
+  align-items: center;
 }
 
-.home-video-wrapper {
-  height: 100%;
-  display: flex;
+.home-img {
+  width: 100%;
 }
-
 h1.home {
-  color: black;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .home-description {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  color: black;
+  color: white;
+  padding: 16px;
 }
 
 .home-buttons {
   padding: 16px;
 }
 
-.home-description {
-  padding: 16px;
-  margin-top:208px;
+.dropdown-item {
+  color: #999C9F;
 }
+

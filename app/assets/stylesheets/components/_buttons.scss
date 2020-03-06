@@ -16,9 +16,27 @@
   color: black;
 }
 
+.blue-gradient-button-home {
+  background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
+  color: white;
+  padding: 8px 48px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-left:16px;
+}
+
+.blue-gradient-button-home:hover {
+  opacity: 3;
+  text-decoration: none;
+  color: white;
+}
+
 .blue-gradient-button {
   background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
   color: white;
+  padding: 8px 48px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
   border-radius: 8px;
   width: 100%;
 }
@@ -27,4 +45,14 @@
   opacity: 3;
   text-decoration: none;
   color: white;
+}
+
+.black-gradient-button {
+  background: $gradient-dark;
+  color: white;
+  padding: 8px 48px;
+  border-radius: 8px;
+  &:hover {
+    background-color: #464C53;
+  }
 }

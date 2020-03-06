@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,18 +22,27 @@
 .navbar-link {
   color: black !important;
   text-decoration: none !important;
+  margin-left: 32px;
 }
 
-.navbar-item:after {
-  content: '';
-  display: block;
-  height: 1.5px;
-  width: 0;
-  background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+.navbar-item {
+  margin-right: 24px;
 }
-.navbar-item:hover:after {
-  width: 100%;
-  background: black;
-  transition: width .5s ease, background-color .5s ease;
-}
+
+// .nav-item {
+//   align-text: left;
+// }
+
+// .navbar-item:after {
+//   content: '';
+//   display: block;
+//   height: 1.5px;
+//   width: 0;
+//   background: transparent;
+//   transition: width .5s ease, background-color .5s ease;
+// }
+// .navbar-item:hover:after {
+//   width: 100%;
+//   background: black;
+//   transition: width .5s ease, background-color .5s ease;
+// }
