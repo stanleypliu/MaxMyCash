@@ -1,4 +1,5 @@
-
+<% content_for :meta_title, "Book your #{@listing.currency} on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, "Find exchanges for #{@listing.currency} and so much more on Revonew" %>
 
 <div class='container'>
   <div class="listing-card-title"><p> Where ? => <%= @listing.location %></p><div class="listing-card-title-money"><p><p> What ? => <%= @listing.currency %> <%= @listing.currency_amount %></p></div></div>
