@@ -8,11 +8,11 @@
       <% else %>
         <%= image_tag 'logo.png', alt: "temp", class: 'avatar-dash' %>
       <% end %>
-      <p class="running-total"> You've exchanged €
-        <% if current_user.running_total == 0  %>
-          <strong><%= "Nothing yet, make your first exchange!" %></strong>
+      <p class="running-total">
+        <% if current_user.running_total != 0 %>
+        <p> You've exchanged € <%= current_user.running_total %> so far!</p>
         <% else %>
-          <strong><%= current_user.running_total %></strong> so far!</p>
+        <p>Nothing exchanged yet, make your first exchange today! 😄</p>
         <% end %>
     </div>
     <div class="user-content-container">
