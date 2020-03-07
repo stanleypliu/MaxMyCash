@@ -1,5 +1,5 @@
 .nav-link {
-	color: black !important;
+	color:$text-color-gray !important;
 }
 
 .user-greeting {
@@ -10,7 +10,9 @@
   width: 300px;
   align-items: center;
   padding: 40px;
+  border-radius: 4px;
   margin: 10px;
+  color: $text-color-gray;
   background-color: white;
 }
 
@@ -19,6 +21,8 @@
   width: 100%;
   padding: 40px;
   margin: 10px;
+  border-radius: 4px;
+  color: $text-color-gray;
   background-color: white;
 }
 
@@ -26,7 +30,7 @@
   background-color: white;
   padding: 16px;
   margin-bottom: 16px;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   width: 100%;
 
