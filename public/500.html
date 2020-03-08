@@ -3,18 +3,83 @@
 <head>
   <title>RevoNope - 500</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap">
   <style>
+    * {
+      font-family: 'Nunito', 'Helvetica', sans-serif;
+    }
 
+    body {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .dialog {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      background-image: linear-gradient(45deg, rgba(70,76,83,0.95) 0%, rgba(28,33,37,0.93) 100%), url('images/dishevelled-dollar.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .blue-gradient-button {
+      background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
+      color: white;
+      padding: 8px 48px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .blue-gradient-button:hover {
+      opacity: 3;
+      text-decoration: none;
+      color: white;
+    }
+
+    .error-message-container {
+      margin-bottom: 30px;
+    }
+
+    #error-message {
+      color: red;
+    }
+
+    .home-button {
+      margin-top: 30px;
+    }
+
+    .revonope {
+      font-size: 40px;
+    }
+
+    .title-flair {
+      color: red;
+    }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>No money, no honey.</h1>
+  <div class="container">
+    <div class="dialog">
+      <div class="revonope">
+        <h1>Revo<span class="title-flair">Nope</span></h1>
+      </div>
+      <div class="error-message-container">
+        <h1>No money, no honey. That's a <span id="error-message">500</span>.</h1>
+      </div>
+      <p>Oops, something went wrong. We sincerely apologise.</p>
+      <div class="home-button">
+        <a href="#" class="blue-gradient-button">Go back home</a>
+      </div>
     </div>
-    <p>Oops, something went wrong. Why don't you head back home and have another go?</p>
   </div>
 </body>
 </html>
