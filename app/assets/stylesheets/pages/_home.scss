@@ -24,11 +24,15 @@
   padding-left: 8px;
   margin-left: 8px;
   margin-bottom: 32px;
+  font-size: 23px;
   align-items: left !important;
 }
 .navbar-link {
   color: $text-color-gray !important;
 }
+
+
+
 .dark-bg {
   background: $gradient-dark;
 }
@@ -50,6 +54,7 @@ h1.home {
 .home-description {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   color: white;
+  font-size: 51px;
   text-align: left;
 }
 
@@ -61,3 +66,23 @@ h1.home {
   color: #999C9F;
 }
 
+.footnote-container {
+  display: flex;
+  font-style: italic;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: $text-color-gray;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 6px;
+}
+
+.footnote-container p {
+  margin: 10px;
+}
+
+.acknowledgments {
+  font-style: normal;
+  text-align: right;
+  color: white;
+}
