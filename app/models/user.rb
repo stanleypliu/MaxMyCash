@@ -15,7 +15,7 @@ class User < ApplicationRecord
   def running_total
     @sum = 0
     self.requested_bookings.each do |booking|
-      @sum += booking.listing.currency_amount
+      @sum += booking.listing.currency_amount.to_i
     end
     @sum
   end
