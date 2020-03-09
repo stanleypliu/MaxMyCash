@@ -31,7 +31,10 @@
   color: $text-color-gray !important;
 }
 
-
+.disclaimer {
+  color: $text-color-gray;
+  font-style: italic;
+}
 
 .dark-bg {
   background: $gradient-dark;
@@ -68,21 +71,25 @@ h1.home {
 
 .footnote-container {
   display: flex;
-  font-style: italic;
   padding-bottom: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
-  color: $text-color-gray;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 12px 6px;
+  color: white;
+  background-color: $gray;
 }
 
 .footnote-container p {
   margin: 10px;
 }
 
+.fluff {
+  display: flex;
+  justify-content: space-between;
+}
+
 .acknowledgments {
   font-style: normal;
-  text-align: right;
-  color: white;
+  text-align: left;
 }
