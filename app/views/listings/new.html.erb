@@ -1,16 +1,22 @@
 
-<div class="listing-container">
-  <div class="card-box-shadow">
-    <h3>Exchange your cash</h3>
+<div class="container">
+  <div class="d-flex listing-container">
+    <div class="payment w-50">
+      <%#= image_tag "ginger-cat.png", alt: "kitty banking" %>
+      <%= image_tag "payment-processed.png", alt: "payment processed" %>
+    </div>
+    <div class="card-box-shadow w-50">
+      <h2>Exchange your cash</h2>
 
-    <%= simple_form_for(@listing) do |f| %>
-      <%= f.input :currency_amount, input_html: {class: 'currency-amount'} %>
-      <%= f.input :currency, collection: @currencies, input_html: {class: 'dropdown-currency'} %>
-      <div class="exchanged-currency"></div>
-      <%= f.input :location %>
-      <%= f.input :message %>
-      <%= f.submit 'Create listing', class: 'blue-gradient-button' %>
-    <% end %>
+      <%= simple_form_for(@listing) do |f| %>
+        <%= f.input :currency_amount, input_html: {class: 'currency-amount'} %>
+        <%= f.input :currency, collection: @currencies, input_html: {class: 'dropdown-currency'} %>
+        <div class="exchanged-currency"></div>
+        <%= f.input :location %>
+        <%= f.input :message %>
+        <%= f.submit 'Create listing', class: 'blue-gradient-button' %>
+      <% end %>
+    </div>
   </div>
 </div>
 <!-- ff + tab => form -->

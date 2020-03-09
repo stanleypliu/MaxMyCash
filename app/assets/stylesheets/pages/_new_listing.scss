@@ -15,13 +15,40 @@
   justify-content: center;
 }
 
+// .card-box-shadow {
+//   border-top: 3px solid black;
+//   border-right: 3px solid black;
+// }
+
 .listing-container {
   display: flex;
   justify-content: center;
   margin-top: 24px;
+  // background: url("ginger-cat.png");
+  // background-size: cover;
+  // background-repeat: none;
+  // background-position: left;
 }
 
-.listing-container h3 {
+// .cats img {
+//   height: 500px;
+//   width: 500px;
+// }
+
+.payment img {
+  height: 600px;
+  width: 850px;
+  top: 50px;
+  left: 0px;
+  position: absolute;
+}
+
+// .card-box-shadow {
+//   background-color: rgba(255, 255, 255, 0.5);
+// }
+
+
+.listing-container h2 {
   text-align: center;
   padding: 20px 10px;
 }
@@ -41,6 +68,10 @@
 form abbr[title] {
   border-bottom: none !important;
   text-decoration: none !important;
+}
+
+label {
+  font-size: 18px;
 }
 
 abbr {
