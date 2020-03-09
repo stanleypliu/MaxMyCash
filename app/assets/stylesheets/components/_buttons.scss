@@ -18,8 +18,8 @@
 
 .blue-gradient-button-home {
   background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
-  // color: white;
-  color: #0f141b;
+  color: white;
+  // color: #0f141b;
   padding: 12px 35px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   font-size: 18px;
@@ -33,7 +33,7 @@
 .blue-gradient-button-home:hover {
   opacity: 3;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .blue-gradient-button {
