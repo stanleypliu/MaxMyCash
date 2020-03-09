@@ -24,7 +24,7 @@
             <h5><strong><%= listing.currency %> <%= listing.currency_amount %></strong></h5>
           </div>
           <p>Contact: <%= listing.user.email %></p>
-          <p>Message: <%= listing.message %></p>
+          <p>Message: <%= listing.message %> <%= link_to "book me", listing_bookings_path(listing), method: :post, class: "btn red" %> </p>
         </div>
       <% end %>
     <% end %>
