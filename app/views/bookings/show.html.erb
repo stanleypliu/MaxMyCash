@@ -1,5 +1,24 @@
-<h1>Congratulations! You've made a booking! 🎊</h1>
 
-<p>You're booked in with <%= @booking.listing.user.first_name %> <%= @booking.listing.user.first_name %></p>
+<div id="sky">
 
-<%= link_to 'View my bookings', dashboard_path  %>
+  <div class="announcementcard">
+    <h1 class="title">You've made a booking! </h1>
+
+    <p><%= @booking.listing.user.first_name.capitalize %> <%= @booking.listing.user.last_name.capitalize %> will be exchanging the cash with you!</p>
+
+      <p>Meet them in <%= @booking.listing.location %>  </p>
+
+    <%= link_to 'View my bookings', dashboard_path  %>
+  </div>
+  <div id="cloud1" class="cloud"></div>
+  <div id="cloud2" class="cloud"></div>
+  <div id="cloud3" class="cloud"></div>
+  <div id="cloud4" class="cloud"></div>
+  <div id="cloud5" class="cloud"></div>
+  <div id="cloud6" class="cloud"></div>
+  <div id="cloud7" class="cloud"></div>
+  <div id="aeroplane"></div>
+  <div id="aeroplaner"></div>
+</div>
+<div class="ground"></div>
+<div class="nav-filler"></div>
