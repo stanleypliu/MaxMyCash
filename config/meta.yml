@@ -1,5 +1,5 @@
 meta_product_name: "Revonew"
 meta_title: "Revonew - Max Your Ca$h"
 meta_description: "Exchange your cash directly with other people, with zero commission"
-meta_image: "logo.png" # should exist in `app/assets/images/`
+meta_image: "og-image.jpg" # should exist in `app/assets/images/`
   # required for Twitter Cards
