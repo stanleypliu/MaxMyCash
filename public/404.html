@@ -4,15 +4,16 @@
   <title>RevoNonExistent - 404</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <style>
-* {
+    * {
       font-family: 'Nunito', 'Helvetica', sans-serif;
     }
 
     body {
+      margin: 0;
       color: white;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-      /*margin: none;*/
     }
 
     .dialog {
@@ -22,10 +23,14 @@
     .container {
       display: flex;
       justify-content: center;
-      background-image: linear-gradient(45deg, rgba(70,76,83,0.95) 0%, rgba(28,33,37,0.93) 100%);
-      background-size: cover;
-      background-position: center;
+      align-items: center;
+      /*background-image: linear-gradient(45deg, rgba(70,76,83,0.95) 0%, rgba(28,33,37,0.93) 100%);*/
+      background: transparent;
       height: 100vh;
+    }
+
+    .home-button {
+      padding-top: 30px;
     }
 
     .blue-gradient-button {
@@ -44,10 +49,6 @@
       color: white;
     }
 
-    .error-message-container {
-      margin-bottom: 30px;
-    }
-
     #error-message {
       color: red;
     }
@@ -56,28 +57,83 @@
       margin-top: 30px;
     }
 
-    .revonope {
-      font-size: 40px;
+    h1 {
+      font-size: 3.5rem;
     }
 
     .title-flair {
       color: red;
+    }
+
+    .navbar-lewagon {
+      justify-content: space-between;
+      background: transparent;
+      width: 100%;
+    }
+
+    .navbar-lewagon .navbar-collapse {
+      flex-grow: 0;
+    }
+
+    .navbar-lewagon .navbar-brand img {
+      width: 40px;
+    }
+
+    .logo-title-white {
+      /*text-shadow: 1px 1px 3px rgba(0,0,0,0.2);*/
+      color: white;
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .navbar-link {
+      color: black !important;
+      text-decoration: none !important;
+      margin-left: 32px;
+    }
+
+    .dropdown-item:hover {
+      border-radius: 8px;
+    }
+
+    .navbar-item {
+      margin-right: 24px;
+    }
+
+    .dark-bg {
+      background: linear-gradient(45deg, rgba(70,76,83,0.8) 0%, rgba(28,33,37,0.95) 70.71%), url('images/maneki-neko.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .logo-span {
+      color: #8B88F8;
     }
   </style>
 </head>
 
 <body >
   <!-- This file lives in public/404.html -->
-  <div class="container">
-    <div class="dialog">
-      <div class="revonope">
-        <h1>Revo<span class="title-flair">NonExistent</span></h1>
-      </div>
-      <div class="error-message-container">
-        <h1>Sorry, the page you were looking for doesn't exist. That's a <span id="error-message">404</span>.</h1>
-      </div>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+    <div class="d-flex align-items-center">
+      <a href="#" class="navbar-brand"><h2 class="logo-title-white">Revo<span class="logo-span">new</span></h2></a>
+    </div>
+  </div>
+  <div class="dark-bg">
+    <div class="container">
+      <div class="dialog">
+        <!-- <div class="revonope"> -->
+          <!-- <h1>Revo<span class="title-flair">NonExistent</span></h1> -->
+        <!-- </div> -->
+        <div class="error-message-container">
+          <h1>Sorry, the page you were looking for doesn't exist. That's a <span id="error-message">404</span>.</h1>
+        </div>
         <p>You may have mistyped the address or the page may have moved.</p>
-        <a href="#" class="blue-gradient-button">Go back home</a>
+        <div class="home-button">
+          <a href="/" class="blue-gradient-button">Go back home</a>
+        </div>
+      </div>
     </div>
   </div>
 </body>
