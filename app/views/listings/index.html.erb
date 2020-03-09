@@ -44,8 +44,10 @@
                 <% time_yest = Time.now - (24*60*60) %>
                 <p class="created-at"><strong>created <%= distance_of_time_in_words(Time.now, listing.created_at) %> ago</strong></p>
               </div>
+              <%= link_to "book me", listing_bookings_path(listing), method: :post, class: "btn red" %> </p>
             </div>
           </div>
+
         <% end %>
       <% end %>
     </div>
