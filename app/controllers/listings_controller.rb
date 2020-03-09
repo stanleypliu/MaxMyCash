@@ -2,14 +2,14 @@ class ListingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :new]
 
   def index
-    
+
     if params[:query].present?
       @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
       if params[:where].present?
         @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
       end
     else
-      @listings = Listing.all
+      @listings = Listing.all.sort_by { |listing| listing.created_at }.reverse! # having it sort by most recently made
     end
 
   #  @listings = Listing.geocoded # returns flats with coordinates
@@ -19,6 +19,7 @@ class ListingsController < ApplicationController
         lng: listing.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { listing: listing })
       } 
+
     end
   end
 

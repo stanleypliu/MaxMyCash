@@ -1,3 +1,10 @@
+#index-page-cont {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 h1 {
   color: $text-color-gray;
   text-align: left;
@@ -18,11 +25,38 @@ h1 {
   border-color: 1px solid #6864f6;
   border-style: groove;
 }
-.listing-card-title {
+
+.listing-top {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
+
+.loc-cur {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.work-pls{
+  display:flex;
+  justify-content: space-between;
+}
+.user-email {
+  margin: 0px;
+}
+
+.listing-bottom {
+  color: $text-color-gray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.created-at {
+  color: $text-color-gray;
+  font-size: 14px;
+  margin: 0px;
+}
+
 #a1 {
   margin: 1%;
   margin: 0 !important;
@@ -43,6 +77,8 @@ h1 {
   height: 82vh;
   overflow: scroll;
   padding: 8px;
+  flex-direction: column;
+  display:flex;
   margin-top: 19px;
 }
 .rhs-index {

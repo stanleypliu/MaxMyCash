@@ -18,8 +18,8 @@
 
 .blue-gradient-button-home {
   background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
-  // color: white;
-  color: #0f141b;
+  color: white;
+  // color: #0f141b;
   padding: 12px 35px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   font-size: 18px;
@@ -33,7 +33,7 @@
 .blue-gradient-button-home:hover {
   opacity: 3;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .blue-gradient-button {
@@ -65,25 +65,46 @@
   }
 }
 
-.message-button {
-  color: $green-rev;
-  background-color: transparent;
-  background-image: none;
-  border-color: $green-rev;
-  display: inline-block;
-  font-weight: 400;
+// .message-button {
+//   color: $green-rev;
+//   background-color: transparent;
+//   background-image: none;
+//   border-color: $green-rev;
+//   display: inline-block;
+//   font-weight: 400;
+//   text-align: center;
+//   white-space: nowrap;
+//   vertical-align: middle;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   border: 1px solid transparent;
+//   padding: .375rem .75rem;
+//   font-size: 1rem;
+//   line-height: 1.5;
+//   border-radius: .25rem;
+//   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+// }
+
+.just-added {
+  background-color: #62D783;
+  /* height: 24px; */
+  max-height: 14px;
+  width: 56px;
+  border-radius: 4px;
   text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: white;
+  margin-left: 4px;
+  font-size: 10px;
 }
+
+
+
+
+
+
+
+
+
 
