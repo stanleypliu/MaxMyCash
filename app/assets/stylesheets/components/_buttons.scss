@@ -39,9 +39,12 @@
 .blue-gradient-button {
   background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
   color: white;
-  padding: 8px 48px;
+  padding: 12px 35px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  font-size: 18px;
   border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
   width: 100%;
 }
 
