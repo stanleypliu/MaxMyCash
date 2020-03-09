@@ -1,0 +1,10 @@
+.special-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
+  .special-input {
+    width: 40%;
+    padding-left: 4px;
+  }
+}
