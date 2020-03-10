@@ -3,6 +3,7 @@ const ratesURL = `http://data.fixer.io/api/latest?access_key=6be59aaac4ccb088b8d
 const exchangedCurrency = document.querySelector('.exchanged-currency');
 const dropdownInput = document.querySelector('.dropdown-currency');
 const currencyAmount = document.querySelector('.currency-amount');
+const newListingForm = document.querySelector('new-listing-form');
 
 
 if (dropdownInput) {
@@ -33,3 +34,7 @@ if (currencyAmount) {
     });
   });
 };
+
+// newListingForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+// });
