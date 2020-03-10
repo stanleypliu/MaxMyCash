@@ -109,13 +109,13 @@
 .button-book {
   background-color: #253493;
   color: white;
-  max-height: 24px;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  padding-right: 2px;
+  // max-height: 24px;
+  padding: 8px 16px;
   border-radius: 4px;
-  margin-left: 4px;
-  width: 69px;
+  // margin-left: 4px;
+  display: inline-block;
+  margin-top: 5px;
+  // width: 69px;
 }
 
 
