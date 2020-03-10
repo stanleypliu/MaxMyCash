@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= 'fixed-top' if params[:action] == 'home' %>">
-  <div class="d-flex align-items-center">
+  <div class="d-flex align-items-center navbar-left">
     <%= link_to root_path, class: "navbar-brand" do %>
       <h2 class="<%= params[:action] == ('home'||'listings.index') ? 'logo-title-white' : 'logo-title-dark' %>">Revo<span>new</span></h2>
     <% end %>
