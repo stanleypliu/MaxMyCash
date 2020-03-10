@@ -31,7 +31,10 @@
   color: $text-color-gray !important;
 }
 
-
+.disclaimer {
+  color: $text-color-gray;
+  font-style: italic;
+}
 
 .dark-bg {
   background: $gradient-dark;
@@ -68,21 +71,43 @@ h1.home {
 
 .footnote-container {
   display: flex;
-  font-style: italic;
   padding-bottom: 10px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
-  color: $text-color-gray;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  // border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 12px 6px;
+  color: white;
+  background: linear-gradient(45deg, rgba(57,60,64,0.8211659663865546), rgba(14,17,20,0.8267682072829132) 127.71%);
+  // background: linear-gradient(45deg, rgba(15,33,56,0.8211659663865546), rgba(14,17,20,0.8267682072829132) 127.71%);
 }
 
 .footnote-container p {
   margin: 10px;
 }
 
+.fluff {
+  display: flex;
+  justify-content: space-between;
+}
+
 .acknowledgments {
+  // flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-style: normal;
-  text-align: right;
+  text-align: left;
+}
+
+.footer-link {
   color: white;
+  transition: 0.2s;
+  &:hover {
+    color: #8B88F8;
+  }
+}
+
+
+.fab {
+  font-size: x-large;
 }
