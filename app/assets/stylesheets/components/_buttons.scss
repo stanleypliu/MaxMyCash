@@ -130,3 +130,27 @@
     }
 }
 
+.button-edit {
+  opacity: 0.7;
+  transition: 0.2s;
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 3px;
+  padding: 5px 15px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.button-delete {
+  opacity: 0.7;
+  transition: 0.2s;
+  color: red;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 5px 15px;
+    &:hover {
+    opacity: 1;
+    color: red;
+  }
+}

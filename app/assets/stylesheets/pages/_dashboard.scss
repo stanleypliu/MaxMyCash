@@ -1,19 +1,71 @@
 .nav-link {
-	color:$text-color-gray !important;
+	color: black !important;
 }
 
-.user-greeting {
-  text-align: center;
+.nav-item {
+  font-size: 20px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: white;
+  border-color: white;
+  // border-bottom: 3px solid rgb(151, 151, 151);
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+hr {
+  border-top: 2px solid black;
 }
 
 .user-info {
+  text-align: center;
   width: 300px;
   align-items: center;
-  padding: 40px;
+  padding: 25px;
   border-radius: 4px;
   margin: 10px;
   color: $text-color-gray;
   background-color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.tab-pane {
+  overflow-x: hidden;
+  height: 64vh;
+  border: none;
+}
+
+.tab-pane.fade.show.active {
+  overflow-x: hidden;
+  height: 64vh;
+}
+
+.tab-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-card-location {
+  color: black;
+  font-weight: bold;
+}
+
+.tab-card-lower-half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-card-message {
+  align-items: center;
 }
 
 .user-content-container {
@@ -24,17 +76,22 @@
   border-radius: 4px;
   color: $text-color-gray;
   background-color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 .tab-card-styling {
   background-color: white;
-  padding: 16px;
+  padding: 28px;
   margin-bottom: 16px;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   width: 100%;
-
 }
+
+.tab-card-currency {
+  text-align: right;
+}
+
 .tab-pane {
   height: 68vh;
   overflow: scroll;
@@ -77,7 +134,34 @@ a {
     color: red !important;
 }
 
-
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: rgb(151, 151, 151);
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
 
 
 
