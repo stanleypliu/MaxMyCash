@@ -8,7 +8,7 @@
     <div class="card-box-shadow w-50">
       <h2>Exchange your cash</h2>
 
-      <%= simple_form_for(@listing), input_html: {class: 'new-listing-form'} do |f| %>
+      <%= simple_form_for(@listing) do |f| %>
         <%= f.input :currency_amount, input_html: {class: 'currency-amount'} %>
         <%= f.input :currency, collection: @currencies, input_html: {class: 'dropdown-currency'} %>
         <div class="exchanged-currency"></div>

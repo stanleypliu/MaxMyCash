@@ -1,3 +1,7 @@
+// body {
+//   background: $gradient-dark;
+//   background-repeat: none;
+// }
 .nav-link {
 	color: black !important;
 }
@@ -68,8 +72,15 @@ hr {
   align-items: center;
 }
 
-.tab-card-message {
+
+.tab-card-request-buttons {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.tab-card-message h5 {
+  color: black;
 }
 
 .user-content-container {
@@ -84,7 +95,7 @@ hr {
 }
 
 .tab-card-styling {
-  background-color: white;
+  background-color: rgba(100,100,100,0.1);
   padding: 28px;
   margin-bottom: 16px;
   border-radius: 4px;
@@ -94,6 +105,11 @@ hr {
 
 .tab-card-currency {
   text-align: right;
+  color: black;
+}
+
+.booking-message {
+  width: 55%;
 }
 
 .tab-card-currency-request {

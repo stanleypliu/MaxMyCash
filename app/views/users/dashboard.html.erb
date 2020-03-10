@@ -10,7 +10,7 @@
       <% end %>
       <p class="running-total"> You've exchanged
         <% if current_user.running_total == 0  %>
-          <strong><%= "nothing yet, make your first exchange!" %></strong>
+          <strong>nothing yet</strong>, make your first exchange!
         <% else %>
           <strong>€<%= current_user.running_total %></strong> so far!</p>
         <% end %>
@@ -70,7 +70,9 @@
             <div class="tab-card-styling">
               <div class="tab-card">
                 <div class="tab-card-heading">
-                  <h4>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h4>
+                  <div class="booking-message">
+                    <h4>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h4>
+                  </div>
                   <div class="tab-card-currency">
                     <h4><%= booking.listing.currency.upcase %></h4>
                     <h4 class="listing-currency-amount"><b><%= booking.listing.currency_amount %></b></h4>
@@ -80,9 +82,9 @@
                 <div class="tab-card-lower-half">
                   <div class="tab-card-message">
                     <% if booking.booking_status == true %>
-                      <h4>Booking confirmed</h4>
+                      <h5>Booking confirmed</h5>
                     <% else %>
-                      <h4>Booking not confirmed yet</h4>
+                      <h5>Booking not confirmed yet</h5>
                     <% end %>
                   </div>
                   <div class="modify-links">
@@ -114,7 +116,7 @@
                   </div>
                 </div>
                 <hr>
-                <div class="tab-card-lower-half">
+                <div class="tab-card-request-buttons">
                   <div class="tab-card-message">
                     <% if booking.booking_status == false %>
                     <%= link_to "MESSAGE", booking_chatrooms_path(booking), method: :post, class: "button-edit" %>
@@ -133,6 +135,7 @@
       </div>
     </div>
   </div>
+
 </div>
 
 
