@@ -12,6 +12,10 @@
   // border-bottom: 3px solid rgb(151, 151, 151);
 }
 
+.nav-tabs .nav-link:hover {
+  border-color: white;
+}
+
 .nav-link.active {
   font-weight: bold;
 }
@@ -90,6 +94,10 @@ hr {
 
 .tab-card-currency {
   text-align: right;
+}
+
+.tab-card-currency-request {
+  display: flex;
 }
 
 .tab-pane {

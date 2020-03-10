@@ -130,6 +130,19 @@
     }
 }
 
+.button-accept {
+  opacity: 0.7;
+  transition: 0.2s;
+  color: green;
+  border: 1px solid green;
+  border-radius: 3px;
+  padding: 5px 15px;
+  &:hover {
+    opacity: 1;
+    color: green
+  }
+}
+
 .button-edit {
   opacity: 0.7;
   transition: 0.2s;
