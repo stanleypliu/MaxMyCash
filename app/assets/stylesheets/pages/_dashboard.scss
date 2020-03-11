@@ -198,11 +198,11 @@ a {
 }
 
 .avatar {
-  position: relative;
-  opacity: 0;
-  -webkit-transition: all .7s ease .7s;
-  transition: all .7s ease .7s;
-  transform: translateY(50px);
+  // position: relative;
+  // opacity: 0;
+  // -webkit-transition: all .7s ease .7s;
+  // transition: all .7s ease .7s;
+  // transform: translateY(50px);
 }
 
 .user-info.showing, .avatar.showing, .running-total.showing {
