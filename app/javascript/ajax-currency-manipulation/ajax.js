@@ -4,6 +4,7 @@ const exchangedCurrency = document.querySelector('.exchanged-currency');
 const dropdownInput = document.querySelector('.dropdown-currency');
 const currencyAmount = document.querySelector('.currency-amount');
 const newListingForm = document.querySelector('new-listing-form');
+const runningTotal = document.querySelector('.running-total');
 
 
 if (dropdownInput) {
@@ -38,3 +39,7 @@ if (currencyAmount) {
 // newListingForm.addEventListener('submit', (event) => {
 //   event.preventDefault();
 // });
+if (runningTotal) {
+
+}
+
