@@ -76,7 +76,7 @@ hr {
 
 .tab-card-request-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -189,4 +189,44 @@ a {
 }
 
 
+.user-info, .running-total {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateY(50px);
+}
 
+.avatar {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .7s ease .7s;
+  transition: all .7s ease .7s;
+  transform: translateY(50px);
+}
+
+.user-info.showing, .avatar.showing, .running-total.showing {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-content-container {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateY(-50px);
+}
+
+.tab-content {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .7s ease .7s;
+  transition: all .7s ease .7s;
+  transform: translateY(50px);
+}
+
+.user-content-container.showing, .tab-content.showing {
+  opacity: 1;
+  transform: translateY(0);
+}
