@@ -19,8 +19,9 @@
       </div>
       <div class="list-cont">
         <% @listings.each do |listing|%>
+          <% if current_user != listing.user %>
             <div class="listing-card">
-       
+
               <div class='listing-top'>
                 <div class="loc-cur">
                   <div class="info">
@@ -48,13 +49,13 @@
                       <% time_yest = Time.now - (24*60*60) %>
                       <strong>created <%= distance_of_time_in_words(Time.now, listing.created_at) %> ago</strong>
                     </p>
-                    <%= link_to "book me", listing_bookings_path(listing), method: :post, class: "button-book" %>
+                      <%= link_to "book me", listing_bookings_path(listing), method: :post, class: "button-book" %>
                 </div>
               </div>
             </div>
 
           <% end %>
-      
+        <% end %>
       </div>
 
 
