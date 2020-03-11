@@ -43,10 +43,12 @@
   height: 100vh;
   // needs to be a flexbox to work
   align-items: center;
+  // position: absolute;
 }
 
 .home-img {
   width: 100%;
+  margin-left: 31px;
 }
 h1.home {
   color: white;
@@ -111,3 +113,29 @@ h1.home {
 .fab {
   font-size: x-large;
 }
+
+.left.w-50 {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateY(50px);
+}
+
+.left.w-50.showing {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.right.w-50 {
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateY(-50px);
+}
+
+.right.w-50.showing {
+  opacity: 1;
+  transform: translateY(0);
+}
+
