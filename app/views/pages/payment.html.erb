@@ -39,7 +39,7 @@
 
       form.addEventListener('submit', function(ev) {
         ev.preventDefault();
-        stripe.confirmCardPayment('<% @client_secret %>', {
+        stripe.confirmCardPayment('<%= @client_secret %>', {
           payment_method: {
             card: card,
             billing_details: {
@@ -54,6 +54,8 @@
             // The payment has been processed!
             if (result.paymentIntent.status === 'succeeded') {
               window.alert('success')
+              window.location.replace("<%= dashboard_path %>")
+
 
               // Show a success message to your customer
               // There's a risk of the customer closing the window before callback
