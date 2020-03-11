@@ -18,6 +18,9 @@ const tabContent = $('.tab-content');
 const payment = $('.payment');
 const listingForm = $('.card-box-shadow');
 
+//Index
+const listingCard = $('.card.m-2.p-4');
+
 $(function () {
   if (left && right) {
     // console.log('success');
@@ -40,6 +43,8 @@ $(function () {
     payment.addClass('showing');
     listingForm.addClass('showing');
   };
-
+  if (window.location.href == "http://www.revonew.xyz/listings" || "http://localhost:3000/listings") {
+    listingCard.addClass('showing');
+  };
 });
 

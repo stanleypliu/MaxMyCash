@@ -30,6 +30,19 @@ hr {
   border-radius: 15px 50px 30px;
  }
 
+ .card.m-2.p-4 {
+   position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+ }
+
+ .card.m-2.p-4.showing {
+  opacity: 1;
+  transform: translateX(0);
+ }
+
 .form-control {
   margin-left: 4px;
   margin-right: 4px;
