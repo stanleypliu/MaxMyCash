@@ -1,70 +1,67 @@
-<div class="cust-container">
+<div class="dark-bg">
+  <div class="cust-container">
+    <div id="index-page-cont">
+      <div class="lhs-index">
+        <div class="search-thing">
+          <%= form_tag listings_path, method: :get, class: "special-form" do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control1 special-input",
+            placeholder: "Which currency?" %>
 
-  <div id="index-page-cont">
-    <div class="lhs-index">
-      <div class="search-thing">
-        <%= form_tag listings_path, method: :get, class: "special-form" do %>
-          <%= text_field_tag :query,
-          params[:query],
-          class: "form-control1 special-input",
-          placeholder: "Which currency?" %>
+            <%= text_field_tag :where,
+            params[:where],
+            class: "form-control1 special-input",
+            placeholder: "Where?" %>
 
-          <%= text_field_tag :where,
-          params[:where],
-          class: "form-control1 special-input",
-          placeholder: "Where?" %>
+            <%= submit_tag "Search", class: "button-search", id: "a1" %>
+          <% end %>
+        </div>
 
-          <%= submit_tag "Search", class: "button-search", id: "a1" %>
-        <% end %>
-      </div>
-      <div class="list-cont">
-        <% @listings.each do |listing|%>
-            <div class="listing-card">
-       
-              <div class='listing-top'>
-                <div class="loc-cur">
-                  <div class="info">
-                    <div class="work-pls">
-                      <p><strong><%= listing.location.capitalize %></strong></p>
-                      <% time_yest = Time.now - (24*60*60) %>
-                      <% if listing.created_at > time_yest %>
-                        <p class="just-added">Just added</p>
-                      <% end %>
+        <div class="list-cont">
+          <% @listings.each do |listing|%>
+              <div class="listing-card">
+                <div class='listing-top'>
+                  <div class="loc-cur">
+                    <div class="info">
+                      <div class="work-pls">
+                        <p><strong><%= listing.location.capitalize %></strong></p>
+                        <% time_yest = Time.now - (24*60*60) %>
+                        <% if listing.created_at > time_yest %>
+                          <p class="just-added">Just added</p>
+                        <% end %>
+                      </div>
+                      <p class="user-email"><%= listing.user.email %></p>
                     </div>
-                    <p class="user-email"><%= listing.user.email %></p>
+                  </div>
+    <!--          <p><%#= Time.now - (24*60*60) %></p>
+                  <p><%#= listing.created_at %></p> -->
+                  <p><strong><%= listing.currency %> <%= listing.currency_amount %></strong></p>
+                </div>
+                <hr>
+                <div class="listing-bottom">
+                  <div class="listing-message">
+                    <p><%= listing.message %></p>
+                  </div>
+                  <div class="listing-created-at">
+                      <p class="created-at">
+                        <% time_yest = Time.now - (24*60*60) %>
+                        <strong>created <%= distance_of_time_in_words(Time.now, listing.created_at) %> ago</strong>
+                      </p>
+                      <%= link_to "book me", listing_bookings_path(listing), method: :post, class: "button-book" %>
                   </div>
                 </div>
-  <!--          <p><%#= Time.now - (24*60*60) %></p>
-                <p><%#= listing.created_at %></p> -->
-                <p><strong><%= listing.currency %> <%= listing.currency_amount %></strong></p>
               </div>
-                <hr>
-              <div class="listing-bottom">
-                <div class="listing-message">
-                  <p><%= listing.message %></p>
-                </div>
-                <div class="listing-created-at">
-                    <p class="created-at">
-                      <% time_yest = Time.now - (24*60*60) %>
-                      <strong>created <%= distance_of_time_in_words(Time.now, listing.created_at) %> ago</strong>
-                    </p>
-                    <%= link_to "book me", listing_bookings_path(listing), method: :post, class: "button-book" %>
-                </div>
-              </div>
-            </div>
-
-          <% end %>
-      
-      </div>
-
-
-    </div>
-    <div class="rhs-index">
-      <div id="map"
-         style="height: 100%;"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            <% end %>
+          </div>
         </div>
+      <div class="rhs-index">
+        <div id="map"
+           style="height: 100%;"
+           data-markers="<%= @markers.to_json %>"
+           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+      </div>
     </div>
   </div>
 </div>

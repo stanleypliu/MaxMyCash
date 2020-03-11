@@ -65,9 +65,8 @@ h1 {
 
 .list-cont {
   padding-top: 14px;
-  max-height: 75vh;
   width: 100%;
-  overflow: scroll;
+  height: 100%;
 }
 .lhs-index {
   width: 40%;
@@ -84,6 +83,9 @@ h1 {
   margin-top: 11px;
   border-radius: 4px;
   margin-bottom: 24px;
+  max-height: 85vh;
+  position: sticky;
+  top: 78px;
 }
 .listing-card {
   width: 100%;
