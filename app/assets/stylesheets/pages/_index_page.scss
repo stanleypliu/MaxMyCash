@@ -28,17 +28,25 @@ hr {
 
  .card {
   border-radius: 15px 50px 30px;
+
  }
 
- .card.m-2.p-4 {
-   position: relative;
+.card:nth-of-type(odd) {
+  position: relative;
   opacity: 0;
   -webkit-transition: all .4s ease .4s;
   transition: all .4s ease .4s;
   transform: translateX(-50px);
- }
+}
 
- .card.m-2.p-4.showing {
+.card:nth-of-type(even) {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .5s ease .5s;
+  transition: all .5s ease .5s;
+  transform: translateX(50px);
+}
+ .card.showing {
   opacity: 1;
   transform: translateX(0);
  }

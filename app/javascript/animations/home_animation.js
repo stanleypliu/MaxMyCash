@@ -19,7 +19,7 @@ const payment = $('.payment');
 const listingForm = $('.card-box-shadow');
 
 //Index
-const listingCard = $('.card.m-2.p-4');
+const listingCard = $('.card');
 
 $(function () {
   if (left && right) {
@@ -44,6 +44,10 @@ $(function () {
     listingForm.addClass('showing');
   };
   if (window.location.href == "http://www.revonew.xyz/listings" || "http://localhost:3000/listings") {
+    // listingCard.each(function(index) {
+      // console.log(index);
+    //   $(this).delay(1000*index).addClass('showing');
+    // });
     listingCard.addClass('showing');
   };
 });
