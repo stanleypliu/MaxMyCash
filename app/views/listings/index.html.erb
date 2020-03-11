@@ -14,38 +14,44 @@
             class: "form-control",
             placeholder: "Where?" %>
 
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <%= submit_tag "Search", class: "btn red" %>
           <% end %>
         </div>
 
         <div class="cards-index pt-3">
           <% @listings.each do |listing|%>
+          <% if current_user != listing.user %>
             <div class="card m-2 p-4">
               <div class="top-listing-card d-flex">
                 <div class="card-top-left">
-                  <%= listing.location %>
-                  <br>
+                  <p class="big-font"><strong><%= listing.location %></strong>
+                    <% time_yest = Time.now - (24*60*60) %>
+                    <% if listing.created_at > time_yest %>
+                      <i class="just-added">Just added</i>
+                    <% end %></p>
                   <%= listing.user.email %>
                 </div>
-                <div class="card-top-right">
+                <div class="card-top-right big-font">
                   <%= listing.currency[0,3] %>
                   <%= listing.currency_amount %>
                 </div>
               </div>
                 <hr>
-              <div class="card-bottom">
+              <div class="card-bottom row px-3">
                   <%= listing.message %>
+                  <%=link_to "book me", listing_bookings_path(listing), method: :post, class: "btn red" %>
               </div>
             </div>
+          <% end %>
           <% end %>
         </div>
       </div>
       <div class="col-6">
-        <div id="map"
-           style="height: 100%;"
-           data-markers="<%= @markers.to_json %>"
-           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
+          <div id="map"
+             style="height: 100%;"
+             data-markers="<%= @markers.to_json %>"
+             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
       </div>
     </div>
   </div>
