@@ -29,6 +29,10 @@
   // background-position: left;
 }
 
+.listing-container.showing {
+
+}
+
 // .cats img {
 //   height: 500px;
 //   width: 500px;
@@ -38,6 +42,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(50px);
+}
+
+.payment.showing {
+    opacity: 1;
+  transform: translateX(0);
 }
 
 .payment img {
@@ -61,6 +75,16 @@
 .card-box-shadow {
   margin-top: 30px;
   width: 40%;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+}
+
+.card-box-shadow.showing {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .blue-gradient-button {

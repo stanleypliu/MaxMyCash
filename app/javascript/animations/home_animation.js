@@ -14,6 +14,10 @@ const runningTotal = $('.running-total');
 const userContent = $('.user-content-container');
 const tabContent = $('.tab-content');
 
+// New listing
+const payment = $('.payment');
+const listingForm = $('.card-box-shadow');
+
 $(function () {
   if (left && right) {
     // console.log('success');
@@ -32,5 +36,10 @@ $(function () {
     userContent.addClass('showing');
     tabContent.addClass('showing');
   };
+  if (window.location.href == "http://www.revonew.xyz/listings/new" || "http://localhost:3000/listings/new") {
+    payment.addClass('showing');
+    listingForm.addClass('showing');
+  };
+
 });
 
