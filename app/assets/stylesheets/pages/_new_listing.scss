@@ -23,7 +23,6 @@
 .listing-container {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
   // background: url("ginger-cat.png");
   // background-size: cover;
   // background-repeat: none;
@@ -35,12 +34,14 @@
 //   width: 500px;
 // }
 
+.payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .payment img {
-  height: 500px;
-  width: 50%;
-  top: 132px;
-  left: 0px;
-  position: absolute;
+  width: 90%;
 }
 
 // .card-box-shadow {
@@ -58,6 +59,7 @@
 }
 
 .card-box-shadow {
+  margin-top: 30px;
   width: 40%;
 }
 
