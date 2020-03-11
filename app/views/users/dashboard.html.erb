@@ -2,7 +2,7 @@
   <div class="d-flex">
 
     <div class="user-info">
-      <h4 class="user-greeting">Hello, <%= @current_user.first_name %>!</h4>
+      <h4 class="user-greeting">Hello, <%= @current_user.email %>!</h4>
       <% if current_user.photo.attached? %>
         <%= cl_image_tag current_user.photo.key, alt: "temp", class: 'avatar-dash', gravity: :face, crop: :thumb %>
       <% else %>
@@ -34,13 +34,13 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <br>
           <% if @listings.empty? %>
-            <h1>Doesn't look like you have any listings at the moment!</h1>
+            <h4>Doesn't look like you have any listings at the moment!</h4>
           <% end %>
           <% @listings.each do |listing| %>
             <div class="tab-card-styling">
               <div class="tab-card">
                 <div class="tab-card-heading">
-                  <h2 class="tab-card-location"><%= listing.location.upcase %></h2>
+                  <h4 class="tab-card-location"><%= listing.location.upcase %></h4>
                   <div class="tab-card-currency">
                     <h4><%= listing.currency.upcase %></h4>
                     <h4 class="listing-currency-amount"><b><%= listing.currency_amount %></b></h4>
@@ -74,8 +74,8 @@
                     <h4>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h4>
                   </div>
                   <div class="tab-card-currency">
-                    <h4><%= booking.listing.currency.upcase %></h4>
-                    <h4 class="listing-currency-amount"><b><%= booking.listing.currency_amount %></b></h4>
+                    <h5><%= booking.listing.currency.upcase %></h5>
+                    <h5 class="listing-currency-amount"><b><%= booking.listing.currency_amount %></b></h5>
                   </div>
                 </div>
                 <hr>
@@ -84,7 +84,7 @@
                     <% if booking.booking_status == true %>
                       <h5>Booking confirmed</h5>
                     <% else %>
-                      <h5>Booking not confirmed yet</h5>
+                      <h6>Booking not confirmed yet</h6>
                     <% end %>
                   </div>
                   <div class="modify-links">
@@ -100,7 +100,7 @@
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <br>
           <% if @my_bookings.empty? %>
-            <h1>Doesn't look like you have any requests at the moment!</h1>
+            <h5>Doesn't look like you have any requests at the moment!</h5>
           <% end %>
           <% @my_bookings.each do |booking| %>
             <div class="tab-card-styling">
@@ -110,8 +110,8 @@
                     <h5>Request from <b><%= booking.user.first_name %> <%= booking.user.last_name %> - <%= booking.user.email %></b> for:</h5>
                   </div>
                   <div class="tab-card-currency-request">
-                    <h4>Currency: <b><%= booking.listing.currency.upcase %></b></h4>
-                    <h4>Amount: <b><%= booking.listing.currency_amount %></b></h4>
+                    <h5>Currency: <b><%= booking.listing.currency.upcase %></b></h5>
+                    <h5>Amount: <b><%= booking.listing.currency_amount %></b></h5>
                     <!-- <p><%= booking.listing.message %></p> -->
                   </div>
                 </div>
