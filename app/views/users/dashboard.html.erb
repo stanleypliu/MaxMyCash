@@ -78,7 +78,8 @@
               <div class="tab-card">
                 <div class="tab-card-heading">
                   <div class="booking-message">
-                    <h5>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h5>
+                    <h4>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h4>
+                    <p>in <strong><%= booking.listing.location %></strong></p>
                   </div>
                   <div class="tab-card-currency">
                     <h5><%= booking.listing.currency.upcase %></h5>
