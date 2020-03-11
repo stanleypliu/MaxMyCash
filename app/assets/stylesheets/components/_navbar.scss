@@ -2,8 +2,23 @@
   justify-content: space-between;
   background: transparent;
   width: 100%;
-  padding: 0px 38px;
+  padding: 10px 38px;
 }
+
+.navbar-left {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+}
+
+.navbar-left.showing {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
