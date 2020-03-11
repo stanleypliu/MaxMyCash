@@ -2,24 +2,40 @@
   <div class="container">
     <div class="row pt-3">
       <div class="col-6">
-        <%= form_tag listings_path, method: :get, class: "form-inline" do %>
-          <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Which currency?" %>
+        <div class="pl-1">
+          <%= form_tag listings_path, method: :get, class: "form-inline" do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Which currency?" %>
 
-          <%= text_field_tag :where,
-          params[:where],
-          class: "form-control",
-          placeholder: "Where?" %>
+            <%= text_field_tag :where,
+            params[:where],
+            class: "form-control",
+            placeholder: "Where?" %>
 
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+        </div>
 
         <div class="cards-index pt-3">
           <% @listings.each do |listing|%>
-            <div class="card">
-              <%= listing.user.email %>
+            <div class="card m-2 p-4">
+              <div class="top-listing-card d-flex">
+                <div class="card-top-left">
+                  <%= listing.location %>
+                  <br>
+                  <%= listing.user.email %>
+                </div>
+                <div class="card-top-right">
+                  <%= listing.currency[0,3] %>
+                  <%= listing.currency_amount %>
+                </div>
+              </div>
+                <hr>
+              <div class="card-bottom">
+                  <%= listing.message %>
+              </div>
             </div>
           <% end %>
         </div>

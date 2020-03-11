@@ -1,3 +1,38 @@
+
+
+// new css
+.top-listing-card {
+  justify-content: space-between;
+}
+
+
+.card-top-right {
+  color: $primary;
+}
+
+
+
+hr {
+  border-top: 1px solid $text-color-gray;
+}
+
+.card-bottom {
+  color: $text-color-gray;
+}
+ .card {
+  border-radius: 15px 50px 30px;
+ }
+
+.form-control {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#map {
+  position: sticky;
+  top: 75px;
+}
+
 #index-page-cont {
   // padding-left: 32px;
   // padding-right: 32px;
@@ -74,19 +109,19 @@ h1 {
   margin-top: 10px;
   margin-right: 24px;
 }
-.rhs-index {
-  // width: 30%;
-  flex-grow: 1;
-  // position: sticky;
-  // top: 0;
-  // padding: 8px;
-  margin-top: 11px;
-  border-radius: 4px;
-  margin-bottom: 24px;
-  max-height: 85vh;
-  position: sticky;
-  top: 78px;
-}
+// .rhs-index {
+//   // width: 30%;
+//   flex-grow: 1;
+//   // position: sticky;
+//   // top: 0;
+//   // padding: 8px;
+//   margin-top: 11px;
+//   border-radius: 4px;
+//   margin-bottom: 24px;
+//   max-height: 85vh;
+//   position: sticky;
+//   top: 78px;
+// }
 .listing-card {
   width: 100%;
   margin-bottom: 16px;
