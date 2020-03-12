@@ -23,9 +23,17 @@ class BookingsController < ApplicationController
     end
   end
 
+# def accept 
+#     @booking = Booking.find(params[:id])
+#     @booking.booking_status = true
+#     @booking.save
+#     redirect_to dashboard_path
+# end 
+
   def update
     @booking = Booking.find(params[:id])
     @booking.booking_status = true
+    @booking.save
     Stripe.api_key = 'sk_test_9aTAyyjRKyVdd42UfavEGGvo003cDs6Wl9'
     intent = Stripe::PaymentIntent.create({
       amount: @booking.listing.currency_amount,
@@ -34,8 +42,8 @@ class BookingsController < ApplicationController
       metadata: {integration_check: 'accept_a_payment'},
     })
     client_secret = intent.client_secret
-    @booking.save
     redirect_to payment_path(client_secret: client_secret)
+    # redirect_to dashboard_path
   end
 
   def destroy
