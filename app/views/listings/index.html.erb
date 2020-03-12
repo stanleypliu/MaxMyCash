@@ -13,6 +13,11 @@
             params[:where],
             class: "form-control",
             placeholder: "Where?" %>
+            <%= number_field_tag :distance,
+            params[:distance],
+            class: "form-control",
+            placeholder: "within how many km?"
+            %>
 
             <%= submit_tag "Search", class: "btn red" %>
           <% end %>
