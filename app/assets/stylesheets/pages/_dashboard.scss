@@ -144,6 +144,7 @@ hr {
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .dashboard-tab-card {
@@ -239,4 +240,15 @@ a {
 .user-content-container.showing, .tab-content.showing {
   opacity: 1;
   transform: translateY(0);
+}
+
+.no-listings {
+  display: flex;
+  // width: 33%;
+  justify-items: center;
+  align-items: center;
+}
+
+.button-for-listing {
+  margin-top: 100px;
 }
