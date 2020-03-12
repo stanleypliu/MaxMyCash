@@ -3,10 +3,20 @@ class ListingsController < ApplicationController
 
   def index
 
-    if params[:query].present?
-      @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
-      if params[:where].present?
-        @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
+    # if params[:query].present?
+    #   @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
+    #   if params[:where].present?
+    #     # @listings = @listings.near(["location ILIKE? ", "%#{params[:where]}%"], 200)
+    #     @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
+    #   end
+    if params[:where].present?
+      if params[:distance] == "" 
+        @listings = Listing.near(params[:where], 0)
+      else
+        @listings = Listing.near(params[:where], params[:distance])
+      end
+      if params[:query].present?
+        @listings = @listings.where("currency ILIKE? ", "%#{params[:query]}%")
       end
     else
       @listings = Listing.all.sort_by { |listing| listing.created_at }.reverse! # having it sort by most recently made
