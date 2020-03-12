@@ -1,10 +1,12 @@
 <div class="container">
+    <div class="card-box-shadow-review">
+        <h3 style=" text-align: left"><b>Review order details:</b></h3>
+        <h5 style=" text-align: left">Payment amount - <%= @listing.currency_amount %> </h5>
+        <h5 style=" text-align: left">Currency - <%= @listing.currency %> </h5>
+    </div>
   <div class="row justify-content-center">
     <div class="col-6">
-      <h2 style=" padding-top: 16px; text-align: center; ">You're almost there!</h2>
-      <h3 style=" text-align: center">Review order details:</h3>
-      <p style=" text-align: center">Payment amount - <%= @listing.currency_amount %> </p>
-      <p style=" text-align: center">Currency - <%= @listing.currency %> </p>
+      <h1 class="payment-heading" style="text-align: center;"><b>You're almost there!</b></h1>
 
     <div class="payment-card">
       <p class="pmt-instruction">Enter payment details below</p>
