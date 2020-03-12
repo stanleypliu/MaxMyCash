@@ -6,7 +6,7 @@
         <%= @booking.listing.currency %> -->
         <div class="chatroom-title">
           <p class="chatroom-header">Chat between <%= @booking.listing.user.first_name %> and <%= @booking.user.first_name %></p>
-          <%= link_to 'Go back', dashboard_path, class: 'blue-gradient-button'  %>
+          <%= link_to 'Go back', dashboard_path, class: 'blue-gradient-button-chatroom'  %>
         </div>
         <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
           <% @chatroom.messages.each do |message| %>
