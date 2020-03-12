@@ -38,7 +38,7 @@
               </div>
                 <hr>
               <div class="card-bottom row px-3">
-                  <%= listing.message %>
+                  <p><%= listing.message %></p>
                   <%=link_to "book me", listing_bookings_path(listing), method: :post, class: "btn red" %>
               </div>
             </div>
