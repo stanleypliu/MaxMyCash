@@ -23,12 +23,12 @@ class BookingsController < ApplicationController
     end
   end
 
-# def accept 
+# def accept
 #     @booking = Booking.find(params[:id])
 #     @booking.booking_status = true
 #     @booking.save
 #     redirect_to dashboard_path
-# end 
+# end
 
   def update
     @booking = Booking.find(params[:id])
@@ -42,7 +42,8 @@ class BookingsController < ApplicationController
       metadata: {integration_check: 'accept_a_payment'},
     })
     client_secret = intent.client_secret
-    redirect_to payment_path(client_secret: client_secret)
+    @booking.save
+    redirect_to payment_path(client_secret: client_secret, booking: @booking)
     # redirect_to dashboard_path
   end
 

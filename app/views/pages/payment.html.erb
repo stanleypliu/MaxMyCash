@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <p>You're almost there!</p>
+      <h2 style=" padding-top: 16px; text-align: center; ">You're almost there!</h2>
+      <h3 style=" text-align: center">Review order details:</h3>
+      <p style=" text-align: center">Payment amount - <%= @listing.currency_amount %> </p>
+      <p style=" text-align: center">Currency - <%= @listing.currency %> </p>
+
     <div class="payment-card">
       <p class="pmt-instruction">Enter payment details below</p>
   <!--     <p><% @client_secret %></p>
@@ -56,7 +60,7 @@
             } else {
               // The payment has been processed!
               if (result.paymentIntent.status === 'succeeded') {
-                window.alert('success')
+                window.alert('Success')
                 window.location.replace("<%= dashboard_path %>")
 
 
