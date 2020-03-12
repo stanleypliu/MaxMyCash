@@ -23,11 +23,14 @@
 .listing-container {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
   // background: url("ginger-cat.png");
   // background-size: cover;
   // background-repeat: none;
   // background-position: left;
+}
+
+.listing-container.showing {
+
 }
 
 // .cats img {
@@ -35,12 +38,24 @@
 //   width: 500px;
 // }
 
+.payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(50px);
+}
+
+.payment.showing {
+    opacity: 1;
+  transform: translateX(0);
+}
+
 .payment img {
-  height: 500px;
-  width: 50%;
-  top: 132px;
-  left: 0px;
-  position: absolute;
+  width: 90%;
 }
 
 // .card-box-shadow {
@@ -58,7 +73,18 @@
 }
 
 .card-box-shadow {
+  margin-top: 30px;
   width: 40%;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+}
+
+.card-box-shadow.showing {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .blue-gradient-button {

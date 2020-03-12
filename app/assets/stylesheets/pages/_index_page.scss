@@ -1,11 +1,81 @@
-#index-page-cont {
-  // padding-left: 32px;
-  // padding-right: 32px;
-  // padding-top: 16px;
-  // padding-bottom: 16px;
-  // padding: 16px 32px;
-  display: flex;
+
+
+// new css
+.top-listing-card {
+  justify-content: space-between;
 }
+
+
+.card-top-right {
+  color: $primary;
+}
+
+.big-font {
+  font-size: 26px;
+}
+
+hr {
+  border-top: 1px solid $text-color-gray;
+}
+
+.card-bottom {
+  color: $text-color-gray;
+}
+
+.card-bottom.row{
+  justify-content: space-between;
+}
+
+.card-bottom.row p {
+  font-size: 16px;
+}
+
+ .card {
+  border-radius: 15px 50px 30px;
+
+ }
+
+.card:nth-of-type(odd) {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+}
+
+.card:nth-of-type(even) {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .5s ease .5s;
+  transition: all .5s ease .5s;
+  transform: translateX(50px);
+}
+ .card.showing {
+  opacity: 1;
+  transform: translateX(0);
+ }
+
+.form-control {
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 50px 15px 30px;
+  box-shadow: 0 0 24px $purple;
+}
+.btn.red {
+  border-radius: 50px 15px 30px;
+  box-shadow: 0 0 24px $purple;
+  background-color: $purple;
+  color: white;
+}
+
+#map {
+  position: sticky;
+  top: 75px;
+  height: 100vh !important;
+  border-radius: 50px 50px 30px;
+
+}
+
 
 h1 {
   color: $text-color-gray;
@@ -24,11 +94,7 @@ h1 {
   justify-content: space-between;
 }
 
-.loc-cur {
-  color: black;
-  display: flex;
-  justify-content: space-between;
-}
+
 .work-pls{
   display:flex;
   justify-content: space-between;
@@ -58,33 +124,7 @@ h1 {
   margin: 0px;
 }
 
-#a1 {
-  margin: 1%;
-  margin: 0 !important;
-}
-
-.list-cont {
-  padding-top: 14px;
-  max-height: 75vh;
-  width: 100%;
-  overflow: scroll;
-}
-.lhs-index {
-  width: 40%;
-  // padding: 0px 16px;
-  margin-top: 10px;
-  margin-right: 24px;
-}
-.rhs-index {
-  // width: 30%;
-  flex-grow: 1;
-  // position: sticky;
-  // top: 0;
-  // padding: 8px;
-  margin-top: 11px;
-  border-radius: 4px;
-  margin-bottom: 24px;
-}
+// }
 .listing-card {
   width: 100%;
   margin-bottom: 16px;

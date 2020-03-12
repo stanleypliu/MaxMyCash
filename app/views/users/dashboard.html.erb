@@ -1,140 +1,151 @@
-<div class="container">
-  <div class="d-flex">
+ <div class="dark-bg">
+  <div class="container">
+    <div class="d-flex home-container">
 
-    <div class="user-info">
-      <h4 class="user-greeting">Hello, <%= @current_user.email %>!</h4>
-      <% if current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key, alt: "temp", class: 'avatar-dash', gravity: :face, crop: :thumb %>
-      <% else %>
-        <%= image_tag 'logo.png', alt: "temp", class: 'avatar-dash' %>
-      <% end %>
-      <p class="running-total"> You've exchanged
-        <% if current_user.running_total == 0  %>
-          <strong>nothing yet</strong>, make your first exchange!
+      <div class="user-info">
+        <h4 class="user-greeting">Hello, <%= @current_user.first_name %>!</h4>
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, alt: "temp", class: 'avatar-dash', gravity: :face, crop: :thumb %>
         <% else %>
-          <strong>€<%= current_user.running_total %></strong> so far!</p>
+          <%= image_tag 'logo.png', alt: "temp", class: 'avatar-dash' %>
         <% end %>
-    </div>
-    <div class="user-content-container">
-      <div class="nav" id="nav-tab" role="tablist">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active hvr-underline-from-left" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My listings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hvr-underline-from-left" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My bookings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hvr-underline-from-left" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">My requests <span class="bg-primary">(<%= @my_bookings.where(booking_status: false).count %>)</span></a>
-          </li>
-        </ul>
+        <p class="running-total">
+          <% if current_user.requested_bookings.empty?  %>
+            You've exchanged <strong>nothing yet</strong>, make your first exchange!
+          <% else %>
+            So far, you've exchanged:
+            <span class="running-total-amount"><strong>€<%= @current_user.running_total %></strong></span>
+          <% end %>
+        </p>
       </div>
-
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <br>
-          <% if @listings.empty? %>
-            <h4>Doesn't look like you have any listings at the moment!</h4>
-          <% end %>
-          <% @listings.each do |listing| %>
-            <div class="tab-card-styling">
-              <div class="tab-card">
-                <div class="tab-card-heading">
-                  <h4 class="tab-card-location"><%= listing.location.upcase %></h4>
-                  <div class="tab-card-currency">
-                    <h4><%= listing.currency.upcase %></h4>
-                    <h4 class="listing-currency-amount"><b><%= listing.currency_amount %></b></h4>
-                  </div>
-                </div>
-                <hr>
-                <div class="tab-card-lower-half">
-                  <div class="tab-card-message">
-                    <h5><%= listing.message.capitalize %></h5>
-                  </div>
-                  <div class="modify-links">
-                    <%= link_to 'EDIT', edit_listing_path(listing), class: "button-edit"%>
-                    <%= link_to 'DELETE',  delete_path(listing), method: :delete, class: "button-delete" %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
+      <div class="user-content-container">
+        <div class="nav" id="nav-tab" role="tablist">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active hvr-underline-from-left" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My listings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hvr-underline-from-left" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hvr-underline-from-left" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">My requests <span class="request-number">(<%= @my_bookings.where(booking_status: false).count %>)</span></a>
+            </li>
+          </ul>
         </div>
 
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <br>
-          <% if @bookings.empty? %>
-            <h1>Doesn't look like you have any bookings at the moment!</h1>
-          <% end %>
-          <% @bookings.each do |booking| %>
-            <div class="tab-card-styling">
-              <div class="tab-card">
-                <div class="tab-card-heading">
-                  <div class="booking-message">
-                    <h4>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h4>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <br>
+            <% if @listings.empty? %>
+              <h4>Doesn't look like you have any listings at the moment!</h4>
+            <% end %>
+            <% @listings.each do |listing| %>
+              <div class="tab-card-styling">
+                <div class="tab-card">
+                  <div class="tab-card-heading">
+                    <div class="tab-heading-left">
+                      <h5 class="tab-card-location"><%= listing.location.upcase %></h5>
+                      <p><i>Created on </i><%= listing.created_at.day %>/<%= listing.created_at.month %>/<%= listing.created_at.year %></p>
+                    </div>
+                    <div class="tab-card-currency">
+                      <h5><%= listing.currency.upcase %></h5>
+                      <h5 class="listing-currency-amount"><b><%= listing.currency_amount %></b></h5>
+                    </div>
                   </div>
-                  <div class="tab-card-currency">
-                    <h5><%= booking.listing.currency.upcase %></h5>
-                    <h5 class="listing-currency-amount"><b><%= booking.listing.currency_amount %></b></h5>
-                  </div>
-                </div>
-                <hr>
-                <div class="tab-card-lower-half">
-                  <div class="tab-card-message">
-                    <% if booking.booking_status == true %>
-                      <h5>Booking confirmed</h5>
-                    <% else %>
-                      <h6>Booking not confirmed yet</h6>
-                    <% end %>
-                  </div>
-                  <div class="modify-links">
-                    <%= link_to 'MESSAGE', booking_chatrooms_path(booking), method: :post, class: "button-edit"%>
-                    <%= link_to 'CANCEL',  delete_booking_path(booking), method: :delete, class: "button-delete" %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-          <br>
-          <% if @my_bookings.empty? %>
-            <h5>Doesn't look like you have any requests at the moment!</h5>
-          <% end %>
-          <% @my_bookings.each do |booking| %>
-            <div class="tab-card-styling">
-              <div class="tab-card">
-                <div class="tab-card-heading">
-                  <div>
-                    <h5>Request from <b><%= booking.user.first_name %> <%= booking.user.last_name %> - <%= booking.user.email %></b> for:</h5>
-                  </div>
-                  <div class="tab-card-currency-request">
-                    <h5>Currency: <b><%= booking.listing.currency.upcase %></b></h5>
-                    <h5>Amount: <b><%= booking.listing.currency_amount %></b></h5>
-                    <!-- <p><%= booking.listing.message %></p> -->
-                  </div>
-                </div>
-                <hr>
-                <div class="tab-card-request-buttons">
-                  <div class="tab-card-message">
-                    <% if booking.booking_status == false %>
-                    <%= link_to "MESSAGE", booking_chatrooms_path(booking), method: :post, class: "button-edit" %>
-                    <%= link_to 'ACCEPT', listing_booking_path([booking.listing], [booking]), method: :patch, class: "button-accept" %>
-                    <%= link_to 'REFUSE', delete_booking_path(booking), method: :delete, class: "button-delete" %>
-                  <% else %>
-                    <%= link_to 'MESSAGE', booking_chatrooms_path(booking), method: :post, class: "button-edit"%>
-                    <%= link_to 'CANCEL',  delete_booking_path(booking), method: :delete, class: "button-delete" %>
-
-                  <% end %>
+                  <hr>
+                  <div class="tab-card-lower-half">
+                    <div class="tab-card-message">
+                      <h5><%= listing.message.capitalize %></h5>
+                    </div>
+                    <div class="modify-links">
+                      <%= link_to 'EDIT', edit_listing_path(listing), class: "button-edit"%>
+                      <%= link_to 'DELETE',  delete_path(listing), method: :delete, class: "button-delete" %>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
+
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <br>
+            <% if @bookings.empty? %>
+              <h4>Doesn't look like you have any bookings at the moment!</h4>
+            <% end %>
+            <% @bookings.each do |booking| %>
+              <div class="tab-card-styling">
+                <div class="tab-card">
+                  <div class="tab-card-heading">
+                    <div class="booking-message">
+                      <h4>You're exchanging with <b><%= booking.listing.user.first_name %> <%= booking.listing.user.last_name %> - <%= booking.listing.user.email %></b></h4>
+                      <p>in <strong><%= booking.listing.location %></strong></p>
+                    </div>
+                    <div class="tab-card-currency">
+                      <h5><%= booking.listing.currency.upcase %></h5>
+                      <h5 class="listing-currency-amount"><b><%= booking.listing.currency_amount %></b></h5>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="tab-card-lower-half">
+                    <div class="tab-card-message">
+                      <% if booking.booking_status == true %>
+                        <h5>Booking confirmed</h5>
+                        <%= link_to 'FINALIZE', listing_booking_path([booking.listing], [booking]), method: :patch, class: "button-accept" %>
+                      <% else %>
+                        <h6>Booking not confirmed yet</h6>
+                      <% end %>
+                    </div>
+                    <div class="modify-links">
+                      <%= link_to 'MESSAGE', booking_chatrooms_path(booking), method: :post, class: "button-edit"%>
+                      <%= link_to 'CANCEL',  delete_booking_path(booking), method: :delete, class: "button-delete" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <br>
+            <% if @my_bookings.empty? %>
+              <h5>Doesn't look like you have any requests at the moment!</h5>
+            <% end %>
+            <% @my_bookings.each do |booking| %>
+              <div class="tab-card-styling">
+                <div class="tab-card">
+                  <div class="tab-card-heading">
+                    <div>
+                      <h5>Request from <b><%= booking.user.first_name %> <%= booking.user.last_name %> - <%= booking.user.email %></b> for:</h5>
+                    </div>
+                    <div class="tab-card-currency-request">
+                      <h5>Currency: <b><%= booking.listing.currency.upcase %></b></h5>
+                      <h5>Amount: <b><%= booking.listing.currency_amount %></b></h5>
+                      <!-- <p><%= booking.listing.message %></p> -->
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="tab-card-request-buttons">
+                    <div class="booking-created-date">
+                      <p><i>Request made on <%= booking.created_at.day %>/<%= booking.created_at.month %>/<%= booking.created_at.year %></i></p>
+                    </div>
+                    <div class="tab-card-message">
+                      <% if booking.booking_status == false %>
+                        <%= link_to "MESSAGE", booking_chatrooms_path(booking), method: :post, class: "button-edit" %>
+                        <%= link_to 'ACCEPT', listing_booking_path([booking.listing], [booking]), method: :patch,class: "button-accept" %>
+                        <%= link_to 'REFUSE', delete_booking_path(booking), method: :delete, class: "button-delete" %>
+                      <% else %>
+                        <%= link_to 'MESSAGE', booking_chatrooms_path(booking), method: :post, class: "button-edit"%>
+                        <%= link_to 'CANCEL',  delete_booking_path(booking), method: :delete, class: "button-delete" %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
+<!-- ([booking.listing], [booking]), method: :patch,  -->

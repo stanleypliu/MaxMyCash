@@ -1,7 +1,8 @@
-<div class="pop">
+<div class="info-window">
 	<p><%= listing.currency_amount %><%= listing.currency %></p>
 	<p><%= listing.user.first_name %> <%= listing.user.last_name %></p>
 	<%= listing.user.email %>
+	<br>
 	<br>
 	<%=link_to "book me", listing_bookings_path(listing), method: :post, class: "btn red" %>
 </div>
