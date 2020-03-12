@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def payment
-    @amount = booking.listing.amount
+    @listing = Booking.find(params[:booking]).listing
     @client_secret = params[:client_secret]
   end
 end
