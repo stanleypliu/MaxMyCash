@@ -16,3 +16,40 @@
   padding-left: 14px;
   color: $text-color-gray;
 }
+
+.payment-card {
+  background-color: white;
+  position: absolute;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  width: 90%;
+  top: 350px;
+  left: 67px;
+}
+
+
+img {
+  width: 100%;
+    // margin-left: 31px;
+    position: absolute;
+    top: 50px;
+    z-index: -2;
+}
+
+.card-box-shadow-review {
+  position: absolute;
+  color: $text-color-gray;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  padding: 16px;
+  margin-bottom: 16px;
+  top: 300px;
+  border-radius: 4px;
+  position: absolute;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  height: 30%;
+}
+
+.payment-heading {
+  padding-top: 100px;
+  padding-left: 100px;
+}
