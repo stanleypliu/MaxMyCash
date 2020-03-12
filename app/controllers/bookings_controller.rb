@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
     })
     client_secret = intent.client_secret
     @booking.save
-    redirect_to payment_path(client_secret: client_secret)
+    redirect_to payment_path(client_secret: client_secret, booking: @booking)
   end
 
   def destroy
