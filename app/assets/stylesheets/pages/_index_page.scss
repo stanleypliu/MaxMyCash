@@ -28,6 +28,7 @@ hr {
 
 .card-bottom.row p {
   font-size: 16px;
+  max-width: 80%;
 }
 
  .card {
@@ -65,6 +66,7 @@ hr {
   box-shadow: 0 0 24px $purple;
   background-color: $purple;
   color: white;
+  max-height: 40px;
 }
 
 #map {
