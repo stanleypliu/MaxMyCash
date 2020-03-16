@@ -1,9 +1,11 @@
 .currency-span {
-  background-color: #FFFFBF;
+  background-color: rgba(139 ,136, 248, 49);
   // border: 1px solid black;
   border-radius: 20px;
   padding: 25px 30px;
   margin-bottom: 12px;
+  opacity:.8;
+;
 }
 
 .currency-span p {
@@ -29,6 +31,10 @@
   // background-position: left;
 }
 
+.listing-container.showing {
+
+}
+
 // .cats img {
 //   height: 500px;
 //   width: 500px;
@@ -38,6 +44,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(50px);
+}
+
+.payment.showing {
+    opacity: 1;
+  transform: translateX(0);
 }
 
 .payment img {
@@ -61,6 +77,16 @@
 .card-box-shadow {
   margin-top: 30px;
   width: 40%;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+}
+
+.card-box-shadow.showing {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .blue-gradient-button {

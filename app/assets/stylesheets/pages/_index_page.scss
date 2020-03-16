@@ -26,8 +26,34 @@ hr {
   justify-content: space-between;
 }
 
+.card-bottom.row p {
+  font-size: 16px;
+  max-width: 80%;
+}
+
  .card {
   border-radius: 15px 50px 30px;
+
+ }
+
+.card:nth-of-type(odd) {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+  transform: translateX(-50px);
+}
+
+.card:nth-of-type(even) {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .5s ease .5s;
+  transition: all .5s ease .5s;
+  transform: translateX(50px);
+}
+ .card.showing {
+  opacity: 1;
+  transform: translateX(0);
  }
 
 .form-control {
@@ -40,6 +66,7 @@ hr {
   box-shadow: 0 0 24px $purple;
   background-color: $purple;
   color: white;
+  max-height: 40px;
 }
 
 #map {

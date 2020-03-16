@@ -5,7 +5,7 @@
       <div class="user-info">
         <h4 class="user-greeting">Hello, <%= @current_user.first_name %>!</h4>
         <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, alt: "temp", class: 'avatar-dash', gravity: :face, crop: :thumb %>
+          <%= cl_image_tag current_user.photo.key, alt: "temp", class: 'avatar-dash', gravity: :face, crop: :thumb  %>
         <% else %>
           <%= image_tag 'logo.png', alt: "temp", class: 'avatar-dash' %>
         <% end %>
@@ -37,7 +37,12 @@
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <br>
             <% if @listings.empty? %>
-              <h4>Doesn't look like you have any listings at the moment!</h4>
+              <div class="row justify-content-center no-listings">
+                <h4>Doesn't look like you have any listings at the moment!</h4>
+                <div class="button-for-listing">
+                  <%= link_to 'Make a new listing', new_listing_path, class: " blue-gradient-button" %>
+                </div>
+              </div>
             <% end %>
             <% @listings.each do |listing| %>
               <div class="tab-card-styling">
@@ -70,7 +75,7 @@
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <br>
             <% if @bookings.empty? %>
-              <h1>Doesn't look like you have any bookings at the moment!</h1>
+              <h4>Doesn't look like you have any bookings at the moment!</h4>
             <% end %>
             <% @bookings.each do |booking| %>
               <div class="tab-card-styling">
@@ -152,4 +157,10 @@
     </div>
   </div>
 </div>
+
+
+<% if @paidalert %>
+  <div id="payalert"></div>
+<% end %>
+
 <!-- ([booking.listing], [booking]), method: :patch,  -->
