@@ -90,7 +90,11 @@
                     <div class="tab-card-message">
                       <% if booking.booking_status == true %>
                         <h5>Booking confirmed</h5>
-                        <%= link_to 'FINALIZE', listing_booking_path([booking.listing], [booking]), method: :patch, class: "button-accept" %>
+                        <% if booking.listing.transaction_completed == false %>
+                          <%= link_to 'FINALIZE', listing_booking_path([booking.listing], [booking]), method: :patch, class: "button-accept" %>
+                        <% else %>
+                          <h4>TRANSACTION COMPLETED</h4>
+                        <% end %>
                       <% else %>
                         <h6>Booking not confirmed yet</h6>
                       <% end %>

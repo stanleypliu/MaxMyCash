@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   delete "bookings/:id", to: "bookings#destroy", as: :delete_booking
   delete "listings/:id", to: "listings#destroy", as: :delete
   get "dashboard", to: "users#dashboard", as: :dashboard # custom route - we have to create a users controller as well
+  
 end
