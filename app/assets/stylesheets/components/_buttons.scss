@@ -27,11 +27,19 @@
   margin-top: 16px;
   margin-left:16px;
   font-weight: bold;
-  transition: 0.3s;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  -webkit-transition: opacity 1.2s ease 1.2s, transform 1.2s ease 1.2s, color .2s;
+  transition: opacity 1.2s ease 1.2s, transform 1.2s ease 1.2s, color .2s;
+}
+
+.blue-gradient-button-home.showing {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .blue-gradient-button-home:hover {
-  opacity: 3;
   text-decoration: none;
   color: #2620ff;
   // background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
@@ -50,13 +58,12 @@
 }
 
 .blue-gradient-button:hover {
-  opacity: 3;
+  // opacity: 3;
   text-decoration: none;
   color: white;
 }
 
 .black-gradient-button {
-  transition: 0.2s;
   // background: $gradient-dark;
   background: radial-gradient(circle, rgba(43,46,50,1) 0%, rgba(28,33,37,1) 100%);
   box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
@@ -69,8 +76,8 @@
   border-radius: 8px;
   font-weight: bold;
   opacity: 0;
-  -webkit-transition: all .4s ease .4s;
-  transition: all .4s ease .4s;
+  -webkit-transition: opacity .6s ease .6s, transform .6s ease .6s, color .2s;
+  transition: opacity .6s ease .6s, transform .6s ease .6s, color .2s;
   transform: translateX(50px);
 }
 
@@ -79,6 +86,10 @@
   transform: translateX(0);
 }
 
+.black-gradient-button:hover {
+  text-decoration: none;
+  color: #2620ff;
+}
 // .black-gradient-button:active {
 //   background: linear-gradient(225deg, #464C53, #1C2125 127.71%);
 //   box-shadow: 0px 2px 0px #2b638f, 0px 1px 6px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);

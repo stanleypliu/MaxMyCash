@@ -1,10 +1,14 @@
-// Homepage
-const left = $('.left.w-50');
-const right = $('.right.w-50');
-
 // Navbar
 const navbarLeft = $('.navbar-left');
+
+// Homepage
+// const left = $('.left.w-50');
+const homeDesc = $('.home-description');
+const revoDesc = $('.revonew-description');
+const right = $('.right.w-50');
 const exchangeButton = $('.black-gradient-button');
+const animatedCoins = $('.animated-coins');
+
 
 // Dashboard
 const userInfo = $('.user-info');
@@ -18,18 +22,29 @@ const tabContent = $('.tab-content');
 const payment = $('.payment');
 const listingForm = $('.card-box-shadow');
 
-//Index
+// Index of listings
 const listingCard = $('.card');
 
+// Buttons
+const blueButtonHome = $('.blue-gradient-button-home');
+
 $(function () {
-  if (left && right) {
-    // console.log('success');
-    left.addClass('showing');
-    right.addClass('showing');
-  };
   navbarLeft.addClass('showing');
-  if (exchangeButton) {
+  if (blueButtonHome) {
+    blueButtonHome.addClass('showing');
+  }
+  if (window.location.href == "http://www.revonew.xyz/" || "http://localhost:3000" ) {
+    // console.log('success');
+    // left.addClass('showing');
+    homeDesc.addClass('showing');
+    revoDesc.addClass('showing');
+    right.addClass('showing');
+    // setTimeout(function() {
+    //   right.addClass('growing');
+    // }, 1200);
+    animatedCoins.addClass('showing');
     exchangeButton.addClass('showing');
+    blueButtonHome.addClass('showing');
   };
   if (window.location.href == "http://www.revonew.xyz/dashboard" || "http://localhost:3000/dashboard") {
     userInfo.addClass('showing');
