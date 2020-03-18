@@ -11,4 +11,6 @@ Still regularly updated by the team.
 
 ---
 
+Thanks to [Maxime Seiter](https://github.com/maxycle), [Danielle Levy](https://github.com/dani-levyy) and [Hamza Ahmad](https://github.com/hamzurr), the other members of my team, as well as all the TAs and teachers at Le Wagon, without whom this would not be possible.
+
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
