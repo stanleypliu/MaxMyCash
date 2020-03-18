@@ -5,9 +5,9 @@ Currency exchange marketplace-style app, intended for buying and selling of hard
 Still regularly updated by the team. 
 
 ## TODO
-*Improve the real-time currency conversion functionality
-*Add animated SVGs to the front page
-*General improvements to front end for the rest of the site
+* Improve the real-time currency conversion functionality
+* Add animated SVGs to the front page
+* General improvements to front end for the rest of the site
 
 ---
 
