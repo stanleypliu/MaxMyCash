@@ -177,6 +177,7 @@ h1.home {
   -webkit-transition: all 2s ease 2s;
   transition: all 2s ease 2s;
   transform: translateY(50px);
+  filter: grayscale(80%);
 }
 
 .animated-coins.showing {
@@ -190,7 +191,7 @@ h1.home {
   height: 60px;
   background-size: cover;
   top: 350px;
-  left: 100px;
+  left: 45px;
 }
 
 #animated-coin-2 {
@@ -198,8 +199,8 @@ h1.home {
   width: 100px;
   height: 100px;
   background-size: cover;
-  top: 150px;
-  left: 610px;
+  top: 134px;
+  left: 500px;
 }
 
 #animated-coin-3 {
@@ -207,13 +208,14 @@ h1.home {
   width: 150px;
   height: 150px;
   background-size: cover;
-  top: 550px;
-  left: 550px;
+  top: 500px;
+  left: 500px;
 }
 
 @keyframes roundabout {
   0% {
     border-top: 1px solid white;
+    transform: rotate(0deg);
   }
   25% {
     border-right: 1px solid white;
@@ -236,6 +238,7 @@ h1.home {
   }
   100% {
     border-top: 1px solid white;
+    transform: rotate(360deg);
   }
 }
 
