@@ -171,7 +171,6 @@ h1.home {
 .animated-coins {
   border-radius: 50%;
   animation-name: roundabout;
-
   animation-iteration-count: infinite;
   position: absolute;
   opacity: 0;
@@ -189,7 +188,6 @@ h1.home {
   animation-duration: 2s;
   width: 60px;
   height: 60px;
-  background: url('gold-coin.png');
   background-size: cover;
   top: 350px;
   left: 100px;
@@ -199,7 +197,6 @@ h1.home {
   animation-duration: 1s;
   width: 100px;
   height: 100px;
-  background: url('yen.png');
   background-size: cover;
   top: 150px;
   left: 610px;
@@ -209,7 +206,6 @@ h1.home {
   animation-duration: 1.5s;
   width: 150px;
   height: 150px;
-  background: url('royal-mint.png');
   background-size: cover;
   top: 550px;
   left: 550px;

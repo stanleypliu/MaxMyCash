@@ -2,9 +2,9 @@
   <div class="container">
     <div class="d-flex home-container">
       <div class="left w-50">
-        <div class="animated-coins" id="animated-coin-1"></div>
-        <div class="animated-coins" id="animated-coin-2"></div>
-        <div class="animated-coins" id="animated-coin-3"></div>
+        <div class="animated-coins" id="animated-coin-1" style="background-image: url(<%= image_path "gold-coin.png" %>);"></div>
+        <div class="animated-coins" id="animated-coin-2" style="background-image: url(<%= image_path "yen.png" %>);"></div>
+        <div class="animated-coins" id="animated-coin-3" style="background-image: url(<%= image_path "royal-mint.png" %>);"></div>
         <h2 class="home-description">Exchange left over cash <br> for digital money,<br>wherever you are.</h2>
         <p class="revonew-description">Fast, secure transactions as recommended by billions of customers on Trustpilot, worldwide*</p>
         <%= link_to "Cash exchanges near you", listings_path, class: "blue-gradient-button-home" %>
