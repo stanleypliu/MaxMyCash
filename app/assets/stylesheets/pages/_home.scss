@@ -150,10 +150,10 @@ h1.home {
 
 .animated-coins {
   border-radius: 50%;
+  position: absolute;
   animation-name: roundabout;
   animation-iteration-count: 2;
   animation-fill-mode: forwards;
-  position: absolute;
   animation-duration: 3s;
   opacity: 0;
   -webkit-transition: opacity 2s ease 2s, transform 2s ease 2s;
@@ -192,10 +192,10 @@ h1.home {
 }
 
 @keyframes roundabout {
-  0% {
+  from {
     transform: rotate(360deg);
   }
-  100% {
+  to {
     transform: rotate(0deg);
   }
 }
@@ -267,11 +267,22 @@ svg.fading {
   // border: 1px solid black;
 }
 
-.path {
-  // stroke-dasharray: 300;
+.path-1 {
   animation: dash 5s linear forwards;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 700;
+}
+
+.path-2 {
+  animation: dash 4s linear forwards;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 700;
+}
+
+.path-3 {
+  animation: dash 3s linear forwards;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 700;
 }
 
 @keyframes dash {

@@ -1,3 +1,5 @@
+// ELEMENTS - could put all of these in an array that the script checks through completely upon loading each page and if found, then it'll add the class to reduce code redundancy.
+
 // Navbar
 const navbarLeft = $('.navbar-left');
 
@@ -39,11 +41,12 @@ $(function () {
     homeDesc.addClass('showing');
     revoDesc.addClass('showing');
     right.addClass('showing');
-    svg.addClass('showing');
+    svg.addClass('showing').delay(1000);
     animatedCoins.addClass('showing');
     animatedCoins.on("animationend", function() {
       svg.addClass('fading');
     });
+    // console.log(path.getTotalLength());
     exchangeButton.addClass('showing');
     blueButtonHome.addClass('showing');
   };
