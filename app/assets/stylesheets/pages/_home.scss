@@ -159,7 +159,7 @@ h1.home {
   -webkit-transition: opacity 2s ease 2s, transform 2s ease 2s;
   transition: opacity 2s ease 2s, transform 2s ease 2s;
   transform: translateY(50px);
-
+  filter: grayscale(100%);
 }
 
 .animated-coins.showing {
@@ -193,14 +193,10 @@ h1.home {
 
 @keyframes roundabout {
   0% {
-    // border-top: 1px solid white;
     transform: rotate(360deg);
-    // filter: grayscale(100%);
   }
   100% {
-    // border-top: 1px solid white;
     transform: rotate(0deg);
-    filter: grayscale(100%);
   }
 }
 
@@ -230,19 +226,37 @@ h1.home {
 //   }
 // }
 
+svg {
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s;
+  transition: opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s;
+  transform: translateY(50px);
+}
+
+svg.showing {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+svg.fading {
+  opacity: 0;
+}
+
 .svg-coin-1 {
   position: absolute;
-  top: 289px;
-  left: 15px;
+  top: 340px;
+  left: 5px;
   z-index: 2;
+  // border: 1px solid black;
 }
 
 
 .svg-coin-2 {
   position: absolute;
-  top: 83px;
-  left: 410px;
+  top: 100px;
+  left: 425px;
   z-index: 2;
+  // border: 1px solid black;
 }
 
 .svg-coin-3 {
@@ -250,6 +264,7 @@ h1.home {
   top: 489px;
   left: 478px;
   z-index: 2;
+  // border: 1px solid black;
 }
 
 .path {
