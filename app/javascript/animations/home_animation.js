@@ -8,6 +8,7 @@ const revoDesc = $('.revonew-description');
 const right = $('.right.w-50');
 const exchangeButton = $('.black-gradient-button');
 const animatedCoins = $('.animated-coins');
+const path = $('.path');
 
 
 // Dashboard
@@ -39,9 +40,6 @@ $(function () {
     homeDesc.addClass('showing');
     revoDesc.addClass('showing');
     right.addClass('showing');
-    // setTimeout(function() {
-    //   right.addClass('growing');
-    // }, 1200);
     animatedCoins.addClass('showing');
     exchangeButton.addClass('showing');
     blueButtonHome.addClass('showing');
