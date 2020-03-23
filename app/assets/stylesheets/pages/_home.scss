@@ -148,35 +148,18 @@ h1.home {
 }
 
 
-// #star-six {
-//   width: 0;
-//   height: 0;
-//   border-left: 50px solid transparent;
-//   border-right: 50px solid transparent;
-//   border-bottom: 100px solid red;
-//   position: relative;
-// }
-// #star-six:after {
-//   width: 0;
-//   height: 0;
-//   border-left: 50px solid transparent;
-//   border-right: 50px solid transparent;
-//   border-top: 100px solid red;
-//   position: absolute;
-//   content: "";
-//   top: 30px;
-//   left: -50px;
-// }
-
 .animated-coins {
   border-radius: 50%;
-  animation-name: roundabout;
-  animation-iteration-count: infinite;
   position: absolute;
+  animation-name: roundabout;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
   opacity: 0;
-  -webkit-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: opacity 2s ease 2s, transform 2s ease 2s;
+  transition: opacity 2s ease 2s, transform 2s ease 2s;
   transform: translateY(50px);
+  filter: grayscale(100%);
 }
 
 .animated-coins.showing {
@@ -185,57 +168,35 @@ h1.home {
 }
 
 #animated-coin-1 {
-  animation-duration: 2s;
   width: 60px;
   height: 60px;
   background-size: cover;
   top: 350px;
-  left: 100px;
+  left: 45px;
 }
 
 #animated-coin-2 {
-  animation-duration: 1s;
   width: 100px;
   height: 100px;
   background-size: cover;
-  top: 150px;
-  left: 610px;
+  top: 124px;
+  left: 500px;
 }
 
 #animated-coin-3 {
-  animation-duration: 1.5s;
   width: 150px;
   height: 150px;
   background-size: cover;
-  top: 550px;
-  left: 550px;
+  top: 500px;
+  left: 500px;
 }
 
 @keyframes roundabout {
-  0% {
-    border-top: 1px solid white;
+  from {
+    transform: rotate(360deg);
   }
-  25% {
-    border-right: 1px solid white;
-  }
-
-  // 33% {
-  //   background: url('yen.png');
-  //   background-size: cover;
-  // }
-  50% {
-    border-bottom: 1px solid white;
-
-  }
-  // 66% {
-  //   background: url('royal-mint.png');
-  //   background-size: cover;
-  // }
-  75% {
-    border-left: 1px solid white;
-  }
-  100% {
-    border-top: 1px solid white;
+  to {
+    transform: rotate(0deg);
   }
 }
 
@@ -265,5 +226,67 @@ h1.home {
 //   }
 // }
 
+svg {
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s;
+  transition: opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s;
+  transform: translateY(50px);
+}
+
+svg.showing {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+svg.fading {
+  opacity: 0;
+}
+
+.svg-coin-1 {
+  position: absolute;
+  top: 340px;
+  left: 5px;
+  z-index: 2;
+  // border: 1px solid black;
+}
 
 
+.svg-coin-2 {
+  position: absolute;
+  top: 100px;
+  left: 425px;
+  z-index: 2;
+  // border: 1px solid black;
+}
+
+.svg-coin-3 {
+  position: absolute;
+  top: 489px;
+  left: 478px;
+  z-index: 2;
+  // border: 1px solid black;
+}
+
+.path-1 {
+  animation: dash 5s linear forwards;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 700;
+}
+
+.path-2 {
+  animation: dash 4s linear forwards;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 700;
+}
+
+.path-3 {
+  animation: dash 3s linear forwards;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 700;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

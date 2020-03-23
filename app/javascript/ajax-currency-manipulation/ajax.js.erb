@@ -1,11 +1,13 @@
 const ratesURL = `http://data.fixer.io/api/latest?access_key=${process.env.FIXER_KEY}`;
 
-console.log(ratesURL);
+// New listing page
 const exchangedCurrency = document.querySelector('.exchanged-currency');
 const dropdownInput = document.querySelector('.dropdown-currency');
 const currencyAmount = document.querySelector('.currency-amount');
 const newListingForm = document.querySelector('new-listing-form');
-const runningTotal = document.querySelector('.running-total');
+
+// Dashboard
+// const runningTotal = document.querySelector('.running-total');
 
 
 if (dropdownInput) {
@@ -23,9 +25,6 @@ if (dropdownInput) {
 
 if (currencyAmount) {
   currencyAmount.addEventListener('input', (event) => {
-    // if (dropdownInput.value == undefined) {
-    //   return
-    // }
     const currencyType = dropdownInput.value;
     const dropdownInputSplit = currencyType.split(' ')[0];
 
@@ -40,7 +39,7 @@ if (currencyAmount) {
 // newListingForm.addEventListener('submit', (event) => {
 //   event.preventDefault();
 // });
-if (runningTotal) {
+// if (runningTotal) {
 
-}
+// }
 

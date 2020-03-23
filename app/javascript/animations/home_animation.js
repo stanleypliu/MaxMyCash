@@ -1,3 +1,5 @@
+// ELEMENTS - could put all of these in an array that the script checks through completely upon loading each page and if found, then it'll add the class to reduce code redundancy.
+
 // Navbar
 const navbarLeft = $('.navbar-left');
 
@@ -8,6 +10,8 @@ const revoDesc = $('.revonew-description');
 const right = $('.right.w-50');
 const exchangeButton = $('.black-gradient-button');
 const animatedCoins = $('.animated-coins');
+const svg = $('svg');
+const path = $('.path');
 
 
 // Dashboard
@@ -34,15 +38,15 @@ $(function () {
     blueButtonHome.addClass('showing');
   }
   if (window.location.href == "http://www.revonew.xyz/" || "http://localhost:3000" ) {
-    // console.log('success');
-    // left.addClass('showing');
     homeDesc.addClass('showing');
     revoDesc.addClass('showing');
     right.addClass('showing');
-    // setTimeout(function() {
-    //   right.addClass('growing');
-    // }, 1200);
+    svg.addClass('showing').delay(1000);
     animatedCoins.addClass('showing');
+    animatedCoins.on("animationend", function() {
+      svg.addClass('fading');
+    });
+    // console.log(path.getTotalLength());
     exchangeButton.addClass('showing');
     blueButtonHome.addClass('showing');
   };
