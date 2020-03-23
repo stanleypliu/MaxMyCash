@@ -22,6 +22,7 @@
   // color: #0f141b;
   padding: 12px 35px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 18px;
   border-radius: 8px;
   margin-top: 16px;
@@ -40,8 +41,8 @@
 }
 
 .blue-gradient-button-home:hover {
-  text-decoration: none;
-  color: #2620ff;
+  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  // box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
   // background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
 }
 
@@ -64,11 +65,12 @@
 }
 
 .black-gradient-button {
-  // background: $gradient-dark;
-  background: radial-gradient(circle, rgba(43,46,50,1) 0%, rgba(28,33,37,1) 100%);
+  // background: radial-gradient(circle, rgba(43,46,50,1) 0%, rgba(28,33,37,1) 100%);
+  background: $purple;
   box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
   -webkit-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
   -moz-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  // color: white;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   padding: 10px 38px;
@@ -87,8 +89,7 @@
 }
 
 .black-gradient-button:hover {
-  text-decoration: none;
-  color: #2620ff;
+  // box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
 }
 // .black-gradient-button:active {
 //   background: linear-gradient(225deg, #464C53, #1C2125 127.71%);

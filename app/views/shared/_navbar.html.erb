@@ -6,18 +6,18 @@
 
     <% if user_signed_in? %>
       <% if !current_page?(dashboard_path) %>
-        <%= link_to "Dashboard hvr-underline-from-left dashboard", dashboard_path, class: "dropdown-item" %>
+        <%= link_to "Dashboard hvr-underline-from-left-dashboard", dashboard_path, class: "dropdown-item" %>
       <% end %>
-      <%= link_to "Log out hvr-underline-from-left dashboard", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      <%= link_to "Log out hvr-underline-from-left-dashboard", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     <% else %>
-      <%= link_to "Login", new_user_session_path, class: "navbar-link hvr-underline-from-left dashboard" %>
-      <%= link_to "Sign up", new_user_registration_path, class: "navbar-link hvr-underline-from-left dashboard" %>
-      <%= link_to "About", about_path, class: "navbar-link hvr-underline-from-left dashboard" %>
+      <%= link_to "Login", new_user_session_path, class: "navbar-link hvr-underline-from-left-dashboard" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "navbar-link hvr-underline-from-left-dashboard" %>
+      <%= link_to "About", about_path, class: "navbar-link hvr-underline-from-left-dashboard" %>
     <% end %>
   </div>
 
   <% if current_page?(root_path) %>
-    <%= link_to "Exchange My Cash", new_listing_path, class: "black-gradient-button" %>
+    <%= link_to "New Exchange", new_listing_path, class: "black-gradient-button" %>
   <% end %>
 
 
