@@ -5,22 +5,15 @@ const navbarLeft = $('.navbar-left');
 
 // Homepage
 // const left = $('.left.w-50');
-const homeDesc = $('.home-description');
-const revoDesc = $('.revonew-description');
-const right = $('.right.w-50');
-const exchangeButton = $('.black-gradient-button');
-const animatedCoins = $('.animated-coins');
-const svg = $('svg');
-const path = $('.path');
+const homeClasses = [$('.home-description'), $('.revonew-description'),
+$('.right.w-50'), $('.black-gradient-button'), $('.animated-coins'), $('svg')];
+// const path = $('.path');
 
 
 // Dashboard
-const userInfo = $('.user-info');
-const userGreeting = $('.user-greeting');
-const avatar = $('.avatar-dash');
-const runningTotal = $('.running-total');
-const userContent = $('.user-content-container');
-const tabContent = $('.tab-content');
+const dashboardClasses = [$('.user-info'), $('.user-greeting'),
+$('.avatar-dash'), $('.running-total'), $('.user-content-container'),
+$('.tab-content')];
 
 // New listing
 const payment = $('.payment');
@@ -42,25 +35,15 @@ $(function () {
     blueButtonHome.addClass('showing');
   }
   if (window.location.href == "http://www.revonew.xyz/" || "http://localhost:3000" ) {
-    homeDesc.addClass('showing');
-    revoDesc.addClass('showing');
-    right.addClass('showing');
-    svg.addClass('showing').delay(1000);
-    animatedCoins.addClass('showing');
+    homeClasses.forEach(item => item.addClass('showing'));
+    const animatedCoins = $('.animated-coins.showing');
     animatedCoins.on("animationend", function() {
-      svg.addClass('fading');
+      $('svg').addClass('fading');
     });
     // console.log(path.getTotalLength());
-    exchangeButton.addClass('showing');
-    blueButtonHome.addClass('showing');
   };
   if (window.location.href == "http://www.revonew.xyz/dashboard" || "http://localhost:3000/dashboard") {
-    userInfo.addClass('showing');
-    userGreeting.addClass('showing');
-    avatar.addClass('showing');
-    runningTotal.addClass('showing');
-    userContent.addClass('showing');
-    tabContent.addClass('showing');
+    dashboardClasses.forEach(item => item.addClass('showing'));
   };
   if (window.location.href == "http://www.revonew.xyz/listings/new" || "http://localhost:3000/listings/new") {
     payment.addClass('showing');
@@ -73,5 +56,8 @@ $(function () {
     // });
     listingCard.addClass('showing');
   };
+  if (window.location.href == "http://www.revonew.xyz/about" || "http://localhost:3000/about") {
+
+  }
 });
 
