@@ -32,6 +32,10 @@ const listingCard = $('.card');
 // Buttons
 const blueButtonHome = $('.blue-gradient-button-home');
 
+// Carousel
+const carouselAbout = $('.carousel-control-about');
+const carouselTeam = $('.carousel-control-team');
+
 $(function () {
   navbarLeft.addClass('showing');
   if (blueButtonHome) {
