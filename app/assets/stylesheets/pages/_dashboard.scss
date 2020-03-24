@@ -3,13 +3,7 @@
 //   background-repeat: none;
 // }
 
-.dark-bg {
-  background: $gradient-dark;
-}
 
-.nav-link {
-	color: black !important;
-}
 
 .nav-item {
   font-size: 20px;
@@ -19,10 +13,6 @@
   background-color: #e6e6e6;
   // border-color: white;
   // border-bottom: 3px solid rgb(151, 151, 151);
-}
-
-.nav-tabs .nav-link:hover {
-  // border-color: white;
 }
 
 .nav-link.active {

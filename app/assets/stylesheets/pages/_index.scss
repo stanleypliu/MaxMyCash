@@ -7,4 +7,28 @@
 @import "sign_in";
 // @import "listing_index";
 @import "confirm_booking";
-@import "payment_page"
+@import "payment_page";
+
+.dark-bg {
+  background: $gradient-dark;
+}
+
+.logo-title-dark {
+  font-weight: bold;
+  color: $gray;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+  margin-top: 0.5rem;
+  span {
+    color: $purple
+  }
+}
+
+.logo-title-white {
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+  margin-top: 0.5rem;
+  span {
+    color: $purple
+  }
+}
