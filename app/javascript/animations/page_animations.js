@@ -28,6 +28,7 @@ const blueButtonHome = $('.blue-gradient-button-home');
 // Carousel
 const carouselAbout = $('.carousel-control-about');
 const carouselTeam = $('.carousel-control-team');
+const carouselItem = $('.carousel-item');
 
 $(function () {
   navbarLeft.addClass('showing');
@@ -37,9 +38,9 @@ $(function () {
   if (window.location.href == "http://www.revonew.xyz/" || "http://localhost:3000" ) {
     homeClasses.forEach(item => item.addClass('showing'));
     const animatedCoins = $('.animated-coins.showing');
-    animatedCoins.on("animationend", function() {
-      $('svg').addClass('fading');
-    });
+    // animatedCoins.on("animationend", function() {
+    //   $('svg').addClass('fading');
+    // });
     // console.log(path.getTotalLength());
   };
   if (window.location.href == "http://www.revonew.xyz/dashboard" || "http://localhost:3000/dashboard") {
@@ -57,7 +58,17 @@ $(function () {
     listingCard.addClass('showing');
   };
   if (window.location.href == "http://www.revonew.xyz/about" || "http://localhost:3000/about") {
-
+    carouselAbout.hide();
+    carouselAbout.on("click", function(){
+      carouselTeam.show();
+      carouselAbout.hide();
+      // carouselItem.removeClass('active');
+    });
+    carouselTeam.on("click", function(){
+      carouselAbout.show();
+      carouselTeam.hide();
+      // carouselItem.removeClass('active');
+    });
   }
 });
 

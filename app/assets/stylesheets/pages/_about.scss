@@ -1,6 +1,5 @@
 .team-container {
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
   padding: 5%;
@@ -13,12 +12,17 @@
   border: 1px solid white;
 }
 
+.about-container {
+  // width: 75%;
+
+}
+
 .team-desc {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%;
-  // width: 100%;
+  // width: 75%;
+  width: 100%;
   h1 {
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -28,13 +32,6 @@
 .name {
   text-align: center;
 }
-
-// Overriding default bootstrap CSS
-// .carousel-item {
-//   margin: 0 auto;
-//   // display: flex;
-//   // justify-content: center;
-// }
 
 .about-card {
   background-color: rgba(20, 20, 20, 0.7);
@@ -65,12 +62,37 @@
   width: 70%;
 }
 
-.carousel-item.active {
-
+.carousel-card.active {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.carousel-item {
+.carousel-card {
   display: none;
   // margin-right: 100%;
 
+}
+
+.about-carousel {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  height: 100vh;
+}
+
+.about-arrow {
+  align-self: flex-end;
+}
+
+.team-arrow {
+  align-self: flex-end;
+}
+
+.carousel-control-team {
+
+}
+
+.carousel-control-about {
+  float: left;
 }

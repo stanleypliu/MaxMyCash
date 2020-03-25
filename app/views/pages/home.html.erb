@@ -2,44 +2,55 @@
   <div class="container">
     <div class="d-flex home-container">
       <div class="left w-50">
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-1" viewBox="0 0 200 200">
-<!--           <path d="M70 70 A 15 15 0 1 1 70 10" fill="none" stroke="gray" stroke-width="2" class="path"/>
-          <path d="M70 10 A 15 15 0 1 1 70 70" fill="none" stroke="gray" stroke-width="2" class="path"/> -->
-          <path
-            d="
-              M 40, 40
-              a 30,30 0 1,1 60,0
-              a 30,30 0 1,1 -60,0
-            "
-          fill="none" stroke="gray" stroke-width="2" class="path-1"/>
-        </svg>
-        <div class="animated-coins" id="animated-coin-1" style="background-image: url(<%= image_path "gold-coin.png" %>);"></div>
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-2" viewBox="0 0 200 200">
-          <path
-            d="
-              M 73, 74
-              a 52,52 0 1,1 104,0
-              a 52,52 0 1,1 -104,0
-            "
-          fill="none" stroke="gray" stroke-width="2" class="path-2"/>
-        </svg>
-        <div class="animated-coins" id="animated-coin-2" style="background-image: url(<%= image_path "yen.png" %>);"></div>
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-3" viewBox="0 0 200 200">
-        <!-- old approach of using an "almost-circle" -->
-<!--           <path d="M65 150 A 65 65 0 1 0 130 20" fill="none" stroke="gray" stroke-width="2" class="path"/>
-          <path d="M130 20 A 65 65 0 1 0 65 150" fill="none" stroke="gray" stroke-width="2" class="path"/> -->
-          <path
-            d="
-              M 24, 86
-              a 73,73 0 1,1 146,0
-              a 73,73 0 1,1 -146,0
-            "
-          fill="none" stroke="gray" stroke-width="2" class="path-3"/>
-        </svg>
-        <div class="animated-coins" id="animated-coin-3" style="background-image: url(<%= image_path "royal-mint.png" %>);"></div>
+
+        <div class="coin-headers">
+          <div class="coin-1">
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-1" viewBox="0 0 200 200">
+  <!--           <path d="M70 70 A 15 15 0 1 1 70 10" fill="none" stroke="gray" stroke-width="2" class="path"/>
+            <path d="M70 10 A 15 15 0 1 1 70 70" fill="none" stroke="gray" stroke-width="2" class="path"/> -->
+              <path
+                d="
+                  M 40, 40
+                  a 30,30 0 1,1 60,0
+                  a 30,30 0 1,1 -60,0
+                "
+              fill="none" stroke="gray" stroke-width="2" class="path-1"/>
+            </svg>
+            <div class="animated-coins" id="animated-coin-1" style="background-image: url(<%= image_path "gold-coin.png" %>);"></div>
+          </div>
+          <div class="coin-2">
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-2" viewBox="0 0 200 200">
+              <path
+                d="
+                  M 73, 74
+                  a 52,52 0 1,1 104,0
+                  a 52,52 0 1,1 -104,0
+                "
+              fill="none" stroke="gray" stroke-width="2" class="path-2"/>
+            </svg>
+            <div class="animated-coins" id="animated-coin-2" style="background-image: url(<%= image_path "yen.png" %>);"></div>
+          </div>
+        </div>
         <h2 class="home-description">Exchange left over cash <br> for digital money,<br>wherever you are.</h2>
         <p class="revonew-description">Fast, secure transactions as recommended by billions of customers on Trustpilot, worldwide*</p>
-        <%= link_to "Cash exchanges near you", listings_path, class: "blue-gradient-button-home" %>
+        <div class="left-bottom">
+          <%= link_to "Cash exchanges near you", listings_path, class: "blue-gradient-button-home" %>
+          <div class="coin-3">
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-3" viewBox="0 0 200 200">
+            <!-- old approach of using an "almost-circle" -->
+    <!--           <path d="M65 150 A 65 65 0 1 0 130 20" fill="none" stroke="gray" stroke-width="2" class="path"/>
+              <path d="M130 20 A 65 65 0 1 0 65 150" fill="none" stroke="gray" stroke-width="2" class="path"/> -->
+              <path
+                d="
+                  M 24, 86
+                  a 73,73 0 1,1 146,0
+                  a 73,73 0 1,1 -146,0
+                "
+              fill="none" stroke="gray" stroke-width="2" class="path-3"/>
+            </svg>
+            <div class="animated-coins" id="animated-coin-3" style="background-image: url(<%= image_path "royal-mint.png" %>);"></div>
+          </div>
+        </div>
       </div>
 
       <div class="right w-50">
@@ -52,7 +63,7 @@
   </div>
     <div class="footnote-container">
       <div class="fluff w-40">
-        <a href="#" class="footer-link"><p>About</p></a>
+        <a href="/about" class="footer-link"><p>About</p></a>
         <a href="#" class="footer-link"><p>Terms and Conditions</p></a>
         <a href="#" class="footer-link"><p>FAQ</p></a>
       </div>
