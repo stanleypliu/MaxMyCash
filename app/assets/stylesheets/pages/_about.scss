@@ -1,0 +1,102 @@
+.about-carousel {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  height: 100vh;
+}
+
+.carousel-card.active {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.about-container {
+  // width: 75%;
+
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.about-row {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+
+.team-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // width: 75%;
+  width: 100%;
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
+
+.name {
+  text-align: center;
+}
+
+.about-card {
+  background-color: rgba(20, 20, 20, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 40vh;
+  width: 21%;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 5px;
+  border: 1px solid $text-color-gray;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  h4 {
+    color: $text-color-gray;
+  }
+}
+
+// .about-card:hover:after {
+//   content: "Was a materials engineer, first learnt to code on the job and found I really liked it over traditional engineering! After some thinking I decided on a career change and joined Le Wagon. Hoping to become a fullstack web developer.";
+
+// }
+
+.avatar-bordered.team {
+  width: 70%;
+}
+
+
+
+.carousel-card {
+  display: none;
+  // margin-right: 100%;
+
+}
+
+
+.about-arrow {
+  align-self: center;
+}
+
+.team-arrow {
+  align-self: center;
+}
+
+.carousel-control-team {
+
+}
+
+.carousel-control-about {
+
+}

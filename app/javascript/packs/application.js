@@ -2,7 +2,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("ajax-currency-manipulation/ajax")
-require("animations/home_animation")
+require("animations/page_animations")
 import Swal from 'sweetalert2'
 
 import "bootstrap";

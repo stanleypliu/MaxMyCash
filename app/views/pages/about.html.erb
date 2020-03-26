@@ -1,18 +1,55 @@
 <div class="dark-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-3">
-        Stanley
+  <div class="about-carousel">
+    <div class="carousel-card active">
+      <div class="about-container">
+        <h1>About</h1>
+        <p>We worked hard.</p>
       </div>
-      <div class="col-3">
-        Maxime
+      <div class="team-arrow">
+        <button class="carousel-control-team">
+          Meet the team
+        </button>
       </div>
-      <div class="col-3">
-        Hamza
+    </div>
+    <div class="carousel-card">
+      <div class="about-arrow">
+        <button class="carousel-control-about">
+          About
+        </button>
       </div>
-      <div class="col-3">
-        Danielle
+      <div class="team-container">
+        <div class="team-desc">
+          <h1>The Team</h1>
+          <div class="about-row">
+            <div class="about-card">
+              <%= image_tag "logo.png", alt: "Stanley", class: 'avatar-bordered team' %>
+              <div class="name">
+                <h4>Stanley</h4>
+              </div>
+            </div>
+            <div class="about-card">
+              <%= image_tag "logo.png", alt: "alttext", class: 'avatar-bordered team' %>
+              <div class="name">
+                <h4>Maxime</h4>
+              </div>
+            </div>
+            <div class="about-card">
+              <%= image_tag "logo.png", alt: "alttext", class: 'avatar-bordered team' %>
+              <div class="name">
+                <h4>Danielle</h4>
+              </div>
+            </div>
+            <div class="about-card">
+              <%= image_tag "logo.png", alt: "alttext", class: 'avatar-bordered team' %>
+              <div class="name">
+                <h4>Hamza</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+

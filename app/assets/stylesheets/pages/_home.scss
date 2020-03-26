@@ -23,7 +23,7 @@
   color: $text-color-gray;
   padding-left: 8px;
   margin-left: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   font-size: 23px;
   align-items: left !important;
   position: relative;
@@ -147,7 +147,6 @@ h1.home {
 
 .animated-coins {
   border-radius: 50%;
-  position: absolute;
   animation-name: roundabout;
   animation-iteration-count: 2;
   animation-fill-mode: forwards;
@@ -168,24 +167,18 @@ h1.home {
   width: 60px;
   height: 60px;
   background-size: cover;
-  top: 350px;
-  left: 45px;
 }
 
 #animated-coin-2 {
   width: 100px;
   height: 100px;
   background-size: cover;
-  top: 124px;
-  left: 500px;
 }
 
 #animated-coin-3 {
   width: 150px;
   height: 150px;
   background-size: cover;
-  top: 500px;
-  left: 500px;
 }
 
 @keyframes roundabout {
@@ -241,27 +234,20 @@ svg.fading {
 
 .svg-coin-1 {
   position: absolute;
-  top: 340px;
-  left: 5px;
-  z-index: 2;
-  // border: 1px solid black;
+  top: -5px;
+  left: -5px;
 }
 
 
 .svg-coin-2 {
   position: absolute;
-  top: 100px;
-  left: 425px;
-  z-index: 2;
-  // border: 1px solid black;
+  top: -5px;
+  left: -7px;
 }
 
 .svg-coin-3 {
   position: absolute;
-  top: 489px;
-  left: 478px;
-  z-index: 2;
-  // border: 1px solid black;
+  left: -3px;
 }
 
 .path-1 {
@@ -287,3 +273,28 @@ svg.fading {
     stroke-dashoffset: 0;
   }
 }
+
+.coin-1 {
+  position: relative;
+}
+
+.coin-2 {
+  position: relative;
+}
+
+.coin-3 {
+  position: relative;
+}
+
+.coin-headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
