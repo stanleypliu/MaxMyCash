@@ -38,9 +38,9 @@ $(function () {
   if (window.location.href == "http://www.revonew.xyz/" || "http://localhost:3000" ) {
     homeClasses.forEach(item => item.addClass('showing'));
     const animatedCoins = $('.animated-coins.showing');
-    // animatedCoins.on("animationend", function() {
-    //   $('svg').addClass('fading');
-    // });
+    animatedCoins.on("animationend", function() {
+      $('svg').addClass('fading');
+    });
     // console.log(path.getTotalLength());
   };
   if (window.location.href == "http://www.revonew.xyz/dashboard" || "http://localhost:3000/dashboard") {
@@ -51,23 +51,32 @@ $(function () {
     listingForm.addClass('showing');
   };
   if (window.location.href == "http://www.revonew.xyz/listings" || "http://localhost:3000/listings") {
-    // listingCard.each(function(index) {
+    listingCard.each(function(index) {
       // console.log(index);
-    //   $(this).delay(1000*index).addClass('showing');
-    // });
+      // const timeout = 1000 * index;
+      // $(this).delay(timeout);
+      $(this).addClass('showing');
+    });
     listingCard.addClass('showing');
   };
   if (window.location.href == "http://www.revonew.xyz/about" || "http://localhost:3000/about") {
-    carouselAbout.hide();
+    // carouselAbout.hide();
     carouselAbout.on("click", function(){
-      carouselTeam.show();
-      carouselAbout.hide();
-      // carouselItem.removeClass('active');
+      // console.log(carouselTeam.parentsUntil(".about-carousel"));
+      const currentItem = carouselAbout.parentsUntil(".about-carousel");
+      // console.log(currentItem.next());
+      // console.log(carouselTeam.parents()[1].next());
+      currentItem.removeClass('active');
+      currentItem.prev().addClass('active');
     });
     carouselTeam.on("click", function(){
-      carouselAbout.show();
-      carouselTeam.hide();
-      // carouselItem.removeClass('active');
+      // console.log(carouselTeam.parentsUntil(".about-carousel"));
+      const currentItem = carouselTeam.parentsUntil(".about-carousel");
+      // console.log(currentItem.next());
+      // console.log(carouselTeam.parents()[1].next());
+      currentItem.removeClass('active');
+      currentItem.next().addClass('active');
+      // carouselTeam.parents()[1].
     });
   }
 });

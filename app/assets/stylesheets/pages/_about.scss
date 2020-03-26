@@ -1,3 +1,21 @@
+.about-carousel {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  height: 100vh;
+}
+
+.carousel-card.active {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.about-container {
+  // width: 75%;
+
+}
+
 .team-container {
   display: flex;
   justify-content: center;
@@ -12,10 +30,6 @@
   border: 1px solid white;
 }
 
-.about-container {
-  // width: 75%;
-
-}
 
 .team-desc {
   display: flex;
@@ -62,11 +76,7 @@
   width: 70%;
 }
 
-.carousel-card.active {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
+
 
 .carousel-card {
   display: none;
@@ -74,19 +84,13 @@
 
 }
 
-.about-carousel {
-  display: flex;
-  align-items: center;
-  // justify-content: center;
-  height: 100vh;
-}
 
 .about-arrow {
-  align-self: flex-end;
+  align-self: center;
 }
 
 .team-arrow {
-  align-self: flex-end;
+  align-self: center;
 }
 
 .carousel-control-team {
@@ -94,5 +98,5 @@
 }
 
 .carousel-control-about {
-  float: left;
+
 }
