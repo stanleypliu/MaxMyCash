@@ -1,27 +1,54 @@
+@media (min-width: 240px) and (max-width: 599px) {
+  .exchange-button {
+    display: none;
+  }
+  .navbar-left {
+    a {
+      margin: 5px 0px;
+      display: block;
+      text-align: center;
+      font-size: 1.5em;
+    }
+  }
+  .navbar-lewagon {
+    padding: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .navbar-left {
+    display: flex;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .navbar-left {
+    opacity: 0;
+    -webkit-transition: all .4s ease .4s;
+    transition: all .4s ease .4s;
+    transform: translateX(-5%);
+    display: flex;
+  }
+  .navbar-left.showing {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .navbar-link {
+    margin-left: 32px;
+  }
+  .navbar-lewagon {
+    padding: 0.5em 2em;
+  }
+}
+
+
 .navbar-lewagon {
-  justify-content: space-between;
+  // justify-content: space-between;
   background: #464C53;
   // background: $gradient-dark;
   width: 100%;
-  padding: 3px 38px;
-}
 
-.navbar-left {
-  position: relative;
-  opacity: 0;
-  -webkit-transition: all .4s ease .4s;
-  transition: all .4s ease .4s;
-  transform: translateX(-50px);
-}
-
-.navbar-left.showing {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.navbar {
-   position: sticky;
-  top: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -36,7 +63,6 @@
 .navbar-link {
   color: black !important;
   text-decoration: none !important;
-  margin-left: 32px;
   // border: 1px solid black;
 }
 
@@ -58,13 +84,7 @@
 //   background: black;
 //   transition: width .5s ease, background-color .5s ease;
 // }
-// .logo-title-white {
-//   color: white;
-// }
 
-// .logo-title-dark {
-//   color: black;
-// }
 
 .hvr-underline-from-left-dashboard {
   display: inline-block;
