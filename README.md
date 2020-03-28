@@ -6,7 +6,7 @@ Still regularly updated by the team: check out www.revonew.xyz!
 
 ## TODO
 * Improve the real-time currency conversion functionality
-* Add animated SVGs to the front page
+* ~~Add animated SVGs to the front page
 * General improvements to front end for the rest of the site
 * Make the website responsive, as well as extending compatability to other browsers (stretch goal)
 
