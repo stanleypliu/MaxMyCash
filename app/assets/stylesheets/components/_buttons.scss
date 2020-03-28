@@ -1,9 +1,11 @@
-@media (min-width: 768px) {
+@media (min-width: 768px and 1023px) {
   .blue-gradient-button-home {
     opacity: 0;
     margin-top: 16px;
-    margin-left:16px;
+    margin-left: 16px;
     transform: translateY(10%);
+    font-size: 1.25em;
+    // padding: 0.5em 1.5em;
     -webkit-transition: opacity 1.2s ease 1.2s, transform 1.2s ease 1.2s, color 0.2s;
     transition: opacity 1.2s ease 1.2s, transform 1.2s ease 1.2s, color 0.2s;
   }
@@ -20,6 +22,15 @@
   .exchange-button.showing {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blue-gradient-button-home {
+    align-self: self-start;
+  }
+  .left-bottom {
+    justify-content: space-between;
   }
 }
 
@@ -49,8 +60,8 @@
   padding: 12px 35px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-  border-radius: 8px;
+  font-size: 1em;
+  border-radius: 0.5em;
 
   font-weight: bold;
   position: relative;

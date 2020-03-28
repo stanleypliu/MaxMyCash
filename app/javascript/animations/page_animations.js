@@ -3,11 +3,13 @@
 // Navbar
 const navbarLeft = $('.navbar-left');
 const exchangeLink = $('.navbar-link.responsive');
+const standardLinks = $('.navbar-link.standard');
 
 // Homepage
 // const left = $('.left.w-50');
 const homeClasses = [$('.home-description'), $('.revonew-description'),
-$('.right'), $('.exchange-button'), $('.animated-coins'), $('svg')];
+$('.right'), $('.exchange-button'), $('.animated-coins'), $('svg'),
+$('.blue-gradient-button-home')];
 // const path = $('.path');
 
 
@@ -24,7 +26,7 @@ const listingForm = $('.card-box-shadow');
 const listingCard = $('.card');
 
 // Buttons
-const blueButtonHome = $('.blue-gradient-button-home');
+
 
 // Carousel
 const carouselAbout = $('.carousel-control-about');
@@ -32,12 +34,11 @@ const carouselTeam = $('.carousel-control-team');
 const carouselItem = $('.carousel-item');
 
 $(function () {
-  $(window).width() < 600 ? exchangeLink.show() : exchangeLink.hide();
+  $(window).width() < 768 ? exchangeLink.show() : exchangeLink.hide();
+  $(window).width() < 768 ? standardLinks.removeClass('hvr-underline-from-left-dashboard') : standardLinks.addClass('hvr-underline-from-left-dashboard');
   if ($(window).width() >= 768) {
+    console.log("I am showing the divs!");
     navbarLeft.addClass('showing');
-    if (blueButtonHome) {
-      blueButtonHome.addClass('showing');
-    }
     if (window.location.href == "http://www.revonew.xyz/" || "http://localhost:3000" ) {
       homeClasses.forEach(item => item.addClass('showing'));
       const animatedCoins = $('.animated-coins.showing');
@@ -82,5 +83,8 @@ $(function () {
         // carouselTeam.parents()[1].
       });
     }
+  }
+  else {
+    console.log("I am hiding the divs!");
   }
 });
