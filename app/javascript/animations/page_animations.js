@@ -34,8 +34,6 @@ const carouselTeam = $('.carousel-control-team');
 const carouselItem = $('.carousel-item');
 
 $(function () {
-  $(window).width() < 768 ? exchangeLink.show() : exchangeLink.hide();
-  $(window).width() < 768 ? standardLinks.removeClass('hvr-underline-from-left-dashboard') : standardLinks.addClass('hvr-underline-from-left-dashboard');
   if ($(window).width() >= 768) {
     console.log("I am showing the divs!");
     navbarLeft.addClass('showing');
