@@ -42,10 +42,13 @@
 
   //   }
   // }
-  .animated-coins {
+  .coin-headers {
     display: none;
   }
-  svg.showing {
+  .coin-3 {
+    display: none;
+  }
+  svg {
     display: none;
   }
   .left {
@@ -116,6 +119,8 @@
     .acknowledgments {
       display: none;
     }
+    padding-bottom: 10px;
+    padding: 12px 6px;
   }
 }
 
@@ -169,6 +174,8 @@
     .acknowledgments {
       display: none;
     }
+    padding-bottom: 10px;
+    padding: 12px 6px;
   }
 }
 
@@ -225,6 +232,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .footnote-container {
+    padding-bottom: 10px;
+    padding: 12px 6px;
   }
 }
 
