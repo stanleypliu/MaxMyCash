@@ -1,7 +1,12 @@
 <div class="dark-bg">
   <div class="container">
     <div class="d-flex home-container">
-      <div class="left w-50">
+      <div class="left">
+<!--       <div class="hero-section-responsive">
+        <h3 id="hero-first-line">Whether you've just come back home from your travels</h3>
+        <h3 id="hero-second-line">Or you're looking to go,</h3>
+        <h3 id="hero-third-line">we've got you <b>covered</b></h3>
+      </div> -->
 
         <div class="coin-headers">
           <div class="coin-1">
@@ -37,7 +42,6 @@
           <%= link_to "Cash exchanges near you", listings_path, class: "blue-gradient-button-home" %>
           <div class="coin-3">
             <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="svg-coin-3" viewBox="0 0 200 200">
-            <!-- old approach of using an "almost-circle" -->
     <!--           <path d="M65 150 A 65 65 0 1 0 130 20" fill="none" stroke="gray" stroke-width="2" class="path"/>
               <path d="M130 20 A 65 65 0 1 0 65 150" fill="none" stroke="gray" stroke-width="2" class="path"/> -->
               <path
@@ -53,7 +57,7 @@
         </div>
       </div>
 
-      <div class="right w-50">
+      <div class="right">
         <%= image_tag "hugo-resized.png", alt: "money", class: "home-img" %>
       </div>
     </div>
@@ -66,6 +70,7 @@
         <a href="#" class="footer-link"><p>About</p></a>
         <a href="#" class="footer-link"><p>Terms and Conditions</p></a>
         <a href="#" class="footer-link"><p>FAQ</p></a>
+        <a href="http://www.github.com/stanleypliu/MaxMyCash" class="footer-link" id="responsive-repo"><p>GitHub</p></a>
       </div>
       <div class="acknowledgments w-60">
         <p>Made with 💟 by <b>HMDS</b> @ Le Wagon | batch #361 | Check out the GitHub repo here</p>
