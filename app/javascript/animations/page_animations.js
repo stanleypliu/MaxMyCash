@@ -2,7 +2,7 @@
 
 // Navbar
 const navbarLeft = $('.navbar-left');
-const exchangeLink = $('.navbar-link.responsive');
+// const exchangeLink = $('.navbar-link.responsive');
 const standardLinks = $('.navbar-link.standard');
 
 // Homepage

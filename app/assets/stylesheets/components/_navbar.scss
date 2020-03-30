@@ -1,5 +1,5 @@
 @media (min-width: 240px) and (max-width: 767px) {
-  .exchange-button {
+  .exchange-button.navbar {
     display: none;
   }
   .navbar-link {
@@ -13,9 +13,6 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-  }
-  .navbar-lewagon {
-    padding: none;
   }
 }
 
@@ -42,9 +39,9 @@
     display: flex;
     justify-content: space-between;
   }
-  .navbar-link.responsive {
-    display: none;
-  }
+  // .navbar-link.responsive {
+  //   display: none;
+  // }
 }
 
 
