@@ -13,6 +13,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -25,7 +26,9 @@
     transition: all .4s ease .4s;
     transform: translateX(-5%);
     display: flex;
+    align-items: center;
   }
+
   .navbar-left.showing {
     opacity: 1;
     transform: translateX(0);
@@ -36,6 +39,9 @@
   }
   .navbar-lewagon {
     padding: 0.5em 2em;
+
+  }
+  .navbar-lewagon.home {
     display: flex;
     justify-content: space-between;
   }
