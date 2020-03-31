@@ -6,7 +6,7 @@ class Listing < ApplicationRecord
   belongs_to :user
 
   validates :currency_amount, presence: true
-  validates :currency_amount, numericality: { only_integer: true }
+  validates :currency_amount, numericality: { only_integer: true, greater_than: 0 }
   validates :currency, presence: true
   validates :location, presence: true
 

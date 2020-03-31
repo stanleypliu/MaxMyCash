@@ -14,3 +14,32 @@
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
+
+// Form
+
+@media (min-width: 768px) {
+  .form-card {
+    // background-color: #FFFFFF;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    // box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    margin-top: 30px;
+    // width: 40%;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all .4s ease .4s;
+    transition: all .4s ease .4s;
+    transform: translateX(-50px);
+  }
+
+  .form-card.showing {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-card {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}

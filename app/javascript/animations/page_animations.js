@@ -2,7 +2,7 @@
 
 // Navbar
 const navbarLeft = $('.navbar-left');
-const exchangeLink = $('.navbar-link.responsive');
+// const exchangeLink = $('.navbar-link.responsive');
 const standardLinks = $('.navbar-link.standard');
 
 // Homepage
@@ -20,7 +20,7 @@ $('.tab-content')];
 
 // New listing
 const payment = $('.payment');
-const listingForm = $('.card-box-shadow');
+const listingForm = $('.form-card');
 
 // Index of listings
 const listingCard = $('.card');

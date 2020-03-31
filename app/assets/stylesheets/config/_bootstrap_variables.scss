@@ -24,6 +24,6 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
-@media (min-width: 240px) and (max-width: 599px) {
-  $container-padding-x: none;
-}
+// @media (min-width: 240px) and (max-width: 599px) {
+$container-padding-x: 0px;
+// }

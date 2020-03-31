@@ -1,12 +1,12 @@
 <div class="bg-dark min-height">
   <div class="container">
     <div class="d-flex listing-container">
-      <div class="payment w-50">
+      <div class="payment">
         <%= image_tag "payment-processed.png", alt: "payment processed" %>
       </div>
-      <div class="card-box-shadow w-50">
-        <h2>Exchange your cash</h2>
-
+      <div class="form-card">
+        <h2><b>Exchange Your Cash</b></h2>
+        <!-- <hr> -->
         <%= simple_form_for(@listing) do |f| %>
           <%= f.input :currency_amount, input_html: {class: 'currency-amount'} %>
           <%= f.input :currency, collection: @currencies, input_html: {class: 'dropdown-currency'} %>

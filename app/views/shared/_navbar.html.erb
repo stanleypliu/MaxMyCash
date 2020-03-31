@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-md navbar-light navbar-lewagon sticky-top">
-  <div class="align-items-center navbar-left">
+<div class="navbar navbar-expand-md navbar-light sticky-top <%= current_page?(root_path) ? 'navbar-lewagon home' : 'navbar-lewagon' %>">
+  <div class="navbar-left">
     <%= link_to root_path, class: "navbar-brand" do %>
       <h2 class="<%= params[:action] == 'home' || 'index' || 'new' ? 'logo-title-white' : 'logo-title-dark' %>">Revo<span>new</span></h2>
     <% end %>
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <%#= link_to "About", about_path, class: "navbar-link hvr-underline-from-left-dashboard" %>
 
-        <%= link_to "New Exchange", new_listing_path, class: "navbar-link responsive" %>
+        <%#= link_to "New Exchange", new_listing_path, class: "navbar-link responsive" %>
         <% if user_signed_in? %>
           <% if !current_page?(dashboard_path) %>
             <%= link_to "Dashboard", dashboard_path, class: "navbar-link hvr-underline-from-left-dashboard" %>
@@ -26,7 +26,7 @@
   <!-- </div> -->
 
   <% if current_page?(root_path) %>
-    <%= link_to "New Exchange", new_listing_path, class: "exchange-button" %>
+    <%= link_to "New Exchange", new_listing_path, class: "exchange-button navbar" %>
   <% end %>
 
 
