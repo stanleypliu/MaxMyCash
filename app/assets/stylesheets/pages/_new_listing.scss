@@ -1,3 +1,64 @@
+@media (min-width: 240px) and (max-width: 599px) {
+  .payment {
+    display: none;
+  }
+  .form-card {
+    // opacity: 1;
+    flex-grow: 2;
+    margin-top: 0;
+    transform: translateX(0);
+    height: 100vh;
+  }
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .dropdown-currency, .dropdown-currency option {
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .payment {
+    display: none;
+  }
+  .form-card {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all .4s ease .4s;
+    transition: all .4s ease .4s;
+    transform: translateX(50px);
+  }
+
+  .payment.showing {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media (min-width: 1024px) {
+  .payment {
+    width: 50%;
+  }
+  .form-card {
+    width: 50%;
+  }
+}
+
 .currency-span {
   background-color: rgba(139 ,136, 248, 49);
   // border: 1px solid black;
@@ -5,7 +66,7 @@
   padding: 25px 30px;
   margin-bottom: 12px;
   opacity:.8;
-;
+
 }
 
 .currency-span p {
@@ -17,7 +78,7 @@
   justify-content: center;
 }
 
-// .card-box-shadow {
+// .form-card {
 //   border-top: 3px solid black;
 //   border-right: 3px solid black;
 // }
@@ -31,77 +92,18 @@
   // background-position: left;
 }
 
-.listing-container.showing {
-
-}
-
 // .cats img {
 //   height: 500px;
 //   width: 500px;
 // }
 
-.payment {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  opacity: 0;
-  -webkit-transition: all .4s ease .4s;
-  transition: all .4s ease .4s;
-  transform: translateX(50px);
-}
 
-.payment.showing {
-    opacity: 1;
-  transform: translateX(0);
-}
 
 .payment img {
   width: 90%;
 }
 
-// .card-box-shadow {
-//   background-color: rgba(255, 255, 255, 0.5);
-// }
-
-
 .listing-container h2 {
   text-align: center;
   padding: 20px 10px;
-}
-
-.form-group {
-  padding: 10px;
-}
-
-.card-box-shadow {
-  margin-top: 30px;
-  width: 40%;
-  position: relative;
-  opacity: 0;
-  -webkit-transition: all .4s ease .4s;
-  transition: all .4s ease .4s;
-  transform: translateX(-50px);
-}
-
-.card-box-shadow.showing {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.blue-gradient-button {
-  padding: 10px;
-}
-
-form abbr[title] {
-  border-bottom: none !important;
-  text-decoration: none !important;
-}
-
-label {
-  font-size: 18px;
-}
-
-abbr {
-  display: none;
 }

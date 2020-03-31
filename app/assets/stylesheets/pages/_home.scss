@@ -21,29 +21,6 @@
   .dark-bg {
     background: $gradient-light;
   }
-  // .hero-section-responsive {
-  //   // background: $gradient-dark;
-  //   color: black;
-  //   padding: 0.5em 1em;
-  //   font-size: 0.75em;
-  //   // text-align: center;
-  //   width: 100%;
-  //   // border-radius: 15px;
-  //   // border: 5px solid white;
-  //   margin-bottom: 1em;
-  //   #hero-first-line {
-  //     text-align: left;
-  //     font-size: 1.5em;
-  //   }
-  //   #hero-second-line {
-  //     text-align: right;
-  //     font-size: 1.25em;
-  //   }
-  //   #hero-third-line {
-  //     text-align: center;
-
-  //   }
-  // }
   .coin-headers {
     display: none;
   }
@@ -129,10 +106,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .dark-bg {
-    background: $gradient-dark;
-  }
+@media (min-width: 768px) {
   .right {
     opacity: 0;
     -webkit-transition: all .4s ease .4s;
@@ -150,16 +124,13 @@
     justify-content: space-between;
     align-items: center;
   }
-
   .home-description {
     opacity: 0;
     text-align: left;
-    font-size: 2em;
     -webkit-transition: opacity.6s ease .6s, transform .6s ease .6s;
     transition: opacity.6s ease .6s, transform .6s ease .6s;
     transform: translateX(-5%);
   }
-
   .home-description.showing,
   .revonew-description.showing {
     opacity: 1;
@@ -167,7 +138,6 @@
   }
   .revonew-description {
     opacity: 0;
-    font-size: 1em;
     color: $text-color-gray;
     -webkit-transition: opacity.8s ease .8s, transform .8s ease .8s;
     transition: opacity.8s ease .8s, transform .8s ease .8s;
@@ -181,6 +151,24 @@
   .exchange-button.responsive {
     display: none;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dark-bg {
+    background: $gradient-dark;
+  }
+
+  .home-description {
+    font-size: 2em;
+  }
+
+
+
+  .revonew-description {
+    font-size: 1em;
+  }
+
+
   .coin-3 {
     display: none;
   }
@@ -201,59 +189,14 @@
     display: none;
   }
   .home-description {
-    opacity: 0;
-    text-align: left;
     font-size: 2.5em;
-    -webkit-transition: opacity.6s ease .6s, transform .6s ease .6s;
-    transition: opacity.6s ease .6s, transform .6s ease .6s;
-    transform: translateX(-5%);
   }
-  .coin-headers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .right {
-    opacity: 0;
-    -webkit-transition: all .4s ease .4s;
-    transition: all .4s ease .4s;
-    transform: translateY(-5%);
-  }
-
-  .right.showing {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .home-description {
-    opacity: 0;
-    font-size: 2.5em;
-    -webkit-transition: opacity.6s ease .6s, transform .6s ease .6s;
-    transition: opacity.6s ease .6s, transform .6s ease .6s;
-    transform: translateX(-5%);
-  }
-
   .home-description.showing,
   .revonew-description.showing {
     text-align: left;
-    opacity: 1;
-    transform: translateX(0);
   }
   .revonew-description {
-    opacity: 0;
     font-size: 1.5em;
-    color: $text-color-gray;
-    -webkit-transition: opacity.8s ease .8s, transform .8s ease .8s;
-    transition: opacity.8s ease .8s, transform .8s ease .8s;
-    transform: translateX(5%);
-  }
-  .left-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .exchange-button.responsive {
-    display: none;
   }
   .footnote-container {
     padding-bottom: 10px;
