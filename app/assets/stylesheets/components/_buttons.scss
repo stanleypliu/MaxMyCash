@@ -107,14 +107,15 @@
 .exchange-button {
   // background: radial-gradient(circle, rgba(43,46,50,1) 0%, rgba(28,33,37,1) 100%);
   background: $green;
-  box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  -webkit-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  -moz-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  // -webkit-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  // -moz-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
   // color: white;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   padding: 10px 38px;
-  font-size: 15px;
+  font-size: 1em;
   border-radius: 8px;
   font-weight: bold;
     -webkit-transition: color 0.2s;
