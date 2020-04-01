@@ -25,6 +25,12 @@
   }
   .form-card {
     max-width: 600px;
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .listing-container {
+    // align-items: center;
   }
 }
 
@@ -38,26 +44,44 @@
     -webkit-transition: all .4s ease .4s;
     transition: all .4s ease .4s;
     transform: translateX(50px);
+    width: 80%;
   }
-
+  .payment img {
+    width: 90%;
+  }
   .payment.showing {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-
+  // .sun {
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 10em;
+  //   left: 1em;
+  // }
 }
 
 @media (min-width: 1024px) {
   .payment {
     width: 50%;
   }
-  .form-card {
-    width: 50%;
-  }
+  // .sun {
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 12em;
+  //   left: 3em;
+  // }
+
 }
+
+.payment {
+  position: relative;
+}
+
+.sun-circle {
+  fill: $yellow;
+}
+
 
 .currency-span {
   background-color: rgba(139 ,136, 248, 49);
@@ -86,24 +110,10 @@
 .listing-container {
   display: flex;
   justify-content: center;
-  // background: url("ginger-cat.png");
-  // background-size: cover;
-  // background-repeat: none;
-  // background-position: left;
-}
-
-// .cats img {
-//   height: 500px;
-//   width: 500px;
-// }
-
-
-
-.payment img {
-  width: 90%;
+  max-width: 1200px;
 }
 
 .listing-container h2 {
   text-align: center;
-  padding: 20px 10px;
+  padding: 1em 1em;
 }

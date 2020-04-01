@@ -51,7 +51,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = false
 
-  config.hosts << /[a-z0-9]+\.ngrok\.io/
+  config.hosts << "/[a-z0-9]+\.ngrok\.io/"
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
