@@ -36,10 +36,17 @@ if (currencyAmount) {
   });
 };
 
-// newListingForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-// });
-// if (runningTotal) {
+// Look for the presence of currency-span on the page and on submit, pass the numerical value in euros to session storage
+const listingForm = document.querySelector('#new_listing');
 
-// }
+console.log(listingForm);
+
+// listingForm.addEventListener('submit', function() {
+//   console.log('success');
+// });
+
+// const currencySpan = document.querySelector('.currency-span').innerText;
+
+// const euros = Number(currencySpan.split(' ')[2]);
+
 
