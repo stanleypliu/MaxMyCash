@@ -10,7 +10,7 @@ class ListingsController < ApplicationController
     #     @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
     #   end
     if params[:where].present?
-      if params[:distance] == "" 
+      if params[:distance] == ""
         @listings = Listing.near(params[:where], 0)
       else
         @listings = Listing.near(params[:where], params[:distance])
@@ -28,7 +28,7 @@ class ListingsController < ApplicationController
         lat: listing.latitude,
         lng: listing.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { listing: listing })
-      } 
+      }
 
     end
   end
@@ -53,6 +53,7 @@ class ListingsController < ApplicationController
     if @listing.save
       redirect_to dashboard_path
     else
+      flash.alert = "Please check your form for any errors and try again."
       render :new
     end
   end
