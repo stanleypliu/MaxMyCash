@@ -39,14 +39,23 @@ if (currencyAmount) {
 // Look for the presence of currency-span on the page and on submit, pass the numerical value in euros to session storage
 const listingForm = document.querySelector('#new_listing');
 
-console.log(listingForm);
+if (listingForm) {
+  const currencySpan = document.querySelector('.currency-span');
+  if (currencySpan) {
+    const euros = Number(currencySpan.innerText.split(' ')[2]);
+    // Append to form upon submit/add to sessionstorage
+    if (!isNaN(euros) || euros !== 0) {
+      listingForm.addEventListener("submit", function(){
+        console.log('success');
 
-// listingForm.addEventListener('submit', function() {
-//   console.log('success');
-// });
+      });
+    }
+  }
+}
 
-// const currencySpan = document.querySelector('.currency-span').innerText;
 
-// const euros = Number(currencySpan.split(' ')[2]);
+
+
+
 
 
