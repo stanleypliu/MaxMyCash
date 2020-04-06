@@ -31,15 +31,31 @@ if (currencyAmount) {
     fetch(ratesURL).then(response => response.json()).then((data) => {
       document.querySelector('.exchanged-currency').innerHTML = "";
       const exchanged_amount = (event.target.value / data.rates[dropdownInputSplit]).toFixed(2);
-      isNaN(exchanged_amount) ? 0 : exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><p>You'll get <b>${exchanged_amount} Euros</b> back<p></div></br>`);
+      isNaN(exchanged_amount) ? 0 : exchangedCurrency.insertAdjacentHTML('afterbegin', `<br><div class="currency-span"><h3>You'll get <b>${exchanged_amount} Euros</b> back</h3></div></br>`);
     });
   });
 };
 
-// newListingForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-// });
-// if (runningTotal) {
+// Look for the presence of currency-span on the page and on submit, pass the numerical value in euros to session storage
+const listingForm = document.querySelector('#new_listing');
 
-// }
+if (listingForm) {
+  const currencySpan = document.querySelector('.currency-span');
+  if (currencySpan) {
+    const euros = Number(currencySpan.innerText.split(' ')[2]);
+    // Append to form upon submit/add to sessionstorage
+    if (!isNaN(euros) || euros !== 0) {
+      listingForm.addEventListener("submit", function(){
+        console.log('success');
+
+      });
+    }
+  }
+}
+
+
+
+
+
+
 
