@@ -1,21 +1,12 @@
-// .special-form {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-bottom: 32px;
 
-//   .special-input {
-//     width: 40%;
-//     padding-left: 4px;
-//   }
-// }
 
 .form-group {
   padding: 0.5em;
 }
 
 form abbr[title] {
-  border-bottom: none !important;
-  text-decoration: none !important;
+  border-bottom: none ;
+  text-decoration: none ;
 }
 
 label {

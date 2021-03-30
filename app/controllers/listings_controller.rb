@@ -2,13 +2,6 @@ class ListingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :new]
 
   def index
-
-    # if params[:query].present?
-    #   @listings = Listing.where("currency ILIKE? ", "%#{params[:query]}%")
-    #   if params[:where].present?
-    #     # @listings = @listings.near(["location ILIKE? ", "%#{params[:where]}%"], 200)
-    #     @listings = @listings.where("location ILIKE? ", "%#{params[:where]}%")
-    #   end
     if params[:where].present?
       if params[:distance] == ""
         @listings = Listing.near(params[:where], 0)
@@ -43,7 +36,6 @@ class ListingsController < ApplicationController
     @currencies = Listing.get_currencies
     # page where the form is displayed
     @listing = Listing.new
-    # @exchange_rate = Listing.exchange_value
   end
 
   def create

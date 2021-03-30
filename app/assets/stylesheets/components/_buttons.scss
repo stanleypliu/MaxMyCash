@@ -15,11 +15,8 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .blue-gradient-button-home {
     opacity: 0;
-    // margin-top: 16px;
-    // margin-left: 16px;
     transform: translateY(10%);
     font-size: 1.25em;
-    // padding: 0.5em 1.5em;
     -webkit-transition: opacity 1.2s ease 1.2s, transform 1.2s ease 1.2s, color 0.2s;
     transition: opacity 1.2s ease 1.2s, transform 1.2s ease 1.2s, color 0.2s;
   }
@@ -70,7 +67,6 @@
 .blue-gradient-button-home {
   background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
   color: white;
-  // color: #0f141b;
   padding: 12px 35px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -79,14 +75,6 @@
 
   font-weight: bold;
   position: relative;
-}
-
-
-
-.blue-gradient-button-home:hover {
-  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  // box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-  // background-image: linear-gradient(to right bottom, #625ef6, #5f6ff7, #607ef6, #678bf3, #7298ef, #779bee, #7c9eee, #81a1ed, #7f9bf1, #8094f4, #838df7, #8885f8);
 }
 
 .blue-gradient-button {
@@ -103,19 +91,13 @@
 }
 
 .blue-gradient-button:hover {
-  // opacity: 3;
   text-decoration: none;
   color: white;
 }
 
 .exchange-button {
-  // background: radial-gradient(circle, rgba(43,46,50,1) 0%, rgba(28,33,37,1) 100%);
   background: $green;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  // box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  // -webkit-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  // -moz-box-shadow: 0 8 0px rgba(0,0,0,0.2), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  // color: white;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   padding: 10px 38px;
@@ -126,37 +108,6 @@
   transition: color 0.2s;
 }
 
-
-
-.exchange-button:hover {
-  // box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-}
-// .exchange-button:active {
-//   background: linear-gradient(225deg, #464C53, #1C2125 127.71%);
-//   box-shadow: 0px 2px 0px #2b638f, 0px 1px 6px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-// }
-
-// .message-button {
-//   color: $green-rev;
-//   background-color: transparent;
-//   background-image: none;
-//   border-color: $green-rev;
-//   display: inline-block;
-//   font-weight: 400;
-//   text-align: center;
-//   white-space: nowrap;
-//   vertical-align: middle;
-//   -webkit-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-//   user-select: none;
-//   border: 1px solid transparent;
-//   padding: .375rem .75rem;
-//   font-size: 1rem;
-//   line-height: 1.5;
-//   border-radius: .25rem;
-//   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-// }
 
 .just-added {
   background-color: #62D783;
@@ -176,13 +127,10 @@
 .button-book {
   background-color: #253493;
   color: white;
-  // max-height: 24px;
   padding: 8px 16px;
   border-radius: 4px;
-  // margin-left: 4px;
   display: inline-block;
   margin-top: 5px;
-  // width: 69px;
 }
 
 

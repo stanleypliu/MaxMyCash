@@ -3,13 +3,9 @@
     <div class="d-flex listing-container">
       <div class="payment">
         <%= image_tag "payment-processed.png", alt: "payment processed" %>
-<!--         <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="sun" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="100" class="sun-circle">
-        </svg> -->
       </div>
       <div class="form-card">
         <h2><b>Exchange Your Cash</b></h2>
-        <!-- <hr> -->
         <%= simple_form_for(@listing) do |f| %>
           <%= f.input :currency_amount, input_html: {class: 'currency-amount'} %>
           <%= f.input :currency, collection: @currencies, input_html: {class: 'dropdown-currency'} %>
@@ -22,5 +18,3 @@
     </div>
   </div>
 </div>
-<!-- ff + tab => form -->
-<!-- end + tab => end -->
