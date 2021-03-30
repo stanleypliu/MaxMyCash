@@ -8,11 +8,9 @@ import Swal from 'sweetalert2'
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 
-initMapbox();
-// document.addEventListener('turbolinks:load', () => {
-
-
-// })
+ document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+  })
 
 alert = document.querySelector('#payalert')
 
