@@ -12,17 +12,16 @@ class ListingsController < ApplicationController
         @listings = @listings.where("currency ILIKE? ", "%#{params[:query]}%")
       end
     else
-      @listings = Listing.all.sort_by { |listing| listing.created_at }.reverse! # having it sort by most recently made
+      @listings = Listing.take(5)
+      # @listings = Listing.all.sort_by { |listing| listing.created_at }.reverse! # having it sort by most recently made
     end
 
-  #  @listings = Listing.geocoded # returns flats with coordinates
-    @markers = @listings.map do |listing|
+     @markers = @listings.map do |listing|
       {
         lat: listing.latitude,
         lng: listing.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { listing: listing })
       }
-
     end
   end
 

@@ -38,9 +38,12 @@
                     <% end %></p>
                   <%= listing.user.email %>
                 </div>
-                <div class="card-top-right big-font">
-                  <%= listing.currency[0,3] %>
-                  <%= listing.currency_amount %>
+                <div>
+                  <div class="card-top-right big-font">
+                    <%= listing.currency[0,3] %>
+                    <%= listing.currency_amount %>
+                  </div>
+                  <%= listing.location %>
                 </div>
               </div>
                 <hr>
