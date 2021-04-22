@@ -2,6 +2,14 @@
   max-width: 200px;
 }
 
+.mapboxgl-marker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border:1px solid gray;
+  background-color:lightblue;
+}
+
 .mapboxgl-popup-content {
   background-image: url("../../assets/images/yen.png");
   text-align: center;
