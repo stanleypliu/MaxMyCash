@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+  
   def card_link_to(href)
     "<a href='#{href}'>
       <div>
