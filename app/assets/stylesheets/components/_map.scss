@@ -11,7 +11,7 @@
 }
 
 .mapboxgl-popup-content {
-  background-image: url("../../assets/images/yen.png");
+  background-image: image-url("yen.png");
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   background-color: white;
@@ -21,7 +21,7 @@
 }
 
 .mapboxgl-marker {
-  background-image: url("../../assets/images/yen.png");
+  background-image: image-url('yen.png');
   width: 25px;
   height: 25px;
   border-radius: 50%;
