@@ -27,7 +27,6 @@
             <%= render "listings" %>
           </div>
         
-
           <div data-infinite-scroll-target="pagination">
             <%== pagy_nav @pagy_a %>
           </div>
@@ -35,7 +34,7 @@
       </div>
           <div class="col-6">
               <div id="map"
-                style="height: 100%;"
+                style="height: 550px; position: sticky; top: 15"
                 data-markers="<%= @markers.to_json %>"
                 data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
               </div>

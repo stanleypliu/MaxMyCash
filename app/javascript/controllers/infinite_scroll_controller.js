@@ -14,7 +14,7 @@ export default class extends Controller {
 
         var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
         
-        if (window.pageYOffset >= height - window.innerHeight - 100) {
+        if (window.pageYOffset >= height - window.innerHeight) {
             console.log("bottom")
             this.loadMore(url)
         }

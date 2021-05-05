@@ -1,6 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
+require "open-uri"
+
 Review.destroy_all
 Booking.destroy_all
 Listing.destroy_all
@@ -21,15 +23,19 @@ User.destroy_all
 # reviewa  = Review.create!(rating: 2, reviewer: a, reviewee: b)
 # reviewb = Review.create!(rating: 5, reviewer: b, reviewee: a)
 
-puts 'Creating 25 users/listings...'
+puts 'Creating 55 users/listings...'
 curr_list = Listing.get_currencies
-25.times do |i|
+55.times do |i|
+  avatar = Faker::Avatar.image
+  file = URI.open(avatar)
   user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.unique.email,
     password: 123456
     )
+    sleep 1
+    user.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/png')
     Listing.create!(
         user: user,
         location: Faker::Address.city,
@@ -41,21 +47,4 @@ curr_list = Listing.get_currencies
     puts "#{i + 1} - #{user.first_name} => #{user.listings.first.currency}"
 
   end
-  10.times do |i|
-    user = User.create!(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      email: Faker::Internet.unique.email,
-      password: 123456
-      )
-      Listing.create!(
-        user: user,
-        location: Faker::Address.city,
-        currency: "EUR - Euro",
-        currency_amount: rand(10..20000),
-        message: Faker::Lorem.sentence(word_count: 2, supplemental: true, random_words_to_add: 4),
-        transaction_completed: 'false'
-        )
-        puts "#{i + 26} - #{user.first_name} => #{user.listings.first.currency}"
-      end
       puts 'Finished!'

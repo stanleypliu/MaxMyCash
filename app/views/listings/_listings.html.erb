@@ -1,6 +1,6 @@
             <% @loaded_listings.each do |listing|%>
                 <% if current_user != listing.user %>
-                    <div class="card m-2 p-4">
+                    <div class="card m-2 p-4 showing">
                         <div class="top-listing-card d-flex">
                             <div class="card-top-left">
                                 <p class="big-font"><strong><%= listing.location %></strong>
