@@ -21,6 +21,9 @@ gem 'geocoder'
 gem 'cloudinary', '~> 1.13.0'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'pagy', '~> 3.5'
+gem 'mimemagic', '~> 0.3.10'
+# gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+
 
 
 group :development do
