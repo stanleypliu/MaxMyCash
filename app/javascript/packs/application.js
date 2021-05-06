@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import 'controllers';
 
 // document.addEventListener('turbolinks:load', () => {
 //   initMapbox();
