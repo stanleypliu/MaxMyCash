@@ -52,15 +52,15 @@ $(function () {
       payment.addClass('showing');
       listingForm.addClass('showing');
     };
-    if (window.location.href == "http://www.revonew.xyz/listings" || "http://localhost:3000/listings") {
-      listingCard.each(function(index) {
-        // console.log(index);
-        // const timeout = 1000 * index;
-        // $(this).delay(timeout);
-        $(this).addClass('showing');
-      });
-      listingCard.addClass('showing');
-    };
+    // if (window.location.href == "http://www.revonew.xyz/listings" || "http://localhost:3000/listings") {     
+    //   listingCard.each(function(index) {
+    //     console.log(index);
+    //     // const timeout = 1000 * index;
+    //     // $(this).delay(timeout);
+    //     $(this).addClass('showing');
+    //   });
+      // listingCard.addClass('showing');
+    // };
     if (window.location.href == "http://www.revonew.xyz/about" || "http://localhost:3000/about") {
       // carouselAbout.hide();
       carouselAbout.on("click", function(){

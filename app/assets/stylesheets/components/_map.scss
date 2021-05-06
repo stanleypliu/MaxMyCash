@@ -2,7 +2,16 @@
   max-width: 200px;
 }
 
+.mapboxgl-marker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border:1px solid gray;
+  background-color:lightblue;
+}
+
 .mapboxgl-popup-content {
+  background-image: image-url("yen.png");
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   background-color: white;
@@ -11,7 +20,33 @@
   box-shadow: 1px 0px 15px $purple;
 }
 
+.mapboxgl-marker {
+  background-image: image-url('yen.png');
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color:lightblue;
+}
+
 .red {
 	color: red;
 	background-color: #70f15a;
+}
+
+// #map {
+//   // position: -webkit-sticky; /* Safari */
+//   position: sticky;
+//   top: 0;
+//   height: 300px;
+// }
+
+.sticky{
+  position: relative;
+  height: 100vh;
+}
+
+#map{
+  position: sticky;
+  top: 70px;
 }
