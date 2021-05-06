@@ -7,12 +7,13 @@ import Swal from 'sweetalert2'
 
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import 'controllers';
 
-initMapbox();
 // document.addEventListener('turbolinks:load', () => {
-
-
+//   initMapbox();
 // })
+initMapbox();
 
 alert = document.querySelector('#payalert')
 

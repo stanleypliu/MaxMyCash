@@ -1,10 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_listing, except: [:show, :destroy]
 
-  # def index
-  #   @bookings = Booking.where(user: current_user)
-  # end
-
   def show
     @booking = Booking.find(params[:id])
   end

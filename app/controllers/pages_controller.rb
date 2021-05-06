@@ -9,5 +9,4 @@ class PagesController < ApplicationController
     @client_secret = params[:client_secret]
   end
 
-
 end

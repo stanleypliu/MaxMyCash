@@ -19,9 +19,12 @@ gem 'webpacker'
 gem 'json'
 gem 'geocoder'
 gem 'cloudinary', '~> 1.13.0'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'pagy', '~> 3.5'
 
 
 group :development do
+  gem 'bullet'
   gem 'web-console', '>= 3.3.0'
 end
 
